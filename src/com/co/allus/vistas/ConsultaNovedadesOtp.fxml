@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ConsultaNovedadesOtpController">
+    <children>
+        <Label alignment="CENTER" layoutX="-1.0" layoutY="2.0" minHeight="25.0" prefHeight="25.0" prefWidth="572.0" text="CONSULTA DE NOVEDADES" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <StackPane fx:id="panel_tabla_1" alignment="CENTER" layoutX="13.0" layoutY="79.0" maxHeight="340.0" maxWidth="572.0" minHeight="47.0" minWidth="538.0" prefHeight="84.0" prefWidth="545.0">
+            <children>
+                <TableView fx:id="tablaDatos1" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" prefHeight="78.0" prefWidth="545.0" rotate="0.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="estado_serv1" maxWidth="5000.0" minWidth="134.0" prefWidth="134.0" text="Estado del Servicio" fx:id="estado_serv1" />
+                        <TableColumn editable="false" id="tipo_mecanismo1" maxWidth="5000.0" minWidth="79.0" prefWidth="79.0" text="Tipo de&#10;Mecanismo" fx:id="tipo_mecanismo1" />
+                        <TableColumn editable="false" id="fecha_nov1" maxWidth="5000.0" minWidth="80.0" prefWidth="100.0" text="Fecha" fx:id="fecha_nov1" />
+                        <TableColumn editable="false" id="hora_nov1" maxWidth="5000.0" minWidth="33.0" prefWidth="49.0" text="Hora" fx:id="hora_nov1" />
+                        <TableColumn editable="false" id="canal_nov1" maxWidth="5000.0" minWidth="152.0" prefWidth="191.0" text="Canal de Inscripción o de&#10;Cambio de Mecanismo" fx:id="canal_nov1" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </StackPane>
+        <Button fx:id="terminar_trx" alignment="CENTER" disable="false" layoutX="266.0" layoutY="435.0" minHeight="19.0" minWidth="39.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="39.0" prefWidth="39.0" styleClass="terminar_trx" wrapText="false">
+            <effect>
+                <ColorAdjust />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="31.00000762939453" fitWidth="50.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label layoutX="11.0" layoutY="38.0" prefHeight="22.0" prefWidth="124.0" text="Estado del Servicio">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label font="$x1" layoutX="11.0" layoutY="56.0" prefHeight="19.0" prefWidth="124.0" text="Dato de Seguridad :" />
+        <Label fx:id="mensajes_val" alignment="CENTER" layoutX="7.0" layoutY="410.0" prefWidth="556.0" text="" textAlignment="CENTER" textFill="#ff3333">
+            <font>
+                <Font name="System Bold" size="13.0" fx:id="x2" />
+            </font>
+        </Label>
+        <Button fx:id="BuscarNov" layoutX="370.0" layoutY="229.0" mnemonicParsing="false" onAction="#buscarNovAction" styleClass="BuscarNov" text="Consultar" textFill="WHITE" />
+        <ComboBox fx:id="seleccionCodigos" layoutX="305.0" layoutY="196.0" minHeight="19.0" onAction="#selecCodAction" prefHeight="25.0" prefWidth="230.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Item 1" />
+                    <String fx:value="Item 2" />
+                    <String fx:value="Item 3" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Label alignment="CENTER_LEFT" font="$x1" layoutX="13.0" layoutY="174.0" prefWidth="255.0" text="Estados y novedades de la Clave Dinámica" />
+        <DatePicker fx:id="fecha_inicial" layoutX="91.0" layoutY="199.0" prefWidth="111.0" promptText="Fecha Inicial">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <DatePicker fx:id="fecha_final" layoutX="91.0" layoutY="230.0" prefWidth="111.0" promptText="Fecha Final">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <Label layoutX="14.0" layoutY="199.0" prefHeight="18.0" prefWidth="81.0" text="Fecha Inicial" />
+        <Label layoutX="14.0" layoutY="230.0" prefHeight="19.0" prefWidth="75.0" text="Fecha Final" />
+        <Label fx:id="estado_serv_otp" layoutX="136.0" layoutY="40.0" prefHeight="18.0" prefWidth="145.0" text="" />
+        <Label fx:id="dato_seg" layoutX="129.0" layoutY="57.0" prefWidth="355.0" text="" />
+        <Button id="borrar_fecha_ini" fx:id="botBorrFi" layoutX="202.0" layoutY="198.0" minHeight="17.999900000002526" minWidth="15.0" mnemonicParsing="false" onAction="#botBorrFi" prefHeight="25.0" prefWidth="39.0" styleClass="borrar" text="Button">
+            <graphic>
+                <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="false" styleClass="borrar">
+                    <image>
+                        <Image url="@../recursos/borrar_es.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button id="borrar_fecha_fin" fx:id="botBorrFF" layoutX="202.0" layoutY="230.0" minHeight="18.0" minWidth="15.0" mnemonicParsing="false" onAction="#botBorrFf" prefHeight="25.0" prefWidth="39.0" styleClass="borrar" text="Button">
+            <graphic>
+                <ImageView fitHeight="17.999900000002526" fitWidth="22.000022070315026" pickOnBounds="true" preserveRatio="false" styleClass="borrar">
+                    <image>
+                        <Image url="@../recursos/borrar_es.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <StackPane fx:id="panel_tabla" alignment="CENTER" layoutX="14.0" layoutY="264.0" maxHeight="340.0" maxWidth="556.0000999999975" minHeight="47.0" minWidth="521.0" prefHeight="139.0" prefWidth="545.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" prefHeight="146.0" prefWidth="545.0" rotate="0.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="estado_serv" maxWidth="5000.0" minWidth="32.0" prefWidth="81.0" resizable="false" text="Transacción" fx:id="estado_serv" />
+                        <TableColumn editable="false" id="tipo_mecanismo" maxWidth="5000.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Fecha" fx:id="tipo_mecanismo" />
+                        <TableColumn editable="false" id="fecha_nov" maxWidth="5000.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Hora" fx:id="fecha_nov" />
+                        <TableColumn editable="false" id="hora_nov" maxWidth="5000.0" minWidth="200.0" prefWidth="200.0" resizable="false" text="Descripción" fx:id="hora_nov" />
+                        <TableColumn editable="false" id="canal_nov" maxWidth="5000.0" minWidth="350.0" prefWidth="350.0" resizable="false" text="Resultado de la&#10;transacción" fx:id="canal_nov" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </StackPane>
+    </children>
+    <stylesheets>
+        <URL value="@consultanovedadesotp.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet tokenempresas.css?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TokenEmpresasController">
+    <children>
+        <Label fx:id="lbl_empresa" alignment="CENTER" layoutX="5.0" layoutY="3.0" prefHeight="27.0" prefWidth="572.0" text="Empresa" visible="false">
+            <font>
+                <Font name="System Bold" size="15.0" fx:id="x2" />
+            </font>
+            <textFill>
+                <Color blue="0.482" green="0.173" red="0.129" fx:id="x3" />
+            </textFill>
+        </Label>
+        <Label alignment="CENTER" layoutX="46.0" layoutY="48.0" prefHeight="22.0" prefWidth="75.0" text="NIT">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" font="$x1" layoutX="8.0" layoutY="69.0" prefHeight="22.0" prefWidth="141.0" text="Estado de la Empresa" />
+        <Label alignment="CENTER" font="$x1" layoutX="8.0" layoutY="94.0" prefHeight="22.0" prefWidth="141.0" text="Esquema de Seguridad" />
+        <Label alignment="CENTER" font="$x1" layoutX="7.0" layoutY="119.0" prefHeight="22.0" prefWidth="141.0" text="Total Token Disponibles" />
+        <Label alignment="CENTER" font="$x1" layoutX="298.0" layoutY="48.0" prefHeight="22.0" prefWidth="111.0" text="Búsqueda por ID" />
+        <TextField fx:id="tfNit" editable="false" layoutX="151.0" layoutY="48.0" prefHeight="22.0" prefWidth="141.0" />
+        <TextField fx:id="tfEstado_Empresa" editable="false" layoutX="151.0" layoutY="72.0" prefHeight="22.0" prefWidth="141.0" />
+        <TextField fx:id="tfEsquema_Seguridad" editable="false" layoutX="151.0" layoutY="96.0" prefHeight="22.0" prefWidth="141.0" />
+        <TextField fx:id="tfTotal_Tokens" editable="false" layoutX="151.0" layoutY="120.0" prefHeight="22.0" prefWidth="141.0" styleClass="text-field-Token" />
+        <RestrictiveTextField fx:id="tfBusqueda_ID" editable="true" layoutX="410.0" layoutY="48.0" maxLength="15" onKeyPressed="#idbuscarkeypress" onKeyTyped="#idbuscarkeytyped" prefHeight="22.0" prefWidth="141.0" restrict="^[a-z0-9A-Z]{0,15}$" />
+        <Button fx:id="detalle_op" disable="false" focusTraversable="false" layoutX="304.0" layoutY="117.0" mnemonicParsing="false" onAction="#continuarOP" prefHeight="27.0" prefWidth="95.0" text="Ver Detalle">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <HBox layoutX="47.0" layoutY="445.0" prefHeight="29.0" prefWidth="475.0">
+            <children>
+                <Button fx:id="limpiar_op" disable="true" mnemonicParsing="false" prefHeight="26.0" prefWidth="95.0" text="Limpiar" visible="false">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="continuar_op" mnemonicParsing="false" onAction="#continuarAE2" prefHeight="26.0" prefWidth="95.0" text="Continuar" wrapText="false">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="95.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </HBox>
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="61.0" layoutY="383.0" prefHeight="13.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <StackPane fx:id="panel_tabla" layoutX="4.0" layoutY="147.0" prefHeight="238.0" prefWidth="559.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" focusTraversable="true" prefHeight="238.0" prefWidth="926.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="colid_usuario" maxWidth="98.0" minWidth="98.0" prefWidth="98.0" resizable="false" sortable="false" text="ID Usuario" fx:id="colid_usuario" />
+                        <TableColumn editable="false" id="colnombre_usuario" maxWidth="186.0" minWidth="186.0" prefWidth="186.0" resizable="false" sortable="false" text="Nombre &#10;Usuario" fx:id="colnombre_usuario" />
+                        <TableColumn editable="false" id="colestado1" maxWidth="187.0" minWidth="187.0" prefWidth="187.0" resizable="false" sortable="false" text="Estado" fx:id="colestado1" />
+                        <TableColumn editable="false" id="colrol" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Rol" fx:id="colrol" />
+                        <TableColumn editable="false" id="colperfil" maxWidth="152.0" minWidth="152.0" prefWidth="152.0" resizable="false" sortable="false" text="Perfil" fx:id="colperfil" />
+                        <TableColumn editable="false" id="colestado2" maxWidth="56.0" minWidth="56.0" prefWidth="56.0" resizable="false" sortable="false" text="Estado" fx:id="colestado2" />
+                        <TableColumn editable="false" id="colserial" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" resizable="false" sortable="false" text="Serial" fx:id="colserial" />
+                        <TableColumn editable="false" id="colfecha_exp" maxWidth="116.0" minWidth="116.0" prefWidth="116.0" resizable="false" sortable="false" text="Fecha de Exp" fx:id="colfecha_exp" />
+                        <TableColumn editable="false" id="colae" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" resizable="false" sortable="false" text="AE" fx:id="colae" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label alignment="CENTER" font="$x2" layoutX="5.0" layoutY="11.0" prefHeight="27.0" prefWidth="572.0" text="Información General Consulta Token" textFill="$x3" />
+        <Button fx:id="obtMasReg" layoutX="456.0" layoutY="118.0" mnemonicParsing="false" onAction="#obtMasRegOp" prefWidth="95.0" text="+Registros" />
+    </children>
+    <stylesheets>
+        <URL value="@tokenempresas.css" />
+    </stylesheets>
+</AnchorPane>

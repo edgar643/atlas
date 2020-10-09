@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet tokendistribucion.css?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TokenDistribucionController">
+    <children>
+        <Label alignment="CENTER" layoutX="14.0" layoutY="56.0" prefHeight="22.0" prefWidth="75.0" text="NIT">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <TextField fx:id="tfNit" editable="false" layoutX="83.0" layoutY="56.0" prefHeight="22.0" prefWidth="141.0" />
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="180.0" layoutY="455.0" prefHeight="14.0" prefWidth="220.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <StackPane fx:id="panel_tabla" layoutX="1.0" layoutY="132.0" minHeight="13.0" prefHeight="255.0" prefWidth="559.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" focusTraversable="true" prefHeight="115.0" prefWidth="1145.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="colGuia" maxWidth="116.0" minWidth="116.0" prefWidth="116.0" resizable="false" sortable="false" text="Guía" fx:id="colGuia" />
+                        <TableColumn editable="false" id="colSerial" maxWidth="163.0" minWidth="163.0" prefWidth="163.0" resizable="false" sortable="false" text="Serial" fx:id="colSerial" />
+                        <TableColumn editable="false" id="colID" maxWidth="144.0" minWidth="144.0" prefWidth="144.0" resizable="false" sortable="false" text="ID Usuario" fx:id="colID" />
+                        <TableColumn editable="false" id="colNombre" maxWidth="232.0" minWidth="232.0" prefWidth="232.0" resizable="false" sortable="false" text="Nombre de Usuario" fx:id="colNombre" />
+                        <TableColumn editable="false" id="colGestionTele" maxWidth="186.0" minWidth="186.0" prefWidth="186.0" resizable="false" sortable="false" text="Gestión Telefónica" fx:id="colGestionTele" />
+                        <TableColumn editable="false" id="colGestionEnt" maxWidth="158.0" minWidth="158.0" prefWidth="158.0" resizable="false" sortable="false" text="Gestión de Entrega" fx:id="colGestionEnt" />
+                        <TableColumn editable="false" id="colContactoEnt" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" resizable="false" sortable="false" text="Contacto de Entrega" fx:id="colContactoEnt" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label alignment="CENTER" layoutX="3.0" layoutY="0.0" prefHeight="37.0" prefWidth="559.0" text="Distribución de Token" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" layoutX="362.0" layoutY="48.0" stroke="BLACK" strokeType="INSIDE" width="186.0" />
+        <Label id="lblbuscar" alignment="CENTER" font="$x1" layoutX="371.0" layoutY="37.0" prefHeight="22.0" prefWidth="111.0" styleClass="lblbuscar" text="Búsqueda por ID" />
+        <RestrictiveTextField fx:id="tfBuscar" editable="true" layoutX="386.0" layoutY="73.0" maxLength="15" onKeyPressed="#idbuscarkeypress" onKeyTyped="#idbuscarkeytyped" prefHeight="22.0" prefWidth="141.0" restrict="[a-z0-9A-Z]" />
+        <Button fx:id="terminar_trx" alignment="CENTER" focusTraversable="false" layoutX="484.0" layoutY="416.0" minHeight="52.999900000002526" minWidth="63.0" mnemonicParsing="false" onAction="#terminar_trx" prefHeight="52.999900000002526" prefWidth="64.0" styleClass="terminar_trx">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="obtMasReg" layoutX="12.0" layoutY="103.0" mnemonicParsing="false" onAction="#obtMasRegOp" prefWidth="85.0" text="+ Registros" />
+    </children>
+    <stylesheets>
+        <URL value="@tokendistribucion.css" />
+    </stylesheets>
+</AnchorPane>

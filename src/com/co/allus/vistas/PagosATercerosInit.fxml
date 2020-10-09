@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.PagosATercerosInitController">
+    <children>
+        <Button fx:id="masRegistros" layoutX="170.0" layoutY="445.0" mnemonicParsing="false" onAction="#masRegistros" prefHeight="26.0" prefWidth="99.0" text="Más Registros" textFill="WHITE">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="pagarOP" disable="false" layoutX="295.0" layoutY="445.0" mnemonicParsing="false" onAction="#pagarOP" prefHeight="26.0" prefWidth="95.0" text="Ir a Pagar" textFill="WHITE">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Label id="label" alignment="CENTER" layoutX="1.0" layoutY="2.0" prefHeight="26.0" prefWidth="575.0" text="PAGOS A TERCEROS">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <textFill>
+                <Color blue="0.482" green="0.173" red="0.129" fx:id="x1" />
+            </textFill>
+        </Label>
+        <ProgressBar fx:id="progreso" layoutX="179.0" layoutY="433.0" prefWidth="200.0" progress="0.0" visible="true" />
+        <StackPane fx:id="panel_tabla" layoutX="-1.0" layoutY="113.0" maxHeight="263.0" minHeight="263.0" minWidth="558.0" prefHeight="263.0" prefWidth="558.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" editable="false" focusTraversable="true" maxHeight="263.0" maxWidth="1433.0" minHeight="263.0" minWidth="558.0" prefHeight="263.0" prefWidth="558.0" scaleX="1.0" scaleY="1.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="true" id="colPagar" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" text="" fx:id="colPagar" />
+                        <TableColumn editable="false" id="colCodigoConvenio" maxWidth="119.0" minWidth="119.0" prefWidth="119.0" resizable="true" sortType="ASCENDING" sortable="true" text="Código de Convenio" visible="true" fx:id="colCodigoConvenio" />
+                        <TableColumn editable="false" id="colNombreConvenio" maxWidth="290.0" minWidth="290.0" prefWidth="290.0" sortable="false" text="Nombre Convenio" visible="true" fx:id="colNombreConvenio" />
+                        <TableColumn editable="false" id="colDescripcion" maxWidth="190.0" minWidth="190.0" prefWidth="190.0" resizable="true" sortable="false" text="Descripción" visible="true" fx:id="colDescripcion" />
+                        <TableColumn editable="false" id="colReferencia1" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" sortType="ASCENDING" sortable="false" text="Referencia 1" visible="true" fx:id="colReferencia1" />
+                        <TableColumn editable="false" id="colReferencia2" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="true" sortable="false" text="Referencia 2" fx:id="colReferencia2" />
+                        <TableColumn editable="false" id="colReferencia3" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="true" sortable="false" text="Referencia 3" fx:id="colReferencia3" />
+                        <TableColumn editable="false" id="colEstado" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" resizable="true" sortable="false" text="Estado" fx:id="colEstado" />
+                        <TableColumn editable="false" id="colValorPagar" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" resizable="true" sortable="false" text="Valor a Pagar" fx:id="colValorPagar" />
+                        <TableColumn editable="false" id="colFechaHorainscripcion" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="true" sortable="false" text="Fecha y Hora de inscripción" fx:id="colFechaHorainscripcion" />
+                        <TableColumn editable="false" id="colFechavencimiento" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" resizable="true" sortable="false" text="Fecha de Vencimiento" fx:id="colFechavencimiento" />
+                        <TableColumn editable="false" id="colCanal" maxWidth="151.0" minWidth="151.0" prefWidth="151.0" resizable="true" sortable="false" text="Canal" fx:id="colCanal" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <RestrictiveTextField fx:id="txtCodigoConvenio" layoutX="20.0" layoutY="40.0" maxLength="15" onKeyPressed="#codConvkPress" onKeyTyped="#codConvktyped" prefHeight="25.0" prefWidth="211.0" restrict="[0-9]" />
+        <TextField fx:id="txtNombreConvenio" layoutX="344.0" layoutY="40.0" onKeyPressed="#nomconvkpressed" onKeyTyped="#nomconvktyped" prefHeight="25.0" prefWidth="211.0" />
+        <TextField fx:id="txtDescripcion" layoutX="20.0" layoutY="84.0" onKeyPressed="#desckPressed" onKeyTyped="#desckTyped" prefHeight="25.0" prefWidth="211.0" />
+        <RestrictiveTextField fx:id="txtReferenciaFija" layoutX="344.0" layoutY="84.0" maxLength="35" onKeyPressed="#refkPressed" onKeyTyped="#refkTyped" prefHeight="25.0" prefWidth="211.0" restrict="[a-z0-9A-Z]" />
+        <Label id="label" alignment="CENTER" layoutX="18.0" layoutY="18.0" prefHeight="25.0" prefWidth="211.0" text="Código del Convenio" textFill="$x1">
+            <font>
+                <Font name="System Bold" size="13.0" fx:id="x2" />
+            </font>
+        </Label>
+        <Label id="label" alignment="CENTER" font="$x2" layoutX="342.0" layoutY="18.0" prefHeight="25.0" prefWidth="211.0" text="Nombre del Convenio" textFill="$x1" />
+        <Label id="label" alignment="CENTER" font="$x2" layoutX="60.0" layoutY="66.0" prefHeight="18.0" prefWidth="130.0" text="Descripción" textFill="$x1" />
+        <Label id="label" alignment="CENTER" font="$x2" layoutX="376.0" layoutY="67.0" prefHeight="18.0" prefWidth="144.0" text="Referencia Fija" textFill="$x1" />
+        <Button fx:id="btnBuscar" layoutX="240.0" layoutY="58.0" minHeight="18.0" mnemonicParsing="false" onAction="#btnBuscar" prefHeight="26.0" prefWidth="95.0" text="Buscar" textFill="WHITE">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="regresarOp" layoutX="471.0" layoutY="445.0" mnemonicParsing="false" onAction="#regresarOp" prefHeight="26.0" prefWidth="74.0" text="Regresar" textFill="WHITE" />
+    </children>
+    <stylesheets>
+        <URL value="@pagosatercerosinit.css" />
+    </stylesheets>
+</AnchorPane>

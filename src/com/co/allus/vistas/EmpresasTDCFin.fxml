@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.EmpresasTDCFinController">
+    <children>
+        <Label id="tituloCDTfin" alignment="CENTER" focusTraversable="false" layoutX="2.0" layoutY="26.0" prefHeight="49.0" prefWidth="572.0" text="Consulta Movimiento Día TDC" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <StackPane fx:id="panel_tabla" focusTraversable="false" layoutX="7.0" layoutY="197.0" prefHeight="170.0" prefWidth="554.0">
+            <children>
+                <TableView fx:id="tabla_datos" focusTraversable="false" prefHeight="133.0" prefWidth="539.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="Col_tpo" maxWidth="92.0" minWidth="92.0" prefWidth="92.0" text="Tpo Aut" fx:id="Col_tpo" />
+                        <TableColumn editable="false" id="Col_hora" maxWidth="92.0" minWidth="92.0" prefWidth="92.0" text="Hora" fx:id="Col_hora" />
+                        <TableColumn editable="false" id="Col_fecha" maxWidth="99.0" minWidth="99.0" prefWidth="99.0" text="Fecha" fx:id="Col_fecha" />
+                        <TableColumn editable="false" id="Col_valor" maxWidth="127.0" minWidth="127.0" prefWidth="127.0" text="Valor" fx:id="Col_valor" />
+                        <TableColumn editable="false" id="Col_transaccion" maxWidth="83.0" minWidth="83.0" prefWidth="83.0" text="Transacción" fx:id="Col_transaccion" />
+                        <TableColumn editable="false" id="Col_respuesta" maxWidth="129.0" minWidth="129.0" prefWidth="129.0" text="Respuesta" fx:id="Col_respuesta" />
+                        <TableColumn editable="false" id="Col_mensaje" maxWidth="89.0" minWidth="89.0" prefWidth="89.0" text="Tipo Msj" fx:id="Col_mensaje" />
+                        <TableColumn editable="false" id="Col_pais" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="País" fx:id="Col_pais" />
+                        <TableColumn editable="false" id="Col_entidad" maxWidth="185.0" minWidth="185.0" prefWidth="185.0" text="Entidad" fx:id="Col_entidad" />
+                        <TableColumn editable="false" id="Col_origen" maxWidth="74.0" minWidth="74.0" prefWidth="74.0" text="Origen" fx:id="Col_origen" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="62.0" layoutY="405.0" prefHeight="13.0" prefWidth="440.0" spacing="10.0" visible="true" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" layoutX="272.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="255.0" />
+        <Label id="lblbuscar" alignment="CENTER" layoutX="281.0" layoutY="75.0" prefHeight="22.0" prefWidth="164.0" styleClass="lblbuscar" text="Seleccione el día a consultar">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <RadioButton fx:id="rbhoy" layoutX="292.0" layoutY="124.0" mnemonicParsing="false" onAction="#rbhoy" text="Hoy" />
+        <RadioButton fx:id="rbayer" layoutX="371.0" layoutY="124.0" mnemonicParsing="false" onAction="#rbayer" text="Ayer" />
+        <RadioButton fx:id="rbanteayer" layoutX="445.0" layoutY="124.0" mnemonicParsing="false" onAction="#rbanteayer" text="Anteayer" />
+        <TextField fx:id="tfBuscar" layoutX="324.0" layoutY="149.0" prefWidth="152.0" styleClass="tfdate" />
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="253.0" layoutY="415.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#terminar_trx" prefHeight="53.0" prefWidth="63.0" styleClass="terminar_trx">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label id="lblbuscar" alignment="CENTER" font="$x1" layoutX="47.0" layoutY="103.0" prefHeight="22.0" prefWidth="164.0" styleClass="lblbuscar" text="Número TDC seleccionada" />
+        <TextField fx:id="tfTdc" editable="false" layoutX="43.0" layoutY="136.0" prefWidth="171.0" styleClass="tfTdc" />
+        <RadioButton fx:id="rbtodos" focusTraversable="false" layoutX="371.0" layoutY="95.0" mnemonicParsing="false" onAction="#rbtodos" selected="true" text="Todos" />
+    </children>
+    <stylesheets>
+        <URL value="@empresastdcfin.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="600.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.BolsillosListarController">
+    <children>
+        <Label alignment="CENTER" layoutX="-3.0" layoutY="0.0" prefHeight="43.0" prefWidth="572.0" text="BOLSILLOS DE LA CUENTA">
+            <font>
+                <Font name="System Bold" size="20.0" fx:id="x1" />
+            </font>
+            <textFill>
+                <Color blue="0.482" green="0.173" red="0.129" fx:id="x2" />
+            </textFill>
+        </Label>
+        <StackPane fx:id="panel_tabla" alignment="CENTER" maxHeight="295.0" maxWidth="556.0" minHeight="267.0" minWidth="527.0" prefHeight="267.0" prefWidth="527.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="80.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="295.0" maxWidth="556.0" minHeight="242.0" minWidth="527.0" prefHeight="242.0" prefWidth="527.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn id="nombre_bolsillo" maxWidth="5000.0" minWidth="10.0" prefWidth="204.0" text="Nombre del Bolsillo" fx:id="nombre_bolsillo" />
+                        <TableColumn editable="false" id="estado_bolsillo" maxWidth="5000.0" minWidth="10.0" prefWidth="177.0" resizable="false" sortType="ASCENDING" text="Estado del Bolsillo" fx:id="estado_bolsillo" />
+                        <TableColumn id="saldo_bolsillo" maxWidth="5000.0" minWidth="10.0" prefWidth="144.0" text="Saldo del Bolsillo" fx:id="saldo_bolsillo" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </StackPane>
+        <HBox fx:id="menu_progreso" alignment="CENTER" layoutX="68.0" layoutY="406.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <Separator layoutX="0.0" layoutY="43.0" orientation="HORIZONTAL" prefHeight="10.0" prefWidth="572.0" visible="false" />
+        <Button fx:id="movimientos_trx" disable="false" layoutX="18.0" layoutY="440.0" mnemonicParsing="false" onAction="#movimientos_op" prefHeight="27.0" prefWidth="108.0" text="Movimientos">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="detalle_trx" disable="false" layoutX="156.0" layoutY="440.0" mnemonicParsing="false" onAction="#detalle_op" prefHeight="27.0" prefWidth="108.0" text="Ver Detalle">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="regresar_trx" layoutX="296.0" layoutY="440.0" mnemonicParsing="false" onAction="#regresar_op" prefHeight="27.0" prefWidth="108.0" text="Regresar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="cancelar_trx" layoutX="434.0" layoutY="440.0" mnemonicParsing="false" onAction="#cancelar_op" prefHeight="27.0" prefWidth="108.0" text="Cancelar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Label fx:id="mensaje_cuentanumero" alignment="CENTER" font="$x1" layoutX="-3.0" layoutY="43.0" prefHeight="27.0" prefWidth="572.0" text="" textFill="$x2" />
+    </children>
+    <stylesheets>
+        <URL value="@bolsilloslistar.css" />
+    </stylesheets>
+</AnchorPane>

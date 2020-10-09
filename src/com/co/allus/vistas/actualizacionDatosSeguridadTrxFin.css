@@ -1,0 +1,20 @@
+/* 
+    Document   : actualizacionDatosSeguridadTrxFin
+    Created on : 21-mar-2016, 22:10:45
+    Author     : luis.cuervo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.mainFxmlClass {
+
+}
+
+.button
+{
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-color: white; 
+    -fx-border-color: white;
+
+}
+

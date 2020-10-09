@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.PrestamosController">
+    <children>
+        <StackPane fx:id="panel_tabla" layoutX="-5.0" layoutY="66.0" maxWidth="572.0" minWidth="570.0" prefHeight="289.0" prefWidth="572.0">
+            <children>
+                <TableView fx:id="tabla_prestamos" disable="false" editable="false" focusTraversable="true" maxHeight="304.0" maxWidth="567.0" minHeight="272.0" minWidth="556.0" prefHeight="276.0000999999975" prefWidth="567.0" scaleX="1.0" scaleY="1.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="true" id="seleccion" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" text="" fx:id="seleccion" />
+                        <TableColumn editable="false" id="colCredito" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" resizable="true" sortType="ASCENDING" sortable="true" text="Crédito" visible="true" fx:id="colCredito" />
+                        <TableColumn editable="false" id="colTipoPres" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" sortable="true" text="Tipo Préstamo" visible="true" fx:id="colTipoPres" />
+                        <TableColumn editable="false" id="colFechaProx" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" resizable="true" sortable="true" text="Fecha&#10;Próximo Pago" visible="true" fx:id="colFechaProx" />
+                        <TableColumn editable="false" id="colValorIni" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" sortType="ASCENDING" sortable="true" text="Valor Inicial" visible="true" fx:id="colValorIni" />
+                        <TableColumn editable="false" id="colPagoMin" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" resizable="true" text="Pago &#10;mínimo" fx:id="colPagoMin" />
+                        <TableColumn editable="false" id="colSaldoTotal" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" resizable="true" sortable="true" text="Saldo&#10;Total" fx:id="colSaldoTotal" />
+                    </columns>
+                    <rotationAxis>
+                        <Point3D x="1.0" />
+                    </rotationAxis>
+                    <stylesheets>
+                        <URL value="@prestamos.css" />
+                    </stylesheets>
+                </TableView>
+            </children>
+        </StackPane>
+        <HBox layoutX="2.0" layoutY="430.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="detalleOP" mnemonicParsing="false" onAction="#continuarOP" prefHeight="26.0" prefWidth="95.0" text="Ver Detalle" textFill="WHITE">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="125.0" right="20.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="pagarOP" disable="false" mnemonicParsing="false" onAction="#gotoPagar" prefHeight="26.0" prefWidth="95.0" text="Ir a Pagar" textFill="WHITE">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets right="20.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelarOP" disable="false" mnemonicParsing="false" onAction="#cancelar" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Button>
+            </children>
+        </HBox>
+        <Label fx:id="label" alignment="CENTER" layoutX="0.0" layoutY="-1.0" prefHeight="43.0" prefWidth="575.0" text="PAGO / PRÉSTAMOS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="65.0" layoutY="404.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+        <URL value="@prestamos.css" />
+    </stylesheets>
+</AnchorPane>

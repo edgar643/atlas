@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../UserComponentsJavaFX/dist/UserComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet pagostdcpropiastrxdatos.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="com.co.allus.controladoresfxml.PagosTDCpropiasTrxDatosController">
+    <children>
+        <Label id="titulosPagos" alignment="CENTER" layoutX="3.0" layoutY="0.0" prefHeight="49.0" prefWidth="572.0" text="PAGO TDC PROPIA&#10;" textFill="#212C7B">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <VBox layoutX="14.0" layoutY="91.0" prefHeight="134.0" prefWidth="547.0">
+            <children>
+                <Label alignment="TOP_CENTER" contentDisplay="CENTER" graphicTextGap="4.0" prefHeight="136.0" prefWidth="110.0" text="Valor a pagar&#10;     (Pesos)" textAlignment="LEFT">
+                    <font>
+                        <Font name="System Bold" size="14.0" fx:id="x3" />
+                    </font>
+                </Label>
+                <RadioButton fx:id="PagoMinPesos" mnemonicParsing="false" onAction="#selPagoMinPesos" prefHeight="20.0" text="Pago Mínimo en Pesos">
+                    <font>
+                        <Font size="14.0" fx:id="x1" />
+                    </font>
+                    <stylesheets>
+                        <URL value="@pagostdcpropiastrxdatos.css" />
+                    </stylesheets>
+                    <VBox.margin>
+                        <Insets left="150.0" top="-135.0" fx:id="x4" />
+                    </VBox.margin>
+                </RadioButton>
+                <RadioButton fx:id="PagoTotalPesos" font="$x1" mnemonicParsing="false" onAction="#selPagoTotPesos" prefHeight="20.0" text="Pago Total en Pesos">
+                    <VBox.margin>
+                        <Insets left="150.0" top="20.0" fx:id="x2" />
+                    </VBox.margin>
+                </RadioButton>
+                <RadioButton fx:id="OtroValorPesos" font="$x1" mnemonicParsing="false" onAction="#selOtroValPesos" prefHeight="20.0" text="Otro Valor" VBox.margin="$x2" />
+                <RestrictiveTextField fx:id="ValorPesos" onKeyPressed="#valpesosPressed" onKeyTyped="#valpesosKey" prefHeight="20.0" prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets left="320.0" right="60.0" top="-19.0" />
+                    </VBox.margin>
+                </RestrictiveTextField>
+            </children>
+        </VBox>
+        <VBox fx:id="Box_pago_dolar" layoutX="16.0" layoutY="252.0" prefHeight="134.0" prefWidth="547.0">
+            <children>
+                <Label alignment="TOP_CENTER" contentDisplay="CENTER" font="$x3" prefHeight="136.0" prefWidth="110.0" text="Valor a pagar&#10;    (Dólares)" textAlignment="LEFT" />
+                <RadioButton fx:id="PagoMinDolar" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selPagoMinDolar" prefHeight="20.0" text="Pago Mínimo en Dólares" VBox.margin="$x4" />
+                <RadioButton fx:id="PagoTotalDolar" font="$x1" mnemonicParsing="false" onAction="#selPagoTotDolar" prefHeight="20.0" text="Pago Total en Dólares">
+                    <VBox.margin>
+                        <Insets left="150.0" top="20.0" fx:id="x2" />
+                    </VBox.margin>
+                </RadioButton>
+                <RadioButton fx:id="OtroValorDolar" font="$x1" mnemonicParsing="false" onAction="#selOtroValDolar" prefHeight="20.0" text="Otro Valor">
+                    <VBox.margin>
+                        <Insets left="150.0" top="20.0" fx:id="x2" />
+                    </VBox.margin>
+                </RadioButton>
+                <RestrictiveTextField fx:id="ValorDolares" onKeyPressed="#valDolarPressed" onKeyTyped="#valDolarKey" prefHeight="20.0" prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets left="320.0" right="60.0" top="-19.0" />
+                    </VBox.margin>
+                </RestrictiveTextField>
+            </children>
+        </VBox>
+        <HBox layoutX="4.0" layoutY="438.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="continuar_op" disable="true" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="160.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancel_op" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="70.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+        <URL value="@pagostdcpropiastrxdatos.css" />
+    </stylesheets>
+</AnchorPane>

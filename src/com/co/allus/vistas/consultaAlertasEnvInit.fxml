@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element C:/ATLAS -MQ@VERSIONES/ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ConsultaAlertasEnvInitController">
+    <children>
+        <Label id="label" alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="29.0" prefWidth="575.0" text="CONSULTA ALERTAS ENVIADAS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <StackPane fx:id="panel_tabla" layoutX="0.0" layoutY="102.0" maxWidth="572.0" minHeight="223.0" minWidth="559.0" prefHeight="281.0" prefWidth="559.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" editable="false" focusTraversable="true" maxHeight="304.0" maxWidth="567.0" minHeight="233.0" minWidth="556.0" prefHeight="233.0" prefWidth="556.0" scaleX="1.0" scaleY="1.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="tipotrx" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="true" sortType="ASCENDING" sortable="true" text="Tipo transacción" visible="true" fx:id="tipotrx" />
+                        <TableColumn editable="false" id="medioenvi" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" sortable="true" text="Medio Envio" visible="true" fx:id="medioenvi" />
+                        <TableColumn editable="false" id="fecha" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" resizable="true" sortable="true" text="Fecha" visible="true" fx:id="fecha" />
+                        <TableColumn editable="false" id="horamensaje" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" sortable="true" text="Hora Mensaje" visible="true" fx:id="horamensaje" />
+                        <TableColumn editable="false" id="mensaje" maxWidth="600.0" minWidth="600.0" prefWidth="600.0" sortType="ASCENDING" sortable="true" text="Mensaje" visible="true" fx:id="mensaje" />
+                    </columns>
+                    <rotationAxis>
+                        <Point3D x="1.0" />
+                    </rotationAxis>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label layoutX="22.0" layoutY="81.0" prefHeight="19.0" prefWidth="63.0" text="Email :">
+            <font>
+                <Font name="System Bold" size="14.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label font="$x1" layoutX="307.0" layoutY="81.0" prefHeight="19.0" prefWidth="80.0" text="Telefono :" />
+        <Label fx:id="email" layoutX="85.0" layoutY="81.0" prefHeight="19.0" prefWidth="207.0" text="" />
+        <Label fx:id="telefono" layoutX="387.0" layoutY="81.0" prefHeight="19.0" prefWidth="168.0" text="" />
+        <Button fx:id="buscarOp" layoutX="390.0" layoutY="44.0" mnemonicParsing="false" onAction="#buscarFecha" prefHeight="29.0" prefWidth="71.0" text="Buscar" />
+        <Label layoutX="16.0" layoutY="50.0" prefHeight="19.0" prefWidth="80.0" text="Fecha inicial">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x2" />
+            </font>
+        </Label>
+        <Label font="$x2" layoutX="202.0" layoutY="50.0" prefHeight="19.0" prefWidth="80.0" text="Fecha final" />
+        <DatePicker fx:id="fechaini" layoutX="101.0" layoutY="50.0" prefWidth="90.0" promptText="Desde">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <DatePicker fx:id="fechafin" layoutX="275.0" layoutY="47.0" prefWidth="90.0" promptText="Hasta">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <Button fx:id="limpiarOp" layoutX="480.0" layoutY="44.0" mnemonicParsing="false" onAction="#limpiarConsulta" prefHeight="29.0" prefWidth="71.0" text="Limpiar" />
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="484.0" layoutY="426.0" minHeight="28.0" minWidth="61.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="47.0" prefWidth="63.0" styleClass="terminar_trx">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="indmasreg" layoutX="14.0" layoutY="444.0" minHeight="24.0" mnemonicParsing="false" onAction="#MasRegistros" prefHeight="24.0" prefWidth="108.0" text="Mas Registros" />
+    </children>
+    <stylesheets>
+        <URL value="@consultaalertasenvinit.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.GirosCancelConfirmfinController">
+    <children>
+        <Pane fx:id="pane_modalGiros" layoutX="50.0" layoutY="129.0" prefHeight="270.0" prefWidth="489.0" styleClass="pane">
+            <children>
+                <ProgressBar fx:id="progreso" layoutX="145.0" layoutY="184.0" prefWidth="200.0" progress="0.0" visible="true" />
+                <Label fx:id="lblconfirmar" alignment="CENTER" contentDisplay="CENTER" layoutX="0.0" layoutY="59.0" prefHeight="76.0" prefWidth="489.0" text="" textAlignment="JUSTIFY" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="icono" fitHeight="66.0" fitWidth="88.0" layoutX="212.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true" smooth="true">
+                    <image>
+                        <Image url="@../../../../../../../Atlas%20-%201.5.1.9_dllo%20-%20codauto/src/com/co/allus/recursos/warning-icon.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="continuarOP" disable="false" layoutX="106.0" layoutY="216.0" mnemonicParsing="false" onAction="#continuarOP" prefHeight="35.0" prefWidth="95.0" text="SI" textFill="WHITE">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Button>
+                <Button fx:id="cancelarOP" layoutX="271.0" layoutY="216.0" mnemonicParsing="false" onAction="#cancelarOP" prefHeight="35.0" prefWidth="95.0" text="NO" textFill="WHITE">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Button>
+                <Label fx:id="lblmotivo" layoutX="48.0" layoutY="148.0" text="Motivo cancelación" textFill="WHITE" />
+                <ComboBox fx:id="motivoCancelacion" disable="false" editable="false" focusTraversable="true" layoutX="172.0" layoutY="143.0" prefHeight="25.0" prefWidth="260.0" visible="true">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Item 1" />
+                            <String fx:value="Item 2" />
+                            <String fx:value="Item 3" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </children>
+        </Pane>
+        <Label fx:id="titulosGiros" alignment="CENTER" layoutX="3.0" layoutY="14.0" prefHeight="59.0" prefWidth="569.0" styleClass="label2" text="CANCELACIÓN  GIROS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+    </children>
+    <stylesheets>
+        <URL value="@girosnalcancelconfirmfin.css" />
+    </stylesheets>
+</AnchorPane>

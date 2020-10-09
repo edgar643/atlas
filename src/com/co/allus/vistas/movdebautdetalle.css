@@ -1,0 +1,117 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-font-size: 3px;
+    -fx-background-color: #212C7B; 
+    -fx-border-color: white;    
+}
+
+.table-view .column-header .label .text
+{
+    -fx-fill:white;
+    -fx-font-size: 12px;  
+    -fx-text-alignment: center;
+}
+
+.table-view:row-selection .table-row-cell:filled:even .table-cell:filled:even
+{
+    -fx-alignment: CENTER;
+    -fx-text-alignment:CENTER; 
+    -fx-font-size: 12px; 
+
+}
+
+.table-view:row-selection .table-row-cell:odd:filled .table-cell:odd:filled
+{
+    -fx-alignment: CENTER;
+    -fx-text-alignment:CENTER; 
+    -fx-font-size: 12px; 
+
+}
+
+.table-view .column-header .label .text
+{
+    -fx-fill:white;   
+}
+
+.table-view .column-header .label
+{
+    -fx-fill:black;
+
+}
+
+.table-view:row-selection
+{
+    -fx-cursor: hand;
+
+}
+
+
+
+.terminar_trx
+{
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-color: white; 
+    -fx-border-color: white;
+
+}
+
+.boton_return
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #212C7B;
+    -fx-border-color: white;
+    -fx-border-insets: 1,1,1,1;  
+}
+
+.table-view .scroll-bar:vertical .track{
+    -fx-padding:0px;
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+
+.table-view .scroll-bar:vertical .increment-button ,
+.table-view .scroll-bar:vertical .decrement-button {
+
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 0 0;
+}
+
+.table-view  .scroll-bar:vertical .increment-arrow,
+.table-view  .scroll-bar:vertical  .decrement-arrow
+{
+    -fx-shape: " ";	
+    -fx-padding:0;        
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:transparent;
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 2em;
+    -fx-padding:0px;
+
+}
+
+/*.scroll-bar:vertical .thumb{
+    
+   -fx-background-color: blue;
+   -fx-pref-height: 10px;
+   -fx-min-height: 10px;
+   -fx-max-height: 10px;
+   
+}*/

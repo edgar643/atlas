@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.SaldoCreditoHController">
+    <children>
+        <Label fx:id="tituloCreditoH" alignment="CENTER" layoutX="0.0" layoutY="14.0" prefHeight="49.0" prefWidth="572.0" text="CONSULTA - SALDOS / CREDITO HIPOTECARIO" textFill="#212C7B">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <HBox layoutX="0.0" layoutY="420.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="continuar_op" disable="true" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="160.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancel_op" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="70.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <ComboBox fx:id="creditosHipotecarios" layoutX="127.0" layoutY="197.0" onAction="#selCreditosHipotecarios" prefHeight="26.0" prefWidth="324.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Item 1" />
+                    <String fx:value="Item 2" />
+                    <String fx:value="Item 3" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="69.0" layoutY="398.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+        <URL value="@saldocreditoh.css" />
+    </stylesheets>
+</AnchorPane>

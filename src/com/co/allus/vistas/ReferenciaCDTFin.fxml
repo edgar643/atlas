@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ReferenciaCDTFinController">
+    <children>
+        <Label id="tituloCDTfin" fx:id="labelTitulo" alignment="CENTER" layoutX="1.0" layoutY="0.0" prefHeight="49.0" prefWidth="572.0" text="CONSULTA - REFERENCIA CDT" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="255.0" layoutY="398.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="53.0" prefWidth="63.0">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <TableView fx:id="tablaDatosRefCDT" layoutX="7.0" layoutY="72.0" prefHeight="139.0" prefWidth="552.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn editable="false" id="descripcion" maxWidth="5000.0" minWidth="10.0" prefWidth="278.0" text="DESCRIPCIÓN" fx:id="descripcion" />
+                <TableColumn editable="false" id="informacion" maxWidth="5000.0" minWidth="10.0" prefWidth="254.0" text="INFORMACIÓN" fx:id="informacion" />
+            </columns>
+        </TableView>
+    </children>
+    <stylesheets>
+        <URL value="@referenciacdtfin.css" />
+    </stylesheets>
+</AnchorPane>

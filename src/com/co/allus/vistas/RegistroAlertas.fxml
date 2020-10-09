@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet registroalertas.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.RegistroAlertasController">
+    <children>
+        <AnchorPane id="AnchorPane" layoutX="0.0" layoutY="0.0" prefHeight="419.0" prefWidth="568.0">
+            <children>
+                <Label id="" alignment="CENTER_RIGHT" layoutX="80.0" layoutY="74.0" prefHeight="30.0" prefWidth="115.0" text="Nombre del cliente" textAlignment="RIGHT">
+                    <font>
+                        <Font name="System Bold" size="12.0" fx:id="x1" />
+                    </font>
+                </Label>
+                <Label id="" alignment="CENTER_RIGHT" font="$x1" layoutX="80.0" layoutY="119.0" prefHeight="30.0" prefWidth="115.0" text="Cédula" textAlignment="RIGHT" />
+                <TextField fx:id="nombreCliente" editable="true" layoutX="209.0" layoutY="78.0" prefWidth="200.0" styleClass="texto-gris" text="">
+                    <stylesheets>
+                        <URL value="@ActualizacionDatosSeguridad.css" />
+                    </stylesheets>
+                </TextField>
+                <TextField fx:id="cedulaCliente" editable="true" layoutX="209.0" layoutY="123.0" prefWidth="200.0" styleClass="texto-gris">
+                    <stylesheets>
+                        <URL value="@ActualizacionDatosSeguridad.css" />
+                    </stylesheets>
+                </TextField>
+                <Label id="nombreCliente" alignment="CENTER_RIGHT" font="$x1" layoutX="49.0" layoutY="172.0" prefHeight="30.0" prefWidth="115.0" text="E-mail" textAlignment="RIGHT" />
+                <TextField fx:id="Email" editable="true" layoutX="178.0" layoutY="176.0" onKeyReleased="#keyReleasedEmail" prefWidth="326.0" />
+                <TextField fx:id="confirmarEmail" editable="true" layoutX="177.0" layoutY="207.0" onKeyReleased="#keyReleasedconfirmarEmail" prefWidth="326.0" />
+                <RestrictiveTextField fx:id="Celular" layoutX="178.0" layoutY="247.0" maxLength="10" onKeyReleased="#valkeypressed" prefWidth="200.0" restrict="[3][0-9]*?$" />
+                <RestrictiveTextField fx:id="confirmarCelular" layoutX="178.0" layoutY="279.0" maxLength="10" onKeyReleased="#valkeyconfirmarpressed" prefWidth="200.0" restrict="[3][0-9]*?$" />
+                <Label alignment="CENTER_RIGHT" font="$x1" layoutX="49.0" layoutY="250.0" prefWidth="115.0" text="Nro Celular" textAlignment="RIGHT" />
+                <TextField fx:id="avisos" alignment="CENTER" editable="false" layoutX="138.0" layoutY="356.0" prefHeight="40.0" prefWidth="308.0" styleClass="avisos" text="">
+                    <stylesheets>
+                        <URL value="@ActualizacionDatosSeguridad.css" />
+                    </stylesheets>
+                </TextField>
+                <Label id="nombreCliente" alignment="CENTER_RIGHT" font="$x1" layoutX="48.0" layoutY="203.0" prefHeight="30.0" prefWidth="115.0" text="Confirmar E-mail" textAlignment="RIGHT" />
+                <Label alignment="CENTER_RIGHT" font="$x1" layoutX="28.0" layoutY="282.0" prefWidth="136.0" text="Confirmar Nro Celular" textAlignment="RIGHT" />
+            </children>
+        </AnchorPane>
+        <Label fx:id="tituloregAln" alignment="CENTER" layoutX="6.0" layoutY="10.0" prefHeight="40.0" prefWidth="572.0" text="REGISTRO/ACTUALIZACION AL SERVICIO DE ALERTAS Y NOTIFICACIONES" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="continuar" layoutX="157.0" layoutY="439.0" mnemonicParsing="false" onAction="#continuar_trx" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE" />
+        <Button fx:id="cancelar" layoutX="323.0" layoutY="439.0" mnemonicParsing="false" onAction="#cancelar_trx" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE" />
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="64.0" layoutY="417.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+        <URL value="@registroalertas.css" />
+    </stylesheets>
+</AnchorPane>

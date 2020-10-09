@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.GirosNalInfoGeneralController">
+    <children>
+        <StackPane fx:id="panel_tabla" layoutX="7.0" layoutY="95.0" minWidth="552.0" prefHeight="295.0" prefWidth="559.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="295.0" maxWidth="775.0" minHeight="274.0" minWidth="556.0" prefHeight="274.0" prefWidth="775.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="colPuntoservVenta" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Punto de Servicio&#10;Venta" fx:id="colPuntoservVenta" />
+                        <TableColumn editable="false" id="ColContDiaGiro" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Referencia Giro" fx:id="ColContDiaGiro" />
+                        <TableColumn editable="false" id="ColFechaVta" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" resizable="false" sortable="false" text="Fecha Venta" fx:id="ColFechaVta" />
+                        <TableColumn editable="false" id="ColEstadoGiro" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Estado Giro" fx:id="ColEstadoGiro" />
+                        <TableColumn editable="false" id="ColCanalOri" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" resizable="false" sortable="false" text="Canal Origen" fx:id="ColCanalOri" />
+                        <TableColumn editable="false" id="ColDocGirador" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" sortable="false" text="Doc Girador" fx:id="ColDocGirador" />
+                        <TableColumn editable="false" id="ColNomGirador" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" sortable="false" text="Nombre Girador" fx:id="ColNomGirador" />
+                        <TableColumn editable="false" id="ColCelGirador" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Celular&#10;Girador." fx:id="ColCelGirador" />
+                        <TableColumn editable="false" id="ColDocBenef" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Doc &#10;Beneficiario" fx:id="ColDocBenef" />
+                        <TableColumn editable="false" id="colNomBenef" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" sortable="false" text="Nombre Beneficiario" fx:id="colNomBenef" />
+                        <TableColumn editable="false" id="ColCelBenef" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Celular&#10;Beneficiario" fx:id="ColCelBenef" />
+                        <TableColumn editable="false" id="colPuntoserPago" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Punto de Servicio&#10;Ultimo Estado" fx:id="colPuntoserPago" />
+                        <TableColumn editable="false" id="ColCanalPago" maxWidth="111.0" minWidth="111.0" prefWidth="111.0" resizable="false" sortable="false" text="Canal Último&#10;Estado" fx:id="ColCanalPago" />
+                        <TableColumn editable="false" id="ColFechaPago" maxWidth="111.0" minWidth="111.0" prefWidth="111.0" resizable="false" sortable="false" text="Fecha Último&#10;Estado" fx:id="ColFechaPago" />
+                        <TableColumn editable="false" id="ColValorGiro" maxWidth="111.0" minWidth="111.0" prefWidth="111.0" resizable="false" sortable="false" text="Valor Giro" fx:id="ColValorGiro" />
+                        <TableColumn editable="false" id="ColValorComision" maxWidth="111.0" minWidth="111.0" prefWidth="111.0" resizable="false" sortable="false" text="Valor Comisión" fx:id="ColValorComision" />
+                        <TableColumn editable="false" id="ColValIva" maxWidth="111.0" minWidth="111.0" prefWidth="111.0" resizable="false" sortable="false" text="Valor IVA" fx:id="ColValIva" />
+                        <TableColumn editable="false" id="ColValTotal" maxWidth="111.0" minWidth="111.0" prefWidth="111.0" resizable="false" sortable="false" text="Valor Total" fx:id="ColValTotal" />
+                        <TableColumn editable="false" id="ColFechaCancel" maxWidth="111.0" minWidth="111.0" prefWidth="111.0" resizable="false" sortable="false" text="Fecha Cancelado" visible="false" fx:id="ColFechaCancel" />
+                        <TableColumn editable="false" id="ColFechaPteCancel" maxWidth="111.0" minWidth="111.0" prefWidth="111.0" resizable="false" sortable="false" text="Fecha PTE&#10;Cancelado" visible="false" fx:id="ColFechaPteCancel" />
+                        <TableColumn editable="false" id="ColSms" maxWidth="111.0" minWidth="111.0" prefWidth="111.0" resizable="false" sortable="false" text="SMS" fx:id="ColSms" />
+                        <TableColumn editable="false" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" resizable="false" sortable="false" text="Celular Cliente" visible="false" fx:id="ColCelCliente" />
+                        <TableColumn editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" sortable="false" text="Acumulado Mensual" visible="false" fx:id="ColAcumMensual2" />
+                        <TableColumn editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" sortable="false" text="Acumulado Anual" visible="false" fx:id="ColAcumAnual2" />
+                        <TableColumn editable="false" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" resizable="false" sortable="false" text="Motivo cancelacion" fx:id="ColMotCancel" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label alignment="CENTER" layoutX="6.0" layoutY="22.0" prefHeight="32.0" prefWidth="85.0" text="Seleccione &#10;Rango Fechas" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <DatePicker fx:id="fechaini" layoutX="94.0" layoutY="29.0" prefWidth="85.0" promptText="Desde">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <DatePicker fx:id="fechafin" layoutX="225.0" prefWidth="85.0" promptText="Hasta" AnchorPane.topAnchor="29.0">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <Label fx:id="tituloGirosnal" alignment="CENTER" focusTraversable="false" layoutX="3.0" layoutY="0.0" minHeight="22.0" prefHeight="22.0" prefWidth="572.0" text="CONSULTA GIROS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" font="$x1" layoutX="182.0" layoutY="22.0" prefHeight="32.0" prefWidth="40.0" text="Hasta" textAlignment="CENTER" />
+        <Button fx:id="indMasReg" layoutX="25.0" layoutY="447.0" mnemonicParsing="false" onAction="#MasRegAction" prefHeight="27.0" prefWidth="118.0" text="Mas Registros" />
+        <Button fx:id="volverOP" layoutX="425.0" layoutY="447.0" mnemonicParsing="false" onAction="#volverOP" prefHeight="27.0" prefWidth="118.0" text="Volver" />
+        <Rectangle fx:id="recmontomes" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="10.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" visible="true" width="270.0" />
+        <Rectangle fx:id="recmontoanio" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="295.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" width="270.0" />
+        <Label fx:id="labelmontoMes" graphicTextGap="4.0" layoutX="10.0" layoutY="65.0" prefHeight="25.0" prefWidth="164.0" text="Monto acumulado Mes actual :">
+            <font>
+                <Font name="System Bold" size="11.0" fx:id="x2" />
+            </font>
+        </Label>
+        <Label fx:id="montoMEs" alignment="CENTER" contentDisplay="LEFT" layoutX="170.0" layoutY="65.0" prefHeight="25.0" prefWidth="108.0" text="" />
+        <Label fx:id="labelmontoanio" font="$x2" layoutX="298.0" layoutY="65.0" prefHeight="25.0" prefWidth="164.0" text="Monto acumulado Año actual :" />
+        <Label fx:id="montoAnio" alignment="CENTER" layoutX="458.0" layoutY="65.0" prefHeight="25.0" prefWidth="108.0" text="" />
+        <Button fx:id="buscarFechas" layoutX="465.0" layoutY="25.0" mnemonicParsing="false" onAction="#buscarFechas" prefHeight="27.0" prefWidth="69.0" text="Buscar" />
+        <ProgressBar fx:id="progreso" layoutX="181.0" layoutY="457.0" prefWidth="200.0" progress="0.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="313.0" prefHeight="32.0" prefWidth="69.0" text="Referencia" textAlignment="CENTER" AnchorPane.topAnchor="22.0" />
+        <TextField fx:id="consecutivoRef2" layoutX="384.0" prefWidth="75.0" AnchorPane.topAnchor="29.0" />
+    </children>
+    <stylesheets>
+        <URL value="@girosnalinfogeneral.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="com.co.allus.controladoresfxml.PagosTercerosfinTrxController">
+    <children>
+        <Label id="titulopagos" fx:id="titulo_pago" alignment="CENTER" layoutX="13.0" layoutY="14.0" prefWidth="543.9999000000025" text="PAGOS A TERCEROS" textAlignment="JUSTIFY" textFill="#212C7B">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+        <Label fx:id="mensaje" alignment="CENTER" layoutX="13.0" layoutY="73.0" prefHeight="26.0" prefWidth="542.0" text="El pago ha sido realizado de manera exitosa">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tabla_datos_fin1" layoutX="5.0" layoutY="155.0" maxHeight="57.0" maxWidth="556.0" minHeight="57.0" minWidth="540.0" prefHeight="57.0" prefWidth="556.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn editable="false" maxWidth="67.0" minWidth="67.0" prefWidth="67.0" sortable="false" text="Código de &#10;Convenio" fx:id="cod_conv" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="158.0" text="Entidad&#10;Pagada" fx:id="entidad_pago" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="162.0" text="Referencia de Pago:&#10;Numero de identificacion" fx:id="ref_pago" />
+                <TableColumn id="refpago2" maxWidth="5000.0" minWidth="10.0" prefWidth="155.0" text="Referencia de Pago:&#10;Nombre" fx:id="refpago2" />
+            </columns>
+        </TableView>
+        <TableView fx:id="tabla_datos_fin2" layoutX="5.0" layoutY="267.0" maxHeight="57.0" maxWidth="556.0" minHeight="57.0" minWidth="550.0" prefHeight="57.0" prefWidth="556.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="88.0" text="Número de &#10;Comprobante" fx:id="num_comprobante" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="104.0" text="Valor" fx:id="valor" />
+                <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="96.0" sortable="false" text="Número &#10;Cuenta" fx:id="num_cuenta" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="116.0" text="Tipo&#10;Cuenta" fx:id="tipo_cuenta" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="138.0" text="Fecha y Hora &#10;del Pago" fx:id="fecha_hora_pago" />
+            </columns>
+        </TableView>
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="247.0" layoutY="378.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="53.0" prefWidth="63.0">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@pagostercerosfintrx.css" />
+    </stylesheets>
+</AnchorPane>

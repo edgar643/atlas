@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ConsultaMovimientosController">
+    <children>
+        <Label fx:id="titulo" alignment="CENTER" layoutX="2.0" layoutY="0.0" prefHeight="43.0" prefWidth="572.0" text="CONSULTA MOVIMIENTOS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <HBox layoutX="0.0" layoutY="429.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="continuar_op" disable="false" mnemonicParsing="false" onAction="#continuarOP" prefHeight="26.0" prefWidth="95.0" text="Continuar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="160.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelar" mnemonicParsing="false" onAction="#cancelarOP" prefHeight="26.0" prefWidth="95.0" text="Cancelar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="70.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="68.0" layoutY="398.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <StackPane fx:id="panel_tabla" alignment="CENTER" layoutX="172.0" layoutY="60.0" maxHeight="297.0" maxWidth="556.0" minHeight="274.0" minWidth="229.0" prefHeight="297.0" prefWidth="229.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="295.0" maxWidth="556.0" minHeight="274.0" minWidth="229.0" prefHeight="292.0000999999975" prefWidth="229.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="numcta" maxWidth="5000.0" minWidth="10.0" prefWidth="214.0" resizable="true" sortable="true" text="Número  Cuenta Ahorros" fx:id="numcta" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </StackPane>
+    </children>
+    <stylesheets>
+        <URL value="@consultamovimientos.css" />
+    </stylesheets>
+</AnchorPane>

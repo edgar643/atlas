@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.MovDebAut2Controller">
+    <children>
+        <Label alignment="CENTER" layoutX="59.0" layoutY="35.0" prefWidth="199.0" text="Fecha de la Transacción" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <DatePicker fx:id="fechaini" layoutX="55.0" layoutY="61.0" prefWidth="94.0" promptText="Desde">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <DatePicker fx:id="fechafin" layoutX="157.0" layoutY="61.0" prefWidth="94.0" promptText="Hasta">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <Label font="$x1" layoutX="372.0" layoutY="35.0" prefWidth="126.0" text="Código del Convenio" />
+        <TextField fx:id="codConvT" layoutX="363.0" layoutY="62.0" onKeyPressed="#codConvkPress" onKeyTyped="#codConvktyped" prefHeight="22.0" prefWidth="144.0" />
+        <Button fx:id="detalleOP" layoutX="220.0" layoutY="436.0" mnemonicParsing="false" onAction="#detalleOP" prefHeight="27.0" prefWidth="118.0" text="Detalle" textFill="WHITE" />
+        <Button fx:id="indMasReg" layoutX="34.0" layoutY="436.0" mnemonicParsing="false" onAction="#MasRegAction" prefHeight="27.0" prefWidth="118.0" text="Mas Registros" />
+        <Button fx:id="volverOP" layoutX="400.0" layoutY="436.0" mnemonicParsing="false" onAction="#volverOP" prefHeight="27.0" prefWidth="118.0" text="Volver" />
+        <Button fx:id="limpiarOP" layoutX="520.0" layoutY="438.0" minHeight="17.999900000002526" minWidth="15.0" mnemonicParsing="false" onAction="#limpiarOP" prefHeight="27.0" prefWidth="49.0" styleClass="borrar" text="Button">
+            <graphic>
+                <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="false" styleClass="borrar">
+                    <image>
+                        <Image url="@../recursos/borrar_es.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <StackPane fx:id="panel_tabla" layoutX="2.0" layoutY="88.0" minWidth="552.0" prefHeight="286.0" prefWidth="559.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="295.0" maxWidth="775.0" minHeight="274.0" minWidth="556.0" prefHeight="274.0" prefWidth="775.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="ColNumConv" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" resizable="false" sortable="false" text="Número del &#10;Convenio" fx:id="ColNumConv" />
+                        <TableColumn editable="false" id="ColNomConv" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" resizable="false" sortable="false" text="Nombre del &#10;Convenio" fx:id="ColNomConv" />
+                        <TableColumn editable="false" id="ColRefFija" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" sortable="false" text="Referencia&#10;Fija" fx:id="ColRefFija" />
+                        <TableColumn editable="false" id="ColRef2" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" sortable="false" text="Referencia 2" fx:id="ColRef2" />
+                        <TableColumn editable="false" id="ColValor" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" resizable="false" sortable="false" text="Valor" fx:id="ColValor" />
+                        <TableColumn editable="false" id="ColFecha" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" resizable="false" sortable="false" text="Fecha" fx:id="ColFecha" />
+                        <TableColumn editable="false" id="ColEstado" maxWidth="111.0" minWidth="111.0" prefWidth="111.0" resizable="false" sortable="false" text="Estado" fx:id="ColEstado" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label id="tituloCDTfin" alignment="CENTER" focusTraversable="false" layoutX="2.0" layoutY="0.0" prefHeight="35.0" prefWidth="572.0" text="HISTÓRICO DE DÉBITOS EXITOSOS Y RECHAZADOS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="buscarFechas" layoutX="258.0" layoutY="59.0" minHeight="17.999900000002526" minWidth="15.0" mnemonicParsing="false" onAction="#buscarFechas" prefHeight="24.999900000002526" prefWidth="44.0" styleClass="borrar" text="Button">
+            <graphic>
+                <ImageView id="" fitHeight="18.0" fitWidth="28.0" focusTraversable="true" pickOnBounds="true" preserveRatio="false" styleClass="borrar" x="0.0">
+                    <image>
+                        <Image url="@../recursos/lupa.png" />
+                    </image>
+                    <rotationAxis>
+                        <Point3D z="1.0" />
+                    </rotationAxis>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@movdebaut2.css" />
+    </stylesheets>
+</AnchorPane>

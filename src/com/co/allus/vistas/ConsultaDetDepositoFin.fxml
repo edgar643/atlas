@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ConsultaDetDepositoFinController">
+    <children>
+        <Label id="tituloCDTfin" alignment="CENTER" layoutX="2.0" layoutY="0.0" prefHeight="44.0" prefWidth="572.0" text="Estado de Depósitos AFC" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="322.0" layoutY="419.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#terminar_trx" prefHeight="53.0" prefWidth="63.0" styleClass="terminar_trx">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Accordion fx:id="menu" layoutX="21.0" layoutY="61.0" minWidth="188.0" prefHeight="344.0" prefWidth="526.0">
+            <expandedPane>
+                <TitledPane fx:id="info_general" alignment="CENTER" animated="true" collapsible="true" contentDisplay="LEFT" expanded="true" minWidth="184.0" prefHeight="287.0" prefWidth="522.0" text="Información General" textAlignment="LEFT" textFill="WHITE" underline="false">
+                    <content>
+                        <AnchorPane fx:id="ap1" minHeight="0.0" minWidth="0.0" prefHeight="123.0" prefWidth="300.0" snapToPixel="true" visible="true">
+                            <children>
+                                <TableView fx:id="tabla_datos1" layoutX="0.0" layoutY="0.0" prefHeight="256.0" prefWidth="518.0" tableMenuButtonVisible="false">
+                                    <columns>
+                                        <TableColumn editable="false" id="descripcion1" maxWidth="5000.0" minWidth="10.0" prefWidth="257.0" text="Descripción" fx:id="descripcion1" />
+                                        <TableColumn editable="false" id="informacion1" maxWidth="5000.0" minWidth="10.0" prefWidth="256.0" text="Información" fx:id="informacion1" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                            <padding>
+                                <Insets />
+                            </padding>
+                            <stylesheets>
+                                <URL value="@marcoprincipal.css" />
+                            </stylesheets>
+                        </AnchorPane>
+                    </content>
+                    <font>
+                        <Font name="System Bold" size="13.0" fx:id="x2" />
+                    </font>
+                    <stylesheets>
+                        <URL value="@marcoprincipal.css" />
+                    </stylesheets>
+                </TitledPane>
+            </expandedPane>
+            <panes>
+                <fx:reference source="info_general" />
+                <TitledPane fx:id="fechas" alignment="CENTER" animated="true" collapsible="true" contentDisplay="CENTER" expanded="false" focusTraversable="false" font="$x2" minWidth="188.0" opacity="1.0" prefHeight="228.0" prefWidth="480.0" text="Fechas" textAlignment="LEFT" textFill="WHITE" visible="true">
+                    <content>
+                        <AnchorPane fx:id="ap2" minHeight="0.0" minWidth="0.0" prefHeight="121.5" prefWidth="518.0">
+                            <children>
+                                <TableView fx:id="tabla_datos2" layoutX="0.0" layoutY="0.0" prefHeight="255.0" prefWidth="518.0" tableMenuButtonVisible="false">
+                                    <columns>
+                                        <TableColumn editable="false" id="descripcion2" maxWidth="5000.0" minWidth="10.0" prefWidth="257.0" text="Descripción" fx:id="descripcion2" />
+                                        <TableColumn editable="false" id="informacion2" maxWidth="5000.0" minWidth="10.0" prefWidth="256.0" text="Información" fx:id="informacion2" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                            <padding>
+                                <Insets />
+                            </padding>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <TitledPane fx:id="intereses" alignment="CENTER" animated="true" contentDisplay="LEFT" disable="false" expanded="false" focusTraversable="false" font="$x2" text="Intereses y Comisiones" textAlignment="LEFT" textFill="WHITE" visible="true">
+                    <content>
+                        <AnchorPane fx:id="ap3" minHeight="0.0" minWidth="0.0" prefHeight="59.0" prefWidth="180.0">
+                            <children>
+                                <TableView fx:id="tabla_datos3" layoutX="0.0" layoutY="0.0" prefHeight="255.0" prefWidth="518.0" tableMenuButtonVisible="false">
+                                    <columns>
+                                        <TableColumn editable="false" id="descripcion3" maxWidth="5000.0" minWidth="10.0" prefWidth="257.0" text="Descripción" fx:id="descripcion3" />
+                                        <TableColumn editable="false" id="informacion3" maxWidth="5000.0" minWidth="10.0" prefWidth="256.0" text="Información" fx:id="informacion3" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+            </panes>
+            <stylesheets>
+                <URL value="@marcoprincipal.css" />
+            </stylesheets>
+        </Accordion>
+        <Button fx:id="volver_op" disable="false" layoutX="144.0" layoutY="432.0" mnemonicParsing="false" onAction="#volver_op" prefHeight="26.0" prefWidth="95.0" styleClass="boton" text="Volver">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@consultadetdepositofin.css" />
+    </stylesheets>
+</AnchorPane>

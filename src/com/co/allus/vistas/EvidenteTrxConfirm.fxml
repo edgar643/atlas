@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.EvidenteTrxConfirmController">
+    <children>
+        <Label fx:id="titulosEvidente" alignment="CENTER" layoutX="3.0" layoutY="0.0" prefHeight="49.0" prefWidth="572.0" text="" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="descpreg1" layoutX="30.0" layoutY="49.0" prefHeight="73.0" prefWidth="304.0000999999975" text="Descripcion pregunta 1" textAlignment="JUSTIFY" wrapText="true">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label fx:id="descpreg2" font="$x1" layoutX="28.0" layoutY="134.0" prefHeight="73.0" prefWidth="304.0" text="Descripcion pregunta 2" textAlignment="JUSTIFY" wrapText="true" />
+        <Label fx:id="descpreg3" font="$x1" layoutX="30.0" layoutY="210.0" prefHeight="73.0" prefWidth="305.0" text="Descripcion pregunta 3" textAlignment="JUSTIFY" wrapText="true" />
+        <Label fx:id="descpreg4" font="$x1" layoutX="28.0" layoutY="292.0" prefHeight="73.0" prefWidth="304.0" text="Descripcion pregunta 4" textAlignment="JUSTIFY" wrapText="true" />
+        <Label alignment="CENTER" layoutX="0.0" layoutY="377.0" prefWidth="572.0" text="Confirmar con el cliente las respuestas" textFill="#9f9f9f">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Button fx:id="continuar_op" layoutX="164.0" layoutY="420.0" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE" />
+        <Button fx:id="cancelar" layoutX="313.0" layoutY="421.0" mnemonicParsing="false" onAction="#cancel_op" prefHeight="26.0" prefWidth="95.0" text="Regresar" textFill="WHITE" />
+        <HBox fx:id="menu_progreso" alignment="CENTER" layoutX="68.0" layoutY="399.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <Label fx:id="resppreg1" disable="false" focusTraversable="false" font="$x1" layoutX="345.0" layoutY="49.0" mnemonicParsing="false" mouseTransparent="false" pickOnBounds="false" prefHeight="73.0" prefWidth="186.0" text="Respuesta1" textAlignment="JUSTIFY" underline="false" wrapText="true">
+            <textFill>
+                <Color blue="0.500" green="0.500" red="0.500" fx:id="x2" />
+            </textFill>
+        </Label>
+        <Label fx:id="resppreg2" font="$x1" layoutX="345.0" layoutY="134.0" prefHeight="73.0" prefWidth="185.99990000000253" text="Respuesta2" textAlignment="JUSTIFY" textFill="$x2" wrapText="true" />
+        <Label fx:id="resppreg3" contentDisplay="LEFT" font="$x1" layoutX="345.0" layoutY="210.0" prefHeight="73.0" prefWidth="186.0" text="Respuesta3" textAlignment="JUSTIFY" textFill="$x2" wrapText="true" />
+        <Label fx:id="resppreg4" contentDisplay="LEFT" font="$x1" layoutX="345.0" layoutY="292.0" prefHeight="73.0" prefWidth="186.0" text="Respuesta4" textAlignment="JUSTIFY" textFill="$x2" wrapText="true" />
+    </children>
+    <stylesheets>
+        <URL value="@evidentetrxconfirm.css" />
+    </stylesheets>
+</AnchorPane>

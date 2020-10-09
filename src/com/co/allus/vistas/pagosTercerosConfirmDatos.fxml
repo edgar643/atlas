@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="com.co.allus.controladoresfxml.PagosTercerosConfirmDatosController">
+    <children>
+        <Label id="titulopagos" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefWidth="543.9999000000025" text="PAGOS A TERCEROS" textAlignment="JUSTIFY" textFill="#212C7B">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="14.0" layoutY="73.0" prefHeight="26.0" prefWidth="542.0" text="CONFIRMACIÓN DE DATOS CON EL CLIENTE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="continuar_op" layoutX="163.0" layoutY="434.0" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE" />
+        <Button id="cancelar_op" fx:id="cancelar" layoutX="312.0" layoutY="434.0" mnemonicParsing="false" onAction="#cancel_op" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE" />
+        <HBox fx:id="menu_progreso" alignment="CENTER" layoutX="163.0" layoutY="397.0" prefHeight="37.0" prefWidth="244.0">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="false" />
+            </children>
+        </HBox>
+        <TableView fx:id="tabla_Datos1" layoutX="4.0" layoutY="125.0" maxHeight="57.0" maxWidth="553.0" minHeight="57.0" minWidth="540.0" prefHeight="57.0" prefWidth="553.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn maxWidth="67.0" minWidth="67.0" prefWidth="67.0" text="Código de&#10;Convenio" fx:id="cod_conv" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="167.0" text="Nombre de&#10;Convenio" fx:id="nom_conv" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="143.0" text="Referencia de Pago:&#10;Nombre" fx:id="ref_pago2" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="162.0" text="Referencia de Pago:&#10;Numero de identificacion" fx:id="ref_pago" />
+            </columns>
+        </TableView>
+        <TableView fx:id="tabla_Datos2" layoutX="98.0" layoutY="248.0" maxHeight="52.0" maxWidth="377.0" minHeight="52.0" minWidth="377.0" prefHeight="52.0" prefWidth="377.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="Valor" fx:id="valor" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="116.0" text="Número de Cuenta" fx:id="num_cuenta" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="138.0" text="Tipo de Cuenta" fx:id="tipo_cuenta" />
+            </columns>
+        </TableView>
+    </children>
+    <stylesheets>
+        <URL value="@pagostercerosconfirmdatos.css" />
+    </stylesheets>
+</AnchorPane>

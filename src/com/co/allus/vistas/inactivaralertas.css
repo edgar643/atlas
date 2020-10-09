@@ -1,0 +1,20 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+}
+.pane
+{
+
+    -fx-background-color: #212C7B;
+}
+
+.button
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #212C7B;
+    -fx-border-color: white;
+}

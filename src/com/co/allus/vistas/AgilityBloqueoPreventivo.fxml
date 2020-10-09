@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.AgilityBloqueoPreventivoController">
+    <children>
+        <Label id="tituloCDTfin" alignment="CENTER" focusTraversable="false" layoutX="4.0" layoutY="46.0" prefHeight="49.0" prefWidth="572.0" text="BLOQUEOS/TARJETA DE CRÉDITO" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <StackPane fx:id="panel_tabla" focusTraversable="false" layoutX="9.0" layoutY="153.0" prefHeight="161.0" prefWidth="539.0">
+            <children>
+                <TableView fx:id="tabla_datos" focusTraversable="false" prefHeight="133.0" prefWidth="539.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="Col_Numero" maxWidth="5000.0" minWidth="10.0" prefWidth="177.0" text="Número" fx:id="Col_Numero" />
+                        <TableColumn editable="false" id="Col_TipoTarj" maxWidth="5000.0" minWidth="10.0" prefWidth="195.0" text="Tipo de Tarjeta" fx:id="Col_TipoTarj" />
+                        <TableColumn editable="false" id="Col_Bloqueo" maxWidth="5000.0" minWidth="10.0" prefWidth="153.0" text="Bloqueo de Tarjeta" fx:id="Col_Bloqueo" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <HBox layoutX="56.0" layoutY="403.0" prefHeight="31.0" prefWidth="462.0">
+            <children>
+                <Button fx:id="continuar_op" disable="false" mnemonicParsing="false" onAction="#continuarOP" prefHeight="26.0" prefWidth="95.0" text="Continuar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="180.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </HBox>
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="64.0" layoutY="389.0" prefHeight="13.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+        <URL value="@agilitybloqueopreventivo.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.BloqueosTDCController">
+    <children>
+        <HBox layoutX="7.0" layoutY="433.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="continuar_op" disable="false" mnemonicParsing="false" onAction="#continuarOP" prefHeight="26.0" prefWidth="95.0" text="Continuar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="160.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelar" mnemonicParsing="false" onAction="#cancelarOP" prefHeight="26.0" prefWidth="95.0" text="Cancelar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="70.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <Label fx:id="titulo" alignment="CENTER" layoutX="-3.0" layoutY="5.0" prefHeight="43.0" prefWidth="572.0" text="BLOQUEOS / TARJETA CRÉDITO" textFill="#212C7B">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <StackPane fx:id="panel_tabla" alignment="CENTER" layoutX="5.0" layoutY="58.0" maxHeight="295.0" maxWidth="556.0" minHeight="274.0" minWidth="556.0" prefHeight="295.0" prefWidth="556.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="295.0" maxWidth="556.0" minHeight="274.0" minWidth="556.0" prefHeight="295.0" prefWidth="556.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn id="numero" maxWidth="5000.0" minWidth="10.0" prefWidth="168.0" text="Número" fx:id="numero" />
+                        <TableColumn id="tipo_tarjeta" maxWidth="5000.0" minWidth="10.0" prefWidth="193.0" text="Tipo de Tarjeta" fx:id="tipo_tarjeta" />
+                        <TableColumn id="bloqueo_tarjeta" maxWidth="5000.0" minWidth="10.0" prefWidth="178.0" text="Bloqueo de Tarjeta" fx:id="bloqueo_tarjeta" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </StackPane>
+        <HBox fx:id="menu_progreso" alignment="CENTER" layoutX="68.0" layoutY="411.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <Separator layoutX="0.0" layoutY="48.0" orientation="HORIZONTAL" prefHeight="10.0" prefWidth="572.0" visible="false" />
+    </children>
+    <stylesheets>
+        <URL value="@bloqueostdc.css" />
+    </stylesheets>
+</AnchorPane>

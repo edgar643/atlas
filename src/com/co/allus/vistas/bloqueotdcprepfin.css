@@ -1,0 +1,76 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+}
+
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-font-size: 14px;
+    -fx-background-color: #212C7B; 
+    -fx-border-color: white;    
+}
+
+.table-view .column-header .label .text
+{
+    -fx-fill:white;
+    -fx-font-size: 14px;  
+    -fx-text-alignment: center;
+}
+
+.table-view:row-selection .table-row-cell:filled:even .table-cell:filled:even
+{
+    -fx-alignment: CENTER;
+    -fx-text-alignment:CENTER; 
+    -fx-font-size: 14px; 
+
+}
+
+.table-view:row-selection .table-row-cell:odd:filled .table-cell:odd:filled
+{
+    -fx-alignment: CENTER;
+    -fx-text-alignment:CENTER; 
+    -fx-font-size: 14px; 
+
+}
+
+.table-view .column-header .label .text
+{
+    -fx-fill:white;   
+}
+
+.table-view .column-header .label
+{
+    -fx-fill:black;
+
+}
+
+.table-view:row-selection
+{
+    -fx-cursor: hand;
+
+}
+
+.split-pane:horizontal > * > .split-pane-divider {
+    -fx-border-color: transparent -fx-base transparent -fx-base;
+    -fx-background-color: transparent, derive(-fx-base,20%);
+    -fx-background-insets: 0, 0 1 0 1;
+}
+
+.button
+{
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-color: white; 
+    -fx-border-color: white;
+
+}

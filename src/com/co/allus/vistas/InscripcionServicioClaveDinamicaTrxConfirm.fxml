@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.InscripcionServicioClaveDinamicaTrxConfirmController">
+    <children>
+        <Label fx:id="titulosActDatSeguridad" alignment="CENTER" layoutX="2.0" layoutY="0.0" prefHeight="49.0" prefWidth="572.0" text="" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="67.0" layoutY="380.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <Button fx:id="continuar_op" layoutX="161.0" layoutY="410.0" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE" />
+        <Button fx:id="cancelar" layoutX="322.0" layoutY="410.0" mnemonicParsing="false" onAction="#cancel_op" prefHeight="26.0" prefWidth="95.0" text="Regresar" textFill="WHITE" />
+        <Label alignment="CENTER_RIGHT" layoutX="92.0" layoutY="111.0" prefWidth="129.0" text="Nombre del cliente">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label alignment="CENTER_RIGHT" font="$x1" layoutX="92.0" layoutY="148.0" prefWidth="129.0" text="Cédula" />
+        <Label alignment="CENTER_RIGHT" font="$x1" layoutX="92.0" layoutY="276.0" prefWidth="129.0" text="Número de celular" />
+        <Label alignment="CENTER_RIGHT" font="$x1" layoutX="92.0" layoutY="193.0" prefWidth="129.0" text="E-mail" />
+        <Label alignment="CENTER_RIGHT" font="$x1" layoutX="92.0" layoutY="236.0" prefWidth="129.0" text="Tipo de E-mail" />
+        <TextField fx:id="nombreCliente" layoutX="270.0" layoutY="105.0" prefWidth="237.0" text="" />
+        <TextField fx:id="cedulaCliente" layoutX="270.0" layoutY="148.0" prefWidth="237.0" />
+        <TextField fx:id="celularCliente" layoutX="270.0" layoutY="273.0" prefWidth="236.9998779296875" />
+        <TextField fx:id="Email" layoutX="269.0" layoutY="193.0" prefWidth="237.0" />
+        <TextField fx:id="tipoMail" layoutX="270.0" layoutY="233.0" prefWidth="237.0" />
+        <Label alignment="CENTER" layoutX="0.0" layoutY="359.0" prefHeight="22.0" prefWidth="572.0" text="Confirmar datos con el cliente" textFill="#9f9f9f">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER_RIGHT" font="$x1" layoutX="92.0" layoutY="315.0" prefWidth="129.0" text="Tipo de Mecanismo" />
+        <TextField fx:id="tipoMecanismo" layoutX="269.0" layoutY="312.0" prefWidth="237.00009999999747" />
+    </children>
+    <stylesheets>
+        <URL value="@inscripcionservicioclavedinamicatrxconfirm.css" />
+    </stylesheets>
+</AnchorPane>

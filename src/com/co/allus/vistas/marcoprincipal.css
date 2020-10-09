@@ -1,0 +1,651 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+}
+
+/*
+ * propiedades para el tree view
+*/
+
+.tree-cell:odd:filled:expanded>.text
+{ 
+    -fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-text-alignment: center;
+    -fx-background-size: 14;
+}
+
+.tree-cell:odd:filled>.text
+{ 
+    -fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-text-alignment: left;
+    -fx-background-size: 14;
+}
+
+.tree-cell:odd:filled
+{ 
+    -fx-background-color: #0C007D;
+    -fx-background-insets: 0.5,0.5,0.5,0.5;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-cell-size: 30;
+    -fx-text-alignment: left;
+}
+
+.tree-cell:odd:filled:selected
+{ 
+    -fx-background-color: #bf0000;  
+}
+
+.tree-cell:filled:even>.text
+{ 
+    -fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-text-alignment: left;
+    -fx-background-size: 14;
+}
+
+.tree-cell:filled:even
+{ 
+    -fx-background-color: #0C007D;
+    -fx-background-insets: 0.5,0.5,0.5,0.5;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-cell-size: 30;
+    -fx-text-alignment: left;
+}
+
+.tree-cell:filled:even:selected
+{   
+    -fx-background-color: #bf0000;   
+}
+
+.tree-cell .tree-disclosure-node .arrow {
+    -fx-background-color: white;
+    -fx-cursor: hand;
+    -fx-animated: true;
+    /*    -fx-background-image: url(".../recursos/bullet-account.gif");*/
+    /*  visibility: collapse;*/
+}
+
+.tree-cell:expanded .tree-disclosure-node .arrow {
+    -fx-background-color: white;
+    -fx-cursor: hand;
+    -fx-animated: true;
+    /* -fx-background-image: url(".../recursos/bullet-account.gif");*/
+    /*visibility: collapse;*/
+}
+
+.tree-cell:odd:empty
+{ 
+    -fx-background-color: #0C007D;  
+}
+
+.tree-cell:empty:even
+{ 
+    -fx-background-color: #0C007D;  
+}
+
+/*  fin propiedades para el tree view*/
+
+/*    propiedades para el boton*/
+
+.button
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #0C007D;
+    -fx-border-color: white;
+    -fx-border-insets: 1,1,1,1;
+}
+
+/*    propiedades los menus )*/
+.titled-pane:expanded>.title
+{
+    -fx-background-color: #0C007D;
+    -fx-border-color: white;
+    -fx-border-insets: 1,1,1,1;  
+}
+
+.titled-pane >.title
+{
+    -fx-background-color: #0C007D;
+    -fx-border-color: white;
+    -fx-border-insets: 1,1,1,1;  
+}
+
+.titled-pane > .title > .arrow-button >.arrow
+{
+    visibility: collapse;
+}
+
+#Content
+{
+    -fx-background-color: #0C007D;    
+}
+
+.accordion
+{
+    -fx-background-color: #0C007D;    
+    -fx-border-color: white;
+    -fx-border-insets: 1,1,1,1;  
+}
+
+.tree-view:disabled, .tree-view:default:disabled {
+    -fx-opacity: 1;
+    -fx-background-color: transparent;
+    -fx-fill: white;
+    -fx-text-fill: white;
+}
+
+.arbol-transf .tree-cell:filled:expanded:even .text
+{
+    -fx-fill:white;
+    -fx-text-alignment: left;
+    -fx-alignment: center-left;  
+    -fx-font-size: 11;
+    -fx-cell-size: 30;
+}
+
+.arbol-transf .tree-cell:odd:filled:expanded .text
+{
+    fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-font-size: 11;
+    -fx-text-alignment: left;
+    -fx-background-size: 11;
+    -fx-alignment: center-left;
+}
+
+.arbol-transf .tree-cell:odd:filled .text
+{
+    fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-font-size: 11;
+    -fx-text-alignment: left;
+    -fx-background-size: 11;
+    -fx-alignment: center-left; 
+}
+
+.arbol-transf .tree-cell:filled:even .text
+{
+    -fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-alignment: center-left;
+    -fx-font-size: 11;
+    -fx-text-alignment: left;
+    -fx-background-size: 11;  
+    -fx-font-weight: bold;
+}
+
+.arbol-transf.tree-cell:odd:filled
+{ 
+    -fx-background-color: #0C007D;
+    -fx-background-insets: 0.5,0.5,0.5,0.5;
+    -fx-font-size: 11;
+    -fx-font-weight: bold;
+    -fx-cell-size: 30;
+    -fx-text-alignment: left;
+}
+
+.arbol-transf.tree-cell:filled:even
+{
+    -fx-background-color: #0C007D;
+    -fx-background-insets: 0.5,0.5,0.5,0.5;
+    -fx-font-size: 11;
+    -fx-font-weight: bold;
+    -fx-cell-size: 30;
+    -fx-text-alignment: left;
+}
+
+.arbol_serviciosad .tree-cell:filled:expanded:even .text
+{
+
+    -fx-fill:white;
+    -fx-text-alignment: left;
+    -fx-alignment: center-left;  
+    -fx-font-size: 11;
+    -fx-cell-size: 30;
+}
+
+.arbol_serviciosad .tree-cell:odd:filled:expanded .text
+{
+    fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-font-size: 11;
+    -fx-text-alignment: left;
+    -fx-background-size: 11;
+    -fx-alignment: center-left;
+}
+
+.arbol_serviciosad .tree-cell:odd:filled .text
+{
+    fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-font-size: 11;
+    -fx-text-alignment: left;
+    -fx-background-size: 11;
+    -fx-alignment: center-left; 
+}
+
+.arbol_serviciosad .tree-cell:filled:even .text
+{
+    -fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-alignment: center-left;
+    -fx-font-size: 11;
+    -fx-text-alignment: left;
+    -fx-background-size: 11;  
+    -fx-font-weight: bold;
+}
+
+.arbol_serviciosad.tree-cell:odd:filled
+{ 
+    -fx-background-color: #0C007D;
+    -fx-background-insets: 0.5,0.5,0.5,0.5;
+    -fx-font-size: 11;
+    -fx-font-weight: bold;
+    -fx-cell-size: 30;
+    -fx-text-alignment: left;
+}
+
+.arbol_serviciosad.tree-cell:filled:even
+{
+    -fx-background-color: #0C007D;
+    -fx-background-insets: 0.5,0.5,0.5,0.5;
+    -fx-font-size: 11;
+    -fx-font-weight: bold;
+    -fx-cell-size: 30;
+    -fx-text-alignment: left;
+}
+
+.arbol-pagos.tree-cell:filled:expanded:even .text
+{
+    -fx-fill:white;
+    -fx-text-alignment: left;
+    -fx-alignment: center-left;  
+    -fx-font-size: 14;
+    -fx-cell-size: 25;
+    -fx-cursor: hand;
+}
+
+.arbol-pagos.tree-cell:odd:filled:expanded .text
+{
+    fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-font-size: 14;
+    -fx-text-alignment: left;
+    -fx-background-size: 14;
+    -fx-alignment: center-left;
+}
+
+.arbol-pagos.tree-cell:filled:even .text
+{
+    -fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-alignment: center-left;
+    -fx-font-size: 14;
+    -fx-text-alignment: left;
+    -fx-background-size: 14;  
+    -fx-font-weight: bold;
+}
+
+.arbol-pagos.tree-cell:odd:filled
+{ 
+    -fx-background-color: #0C007D;    
+    -fx-background-insets: 1,1,1,1;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left;
+}
+
+.arbol-pagos.tree-cell:filled:even
+{
+    -fx-background-color: #0C007D;
+    -fx-background-insets: 1,1,1,1;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left;
+}
+
+/* BLOQUEOS */
+
+.arbol-bloqueos.tree-cell:filled:expanded:even .text
+{
+    -fx-fill:white;
+    -fx-text-alignment: left;
+    -fx-alignment: center-left;  
+    -fx-font-size: 11,5;
+    -fx-cell-size: 25;
+}
+
+.arbol-bloqueos.tree-cell:odd:filled:expanded .text
+{
+    fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-font-size: 11,5;
+    -fx-text-alignment: center;
+    -fx-background-size: 12;
+    -fx-alignment: center-left;
+}
+
+.arbol-bloqueos.tree-cell:filled:even .text
+{
+    -fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-alignment: center-left;
+    -fx-font-size: 11,5;
+    -fx-text-alignment: left;
+    -fx-background-size: 12;  
+    -fx-font-weight: bold;
+}
+
+.arbol-bloqueos.tree-cell:odd:filled
+{ 
+    -fx-background-color: #0C007D;    
+    -fx-background-insets: 1,1,1,1;
+    -fx-font-size: 11,5;
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left;
+}
+
+.arbol-bloqueos.tree-cell:filled:even
+{
+    -fx-background-color: #0C007D;
+    -fx-background-insets: 1,1,1,1;
+    -fx-font-size: 11,5;
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left;
+}
+
+.arbol-bloqueos .tree-cell:filled:expanded:even .text
+{
+    -fx-font-size: 11,5; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left;
+}
+
+.arbol-bloqueos .tree-cell:filled:even .text
+{
+    -fx-font-size: 11,5; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left; 
+}
+
+.arbol-bloqueos .tree-cell:odd:filled:expanded .text
+{
+    -fx-font-size: 11,5; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left;   
+}
+
+.arbol-bloqueos .tree-cell:odd:filled .text
+{
+    -fx-font-size: 11,5; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left;  
+}
+
+.arbolMovimientos.tree-cell:filled:expanded:even .text
+{
+    -fx-fill:white;
+    -fx-text-alignment: center;
+    -fx-alignment: center-left;  
+    -fx-font-size: 12;
+    -fx-cell-size: 25;
+}
+
+.arbolMovimientos.tree-cell:odd:filled:expanded .text
+{
+    fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-font-size: 12;
+    -fx-text-alignment: center;
+    -fx-background-size: 12;
+    -fx-alignment: center-left;
+}
+
+.arbolMovimientos.tree-cell:filled:even .text
+{
+    -fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-alignment: center-left;
+    -fx-font-size: 12;
+    -fx-text-alignment: center;
+    -fx-background-size: 12;  
+    -fx-font-weight: bold;
+}
+
+.arbolMovimientos.tree-cell:odd:filled
+{ 
+    -fx-background-color: #0C007D;    
+    -fx-background-insets: 1,1,1,1;
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: center;
+}
+
+.arbolMovimientos.tree-cell:filled:even
+{
+    -fx-background-color: #0C007D;
+    -fx-background-insets: 1,1,1,1;
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: center;
+}
+
+.arbolMovimientos .tree-cell:filled:expanded:even .text
+{
+    -fx-font-size: 13; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: center;
+}
+
+.arbolMovimientos .tree-cell:filled:even .text
+{
+    -fx-font-size: 13; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: center; 
+}
+
+.arbolMovimientos .tree-cell:odd:filled:expanded .text
+{
+    -fx-font-size: 13; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: center;   
+}
+
+.arbolMovimientos .tree-cell:odd:filled .text
+{
+    -fx-font-size: 13; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: center;  
+}
+
+.arbolMovimientos.tree-cell:filled:expanded:even .text
+{
+    -fx-fill:white;
+    -fx-text-alignment: center;
+    -fx-alignment: center-left;  
+    -fx-font-size: 12;
+    -fx-cell-size: 25;
+}
+
+.arbolMovimientos.tree-cell:odd:filled:expanded .text
+{
+    fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-font-size: 12;
+    -fx-text-alignment: center;
+    -fx-background-size: 12;
+    -fx-alignment: center-left;
+}
+
+.arbolMovimientos.tree-cell:filled:even .text
+{
+    -fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-alignment: center-left;
+    -fx-font-size: 12;
+    -fx-text-alignment: center;
+    -fx-background-size: 12;  
+    -fx-font-weight: bold;
+}
+
+.arbolMovimientos.tree-cell:odd:filled
+{ 
+    -fx-background-color: #0C007D;    
+    -fx-background-insets: 1,1,1,1;
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: center;
+}
+
+.arbolMovimientos.tree-cell:filled:even
+{
+    -fx-background-color: #0C007D;
+    -fx-background-insets: 1,1,1,1;
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: center;
+}
+
+.arbolMovimientos .tree-cell:filled:expanded:even .text
+{
+    -fx-font-size: 13; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: center;
+}
+
+.arbolMovimientos .tree-cell:filled:even .text
+{
+    -fx-font-size: 13; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: center; 
+}
+
+.arbolMovimientos .tree-cell:odd:filled:expanded .text
+{
+    -fx-font-size: 13; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: center;   
+}
+
+.arbolMovimientos .tree-cell:odd:filled .text
+{
+    -fx-font-size: 13; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: center;  
+}
+
+.arbol-style.tree-cell:filled:expanded:even .text
+{
+    -fx-fill:white;
+    -fx-text-alignment: left;
+    -fx-alignment: center-left;  
+    -fx-font-size: 11,5;
+    -fx-cell-size: 25;
+}
+
+.arbol-style.tree-cell:odd:filled:expanded .text
+{
+    fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-font-size: 11,5;
+    -fx-text-alignment: center;
+    -fx-background-size: 12;
+    -fx-alignment: center-left;
+}
+
+.arbol-style.tree-cell:filled:even .text
+{
+    -fx-fill:white;
+    /*    -fx-cursor: hand;*/
+    -fx-alignment: center-left;
+    -fx-font-size: 11,5;
+    -fx-text-alignment: left;
+    -fx-background-size: 12;  
+    -fx-font-weight: bold;
+}
+
+.arbol-style.tree-cell:odd:filled
+{ 
+    -fx-background-color: #0C007D;    
+    -fx-background-insets: 1,1,1,1;
+    -fx-font-size: 11,5;
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left;
+}
+
+.arbol-style.tree-cell:filled:even
+{
+    -fx-background-color: #0C007D;
+    -fx-background-insets: 1,1,1,1;
+    -fx-font-size: 11,5;
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left;
+}
+
+.arbol-style .tree-cell:filled:expanded:even .text
+{
+    -fx-font-size: 11,5; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left;
+}
+
+.arbol-style .tree-cell:filled:even .text
+{
+    -fx-font-size: 11,5; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left; 
+}
+
+.arbol-style .tree-cell:odd:filled:expanded .text
+{
+    -fx-font-size: 11,5; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left;   
+}
+
+.arbol-style .tree-cell:odd:filled .text
+{
+    -fx-font-size: 11,5; 
+    -fx-font-weight: bold;
+    -fx-cell-size: 25;
+    -fx-text-alignment: left;  
+}
+
+#panetime
+{
+    /* -fx-background-color: #212C7B;    */
+
+}

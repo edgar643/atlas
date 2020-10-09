@@ -1,0 +1,67 @@
+/* 
+    Document   : ActualizacionDatosSeguridad
+    Created on : 21-mar-2016, 20:03:33
+    Author     : luis.cuervo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.mainFxmlClass {
+
+}
+
+
+.button
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #212C7B;
+    -fx-border-color: white;
+    /*    -fx-border-insets: 1,1,1,1;  */
+}
+
+/*.text-field:readonly
+{
+
+    -fx-text-fill: GRAY;
+    -fx-font-weight: bold;
+
+}*/
+
+.texto-gris
+{
+
+    -fx-text-fill: GRAY;
+    -fx-font-weight: bold;
+
+}
+
+.avisos
+{
+    -fx-text-fill: RED;
+    -fx-font-weight: bold;
+}
+
+.combo-box
+{
+
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-color: white;
+    -fx-border-color: #C0C0C0;
+}
+
+.combo-box .arrow-button.arrow
+{
+    -fx-background-color: white;
+    -fx-cursor: hand;
+    -fx-animated: true;
+
+}
+.combo-box .arrow-button
+{
+    -fx-background-color:#C0C0C0;
+    -fx-cursor: hand;
+    -fx-animated: true;
+
+}

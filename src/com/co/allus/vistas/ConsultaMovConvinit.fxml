@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ConsultaMovConvinitController">
+    <children>
+        <Label id="tituloCDTfin" alignment="CENTER" focusTraversable="false" layoutX="0.0" layoutY="1.0" prefHeight="26.0" prefWidth="572.0" text="CONSULTA MOVIMIENTO TRANSACCIONAL CONVENIO" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+        <Button fx:id="buscar" layoutX="229.0" layoutY="384.0" mnemonicParsing="false" onAction="#buscarOP" prefHeight="27.0" prefWidth="118.0" text="Buscar" />
+        <TextField fx:id="numConv" layoutX="61.0" layoutY="217.0" onKeyPressed="#numConvkeyPress" onKeyTyped="#numConvkeytyped" prefWidth="159.0" />
+        <TextField fx:id="numCtaRec" layoutX="326.0" layoutY="217.0" prefWidth="159.0" />
+        <DatePicker fx:id="fechaini" layoutX="188.0" layoutY="115.0" prefWidth="89.0" promptText="Desde">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <DatePicker fx:id="fechafin" layoutX="294.0" layoutY="115.0" prefWidth="89.0" promptText="Hasta">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <Label layoutX="61.0" layoutY="187.0" prefWidth="159.0" text="Número de Convenio">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label font="$x1" layoutX="323.0" layoutY="187.0" prefWidth="189.0" text="Numero de Cuenta Recaudadora" />
+        <Label alignment="CENTER" font="$x1" layoutX="207.0" layoutY="64.0" prefWidth="159.0" text="Fecha del Movimiento" />
+        <HBox fx:id="menu_progreso" alignment="CENTER" layoutX="61.0" layoutY="302.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true" />
+        <ProgressBar fx:id="progreso" layoutX="188.0" layoutY="363.0" prefWidth="200.0" progress="0.0" visible="true" />
+        <ComboBox fx:id="tipo_cuenta" layoutX="323.0" layoutY="275.0" onAction="#selTipocta" prefHeight="25.0" prefWidth="165.0" />
+        <Label font="$x1" layoutX="323.0" layoutY="251.0" prefWidth="189.0" text="Tipo de Cuenta Recaudadora" />
+    </children>
+    <stylesheets>
+        <URL value="@consultamovconvinit.css" />
+    </stylesheets>
+</AnchorPane>

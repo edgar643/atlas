@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="com.co.allus.controladoresfxml.DesbloqSClaveCorpController">
+    <children>
+        <Label id="titulosPagos" alignment="CENTER" layoutX="3.0" layoutY="14.0" prefHeight="49.0" prefWidth="572.0" text="DESBLOQUEO SEGUNDA CLAVE" textFill="#212C7B">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="14.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../recursos/warning-icon.png" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" layoutX="102.0" layoutY="178.0" prefHeight="36.0" prefWidth="446.0" text="Recuerde realizar al cliente las preguntas de validación">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="checkValidacionPreg" layoutX="180.0" layoutY="282.0" mnemonicParsing="false" onAction="#selCheckPreguntas" prefHeight="20.0" prefWidth="242.0" text="Cliente respondió correctamente">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <stylesheets>
+                <URL value="@pagostdcpropiastrxdatos.css" />
+            </stylesheets>
+        </RadioButton>
+        <HBox layoutX="3.0" layoutY="431.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="continuar_op" disable="true" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="160.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancel_op" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="70.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+        <URL value="@desbloqsclavecorp.css" />
+    </stylesheets>
+</AnchorPane>

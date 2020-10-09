@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="757.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.CambioMecanismoController">
+    <children>
+        <Label alignment="CENTER" layoutX="3.0" layoutY="0.0" prefHeight="43.0" prefWidth="572.0" text="CAMBIO DE TIPO DE MECANISMO" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="0.0" layoutY="50.0" prefWidth="572.0" text="Confirmar los datos de seguridad con el cliente">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="65.0" layoutY="99.0" prefHeight="30.0" prefWidth="202.0" text="Número de Celular">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" font="$x1" layoutX="65.0" layoutY="148.0" prefHeight="30.0" prefWidth="202.0" text="Correo Electrónico" />
+        <Label alignment="CENTER" font="$x1" layoutX="65.0" layoutY="199.0" prefHeight="30.0" prefWidth="202.0" text="Tipo de Correo" />
+        <TextField fx:id="num_cel" disable="true" editable="false" layoutX="308.0" layoutY="99.0" opacity="1.0" prefHeight="30.0" prefWidth="200.0" text="" />
+        <TextField fx:id="email" disable="true" editable="false" layoutX="308.0" layoutY="148.0" opacity="1.0" prefHeight="30.0" prefWidth="200.0" />
+        <TextField fx:id="tipo_email" editable="false" layoutX="308.0" layoutY="199.0" prefHeight="30.0" prefWidth="119.0" />
+        <Label fx:id="warningcelular" layoutX="518.0" layoutY="101.0" minWidth="20.0" prefHeight="25.999900000002526" prefWidth="25.0" text="" textFill="WHITE" visible="false">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="30.6666658762339" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../recursos/warning-icon.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <stylesheets>
+                <URL value="@pagostercerosdatospago1.css" />
+            </stylesheets>
+            <tooltip>
+                <Tooltip contentDisplay="CENTER" styleClass="ttip" text="Número Celular inválido" textAlignment="CENTER" />
+            </tooltip>
+        </Label>
+        <Label fx:id="warningemail" layoutX="518.0" layoutY="150.0" minWidth="20.0" prefHeight="25.999900000002526" prefWidth="25.0" text="" textFill="WHITE" visible="false">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="30.6666658762339" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../recursos/warning-icon.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <stylesheets>
+                <URL value="@pagostercerosdatospago1.css" />
+            </stylesheets>
+            <tooltip>
+                <Tooltip contentDisplay="CENTER" styleClass="ttip" text="Correo Electrónico inválido" textAlignment="CENTER" />
+            </tooltip>
+        </Label>
+        <Separator layoutX="-3.0" layoutY="247.0" prefHeight="10.0" prefWidth="572.0" />
+        <HBox layoutX="2.0" layoutY="430.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="continuar_op" disable="true" mnemonicParsing="false" onAction="#continuarOP" prefHeight="26.0" prefWidth="95.0" text="Continuar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="160.0" />
+                    </HBox.margin>
+                </Button>
+                <Button id="cancelar" mnemonicParsing="false" onAction="#cancelarOP" prefHeight="26.0" prefWidth="95.0" text="Cancelar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="70.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <HBox fx:id="menu_progreso" alignment="CENTER" layoutX="63.0" layoutY="408.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <Label alignment="CENTER" font="$x1" layoutX="65.0" layoutY="264.0" prefHeight="30.0" prefWidth="202.0" text="Tipo de Mecanismo Actual" />
+        <TextField fx:id="tipoMecanismoAct" editable="false" layoutX="308.0" layoutY="264.0" prefHeight="30.0" prefWidth="119.0" />
+        <VBox layoutX="308.0" prefHeight="67.0" prefWidth="202.0" AnchorPane.topAnchor="306.0">
+            <children>
+                <RadioButton fx:id="odatoemail" disable="false" mnemonicParsing="false" onAction="#selodatoemail" prefHeight="20.0" text="Cambiar a Email" visible="true">
+                    <font>
+                        <Font name="System Bold" size="14.0" fx:id="x2" />
+                    </font>
+                    <stylesheets>
+                        <URL value="@pagostdcpropiastrxdatos.css" />
+                    </stylesheets>
+                    <VBox.margin>
+                        <Insets top="10.0" fx:id="x3" />
+                    </VBox.margin>
+                </RadioButton>
+                <RadioButton fx:id="odatosms" disable="false" font="$x2" mnemonicParsing="false" onAction="#selodatosms" prefHeight="20.0" text="Cambiar a SMS" visible="true" VBox.margin="$x3" />
+            </children>
+        </VBox>
+        <Label fx:id="mensajeAd" alignment="CENTER" layoutX="4.0" layoutY="375.0" prefHeight="30.0" prefWidth="568.0" text="" textAlignment="CENTER" textFill="RED">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" font="$x1" layoutX="65.0" layoutY="329.0" prefHeight="30.0" prefWidth="202.0" text="Cambio de Tipo de Mecanismo" />
+    </children>
+    <stylesheets>
+        <URL value="@cambiomecanismo.css" />
+    </stylesheets>
+</AnchorPane>

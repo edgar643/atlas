@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="600.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.BolsillosDetalleController">
+    <children>
+        <Label alignment="CENTER" layoutX="-3.0" layoutY="0.0" prefHeight="43.0" prefWidth="572.0" text="DETALLE DEL BOLSILLO">
+            <font>
+                <Font name="System Bold" size="20.0" fx:id="x1" />
+            </font>
+            <textFill>
+                <Color blue="0.482" green="0.173" red="0.129" fx:id="x2" />
+            </textFill>
+        </Label>
+        <StackPane fx:id="panel_tabla" alignment="CENTER" maxHeight="320.0" maxWidth="556.0" minHeight="230.0" minWidth="527.0" prefHeight="320.0" prefWidth="527.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="80.0">
+            <children>
+                <TableView fx:id="tablaDatosDetalleBolsillo" maxHeight="320.0" maxWidth="556.0" minHeight="320.0" minWidth="527.0" prefHeight="320.0" prefWidth="527.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn id="descripcion" maxWidth="320.0" minWidth="320.0" prefWidth="320.0" text="DESCRIPCIÓN" fx:id="descripcion" />
+                        <TableColumn id="informacion" maxWidth="193.0" minWidth="193.0" prefWidth="193.0" text="INFORMACIÓN" fx:id="informacion" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </StackPane>
+        <Separator layoutX="0.0" layoutY="43.0" orientation="HORIZONTAL" prefHeight="10.0" prefWidth="572.0" visible="false" />
+        <Button fx:id="regresar_trx" disable="false" layoutX="229.0" layoutY="440.0" mnemonicParsing="false" onAction="#regresar_op" prefHeight="27.0" prefWidth="108.0" text="Regresar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="cancelar_trx" layoutX="388.0" layoutY="440.0" mnemonicParsing="false" onAction="#cancelar_op" prefHeight="27.0" prefWidth="108.0" text="Cancelar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="movimientos_trx" disable="false" layoutX="80.0" layoutY="440.0" mnemonicParsing="false" onAction="#movimientos_op" prefHeight="27.0" prefWidth="108.0" text="Movimientos">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Label fx:id="mensaje_detallebolsillo" alignment="CENTER" font="$x1" layoutX="-3.0" layoutY="43.0" prefHeight="27.0" prefWidth="572.0" text="" textFill="$x2" />
+    </children>
+    <stylesheets>
+        <URL value="@bolsillosdetalle.css" />
+    </stylesheets>
+</AnchorPane>

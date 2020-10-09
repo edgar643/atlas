@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.PuntosColDetalleMovimientoController">
+    <children>
+        <Label id="tituloCreditoHfin" alignment="CENTER" layoutX="2.0" layoutY="0.0" prefHeight="44.0" prefWidth="572.0" text="CONSULTA DETALLE MOVIMIENTOS ACUMULACION&#10;PUNTOS COLOMBIA TDC" textAlignment="CENTER" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <StackPane id="panel_tabla" layoutX="36.0" layoutY="50.0" prefHeight="377.0" prefWidth="503.0">
+            <children>
+                <TableView fx:id="tabla_datos" prefHeight="208.0" prefWidth="503.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="descripcion" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="DESCRIPCIÓN" fx:id="descripcion" />
+                        <TableColumn editable="false" id="informacion" maxWidth="5000.0" minWidth="10.0" prefWidth="318.0" text="INFORMACIÓN" fx:id="informacion" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="249.0" layoutY="427.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="53.0" prefWidth="63.0" styleClass="buttontrx">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="volver" layoutX="36.0" layoutY="439.0" mnemonicParsing="false" onAction="#volverOP" prefHeight="28.0" prefWidth="89.0" text="Volver" textFill="WHITE" />
+    </children>
+    <stylesheets>
+        <URL value="@puntoscoldetallemovimiento.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="600.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ALMLogVinculacionController">
+  <children>
+    <Label alignment="CENTER" layoutX="-3.0" layoutY="0.0" prefHeight="43.0" prefWidth="572.0" text="CONSULTA LOG VINCULACION AHORRO A LA MANO">
+      <font>
+        <Font name="System Bold" size="20.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="0.482" green="0.173" red="0.129" fx:id="x2" />
+      </textFill>
+    </Label>
+    <StackPane fx:id="panel_tabla" alignment="CENTER" maxHeight="295.0" maxWidth="556.0" minHeight="199.0" minWidth="527.0" prefHeight="268.0" prefWidth="527.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="119.0">
+      <children>
+        <TableView fx:id="tablaDatos" maxHeight="295.0" maxWidth="556.0" minHeight="212.0" minWidth="527.0" prefHeight="212.0" prefWidth="527.0" tableMenuButtonVisible="false">
+          <columns>
+            <TableColumn id="numero_identificacion" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Identificación" fx:id="numero_identificacion" />
+            <TableColumn id="numero_celular" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Celular" fx:id="numero_celular" />
+            <TableColumn id="fecha_vinculacion" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Fecha Transaccion" fx:id="fecha_vinculacion" />
+            <TableColumn id="descripcion_trx" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" text="Descripción" fx:id="descripcion_trx" />
+            <TableColumn id="hora" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Hora Transaccion" fx:id="hora" />
+            <TableColumn id="fecha_nacimiento" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Fecha Nacimiento&#10;Ingresada" fx:id="fecha_nacimiento" />
+            <TableColumn id="fecha_redeban" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Fecha Expedición&#10;Ingresada" fx:id="fecha_redeban" />
+            <TableColumn id="fecha_cifin" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Fecha Expedicion&#10;Registrada" fx:id="fecha_cifin" />
+          </columns>
+        </TableView>
+      </children>
+      <padding>
+        <Insets />
+      </padding>
+    </StackPane>
+    <HBox fx:id="menu_progreso" alignment="CENTER" layoutX="68.0" layoutY="424.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true">
+      <children>
+        <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+      </children>
+    </HBox>
+    <Separator layoutX="0.0" layoutY="43.0" orientation="HORIZONTAL" prefHeight="10.0" prefWidth="572.0" visible="false" />
+    <Button fx:id="aceptar_trx" disable="false" layoutX="234.0" layoutY="446.0" mnemonicParsing="false" onAction="#aceptar_op" prefHeight="27.0" prefWidth="108.0" text="Aceptar">
+      <effect>
+        <Bloom />
+      </effect>
+    </Button>
+    <Label alignment="CENTER" layoutX="84.0" layoutY="85.0" prefWidth="128.0" text="Fecha de la consulta" textAlignment="CENTER">
+      <font>
+        <Font name="System Bold" size="12.0" fx:id="x3" />
+      </font>
+    </Label>
+    <DatePicker fx:id="fechaini" layoutX="219.0" layoutY="83.0" prefWidth="138.0" promptText="">
+      <stylesheets>
+        <URL value="@DatePicker.css" />
+      </stylesheets>
+    </DatePicker>
+    <Button fx:id="buscarFechas" layoutX="452.0" layoutY="80.0" mnemonicParsing="false" onAction="#buscarFechas" prefWidth="90.0" text="Buscar" />
+    <RestrictiveTextField fx:id="Celular" isAlphanum="false" layoutX="219.0" layoutY="52.0" onKeyReleased="#valkeypressed" prefHeight="22.0" prefWidth="138.0" restrict="[0-9]" />
+    <Label id="LabelNumeroTDC" alignment="CENTER_LEFT" font="$x3" layoutX="39.0" layoutY="52.0" prefHeight="22.0" prefWidth="173.0" text="Número de celular a consultar" textAlignment="LEFT" />
+    <Button fx:id="limpiarOP" layoutX="364.0" layoutY="80.0" minHeight="17.999900000002526" minWidth="15.0" mnemonicParsing="false" onAction="#limpiarOP" prefHeight="27.0" prefWidth="49.0" styleClass="borrar" text="Button">
+      <graphic>
+        <ImageView fitHeight="16.999908447265625" fitWidth="22.000099999997474" pickOnBounds="true" preserveRatio="false" styleClass="borrar">
+          <image>
+            <Image url="@../recursos/borrar_es.png" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+  </children>
+  <stylesheets>
+    <URL value="@almlogvinculacion.css" />
+  </stylesheets>
+</AnchorPane>

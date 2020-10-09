@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.InactivarAlertasFinController">
+    <children>
+        <Label id="titulosBloqueosClaveppal" alignment="CENTER" prefHeight="43.0" prefWidth="572.0" text="INACTIVAR SERVICIO DE ALERTAS Y NOTIFICACIONES" textFill="#212c7b" AnchorPane.bottomAnchor="438.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="257.0" layoutY="354.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="53.0" prefWidth="63.0">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="147.0" layoutX="30.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="512.0" />
+        <Label alignment="CENTER" layoutX="2.0" layoutY="229.0" prefHeight="82.0" prefWidth="572.0" text="El servicio de Alertas fue INACTIVADO EXITOSAMENTE.&#10;Le informamos que a partir de este momento se harán&#10;efectivos los cambios." textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+    </children>
+    <stylesheets>
+        <URL value="@declinacionestdcfin.css" />
+    </stylesheets>
+</AnchorPane>

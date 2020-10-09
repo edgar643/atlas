@@ -1,0 +1,24 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+}
+
+
+.button
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #212C7B;
+    -fx-border-color: white;
+    -fx-border-insets: 1,1,1,1; 
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+} 
+
+.radio-button *.radio { 
+    -fx-background-color: -fx-shadow-highlight-color,  #0C55FF, -fx-inner-border, #F7F7F7;
+}
+

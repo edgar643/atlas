@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ConsultaPagDebAutoFinController">
+    <children>
+        <Label id="tituloCDTfin" alignment="CENTER" focusTraversable="false" layoutX="2.0" layoutY="2.0" minHeight="22.0" prefHeight="22.0" prefWidth="572.0" text="CONSULTA PAGADORES DEBITO AUTOMATICO" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="90.0" layoutY="21.0" prefHeight="29.0" prefWidth="165.0" text="NIT/CC Cliente pagador" textAlignment="LEFT">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <RestrictiveTextField fx:id="clientePag" layoutX="109.0" layoutY="56.0" onKeyPressed="#clientePagkeypress" onKeyTyped="#clientePagkeyTyped" prefHeight="22.0" prefWidth="126.0" />
+        <Button fx:id="buscar" layoutX="204.0" layoutY="447.0" minHeight="21.999900000002526" mnemonicParsing="false" onAction="#detalleOP" prefHeight="27.0" prefWidth="138.0" text="Detalle" textAlignment="CENTER" textFill="WHITE" />
+        <Button fx:id="indMasReg" layoutX="14.0" layoutY="447.0" mnemonicParsing="false" onAction="#MasRegAction" prefHeight="27.0" prefWidth="118.0" text="Mas Registros" />
+        <Button fx:id="volverMenupag" layoutX="404.0" layoutY="447.0" minHeight="22.0" mnemonicParsing="false" onAction="#volverMenupagOP" prefHeight="27.0" prefWidth="150.0" text="Regresar" />
+        <Label alignment="CENTER" font="$x1" layoutX="353.0" layoutY="21.0" prefHeight="29.0" prefWidth="126.0" text="Referencia Fija" textAlignment="LEFT" />
+        <TextField fx:id="reffija" layoutX="353.0" layoutY="56.0" onKeyPressed="#reffijaKeyPress" onKeyTyped="#reffijakeyTyped" prefHeight="22.0" prefWidth="126.0" />
+        <StackPane fx:id="panel_tabla" layoutX="8.0" layoutY="89.0" minWidth="552.0" prefHeight="287.0" prefWidth="559.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="295.0" maxWidth="775.0" minHeight="274.0" minWidth="556.0" prefHeight="274.0" prefWidth="775.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="Colclientepag" maxWidth="106.0" minWidth="106.0" prefWidth="106.0" resizable="false" sortable="false" text="NIT/CC &#10;Cliente Pagador" fx:id="Colclientepag" />
+                        <TableColumn editable="false" id="ColNomPag" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" resizable="false" sortable="false" text="Nombre del &#10;Cliente Pagador" fx:id="ColNomPag" />
+                        <TableColumn editable="false" id="ColctaDeb" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" sortable="false" text="Cuenta Debitar" fx:id="ColctaDeb" />
+                        <TableColumn editable="false" id="ColTipcta" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" resizable="false" sortable="false" text="Tipo Cuenta" fx:id="ColTipcta" />
+                        <TableColumn editable="false" id="ColBanco" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" resizable="false" sortable="false" text="Banco" fx:id="ColBanco" />
+                        <TableColumn editable="false" id="ColrefFija" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" resizable="false" sortable="false" text="Referencia Fija" fx:id="ColrefFija" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <ProgressBar fx:id="progreso" layoutX="173.0" layoutY="430.0" prefWidth="200.0" progress="0.0" visible="true" />
+    </children>
+    <stylesheets>
+        <URL value="@consultapagdebautofin.css" />
+    </stylesheets>
+</AnchorPane>

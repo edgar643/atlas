@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ConsultaCrediagilAFCController">
+    <children>
+        <StackPane fx:id="panel_tabla" layoutX="0.0" layoutY="155.0" prefHeight="53.0" prefWidth="575.0">
+            <children>
+                <TableView fx:id="tabla_datos" prefHeight="68.0" prefWidth="575.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn id="colCupoAsignado" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Cupo Asignado" fx:id="colCupoAsignado" />
+                        <TableColumn id="colCupoUtilzado" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Cupo Utilizado" fx:id="colCupoUtilzado" />
+                        <TableColumn id="colCupoDisponible" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Cupo Disponible" fx:id="colCupoDisponible" />
+                        <TableColumn id="colValor" maxWidth="152.0" minWidth="127.0" prefWidth="140.0" text="Valor en canje" fx:id="colValor" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Button fx:id="desembolso_op" layoutX="101.0" layoutY="341.0" mnemonicParsing="false" onAction="#desembolso_op" prefHeight="25.0" prefWidth="146.0" styleClass="button_b" text="Realizar Desembolso" />
+        <Label alignment="CENTER" layoutX="39.0" layoutY="17.0" prefHeight="27.0" prefWidth="498.0" text="CREDIÁGIL" textFill="#003986">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="361.0" layoutY="327.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#terminar_trx" prefHeight="53.0" prefWidth="63.0" styleClass="terminar_trx">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@consultacrediagilafc.css" />
+    </stylesheets>
+</AnchorPane>

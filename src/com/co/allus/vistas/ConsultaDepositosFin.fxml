@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ConsultaDepositosFinController">
+    <children>
+        <HBox layoutX="-5.0" layoutY="438.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="continuar_op" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="15.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelar_op" mnemonicParsing="false" onAction="#retornar" prefHeight="26.0" prefWidth="95.0" text="Cancelar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="20.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="168.0" />
+            </padding>
+        </HBox>
+        <StackPane fx:id="panel_tabla" focusTraversable="false" layoutX="148.0" layoutY="56.0" prefHeight="300.0" prefWidth="290.0">
+            <children>
+                <TableView fx:id="tabla_datos" focusTraversable="true" prefHeight="300.0" prefWidth="290.0000999999975" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="col_numCuenta" maxWidth="210.0" minWidth="198.0" prefWidth="198.0" text="Número Cuenta" fx:id="col_numCuenta" />
+                        <TableColumn editable="false" id="col_estado" maxWidth="93.0" minWidth="75.0" prefWidth="90.0" text="Estado" fx:id="col_estado" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label fx:id="lbltitulo" alignment="CENTER" layoutX="3.0" layoutY="0.0" prefHeight="43.0" prefWidth="572.0" text="" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="60.0" layoutY="402.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+        <URL value="@consultadepositosfin.css" />
+    </stylesheets>
+</AnchorPane>

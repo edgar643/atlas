@@ -1,0 +1,62 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+}
+
+
+.table-view .column-header, .table-view .filler {
+    -fx-font-size: 12px;
+    -fx-background-color: #212C7B; 
+    -fx-border-color: white;       
+}
+
+.table-view:row-selection .table-row-cell:filled:even .table-cell:filled:even
+{
+    -fx-alignment: CENTER;
+    -fx-text-alignment:CENTER; 
+
+}
+
+.table-view .column-header .label .text
+{
+    -fx-fill:white;   
+}
+
+.table-view .column-header .label
+{
+    -fx-fill:black;
+
+}
+
+.table-view:row-selection
+{
+    -fx-cursor: hand;
+
+}
+
+.split-pane:horizontal > * > .split-pane-divider {
+    -fx-border-color: transparent -fx-base transparent -fx-base;
+    -fx-background-color: transparent, derive(-fx-base,20%);
+    -fx-background-insets: 0, 0 1 0 1;
+}
+
+.button
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #212C7B;
+    -fx-border-color: white;
+    -fx-border-insets: 1,1,1,1;
+}
+
+.buttontrx
+{
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-color: white; 
+    -fx-border-color: white;
+
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ConsultaArhEnvDetController">
+    <children>
+        <Label id="tituloCDTfin" alignment="CENTER" focusTraversable="false" layoutX="14.0" layoutY="1.0" prefHeight="26.0" prefWidth="572.0" text="CONSULTA DETALLE ARCHIVOS ENVIADOS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tabla_datos" layoutX="5.0" layoutY="197.0" prefHeight="159.0" prefWidth="547.0">
+            <columns>
+                <TableColumn id="descripcion" maxWidth="5000.0" minWidth="10.0" prefWidth="219.0" text="DESCRIPCIÓN" fx:id="descripcion" />
+                <TableColumn id="informacion" maxWidth="5000.0" minWidth="10.0" prefWidth="340.0" text="INFORMACIÓN" fx:id="informacion" />
+            </columns>
+        </TableView>
+        <StackPane fx:id="panel_tabla" layoutX="10.0" layoutY="36.0" minHeight="69.0" minWidth="533.0" prefHeight="69.0" prefWidth="533.0">
+            <children>
+                <TableView fx:id="tabla_datos1" maxHeight="295.0" maxWidth="775.0" minHeight="62.0" minWidth="542.0" prefHeight="69.0" prefWidth="542.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="ColFechaEnv" maxWidth="149.0" minWidth="149.0" prefWidth="149.0" resizable="false" sortable="false" text="Fecha Envio" fx:id="ColFechaEnv" />
+                        <TableColumn editable="false" id="ColNumReg" maxWidth="225.0" minWidth="225.0" prefWidth="225.0" resizable="false" sortable="false" text="Numero &#10;Registro" fx:id="ColNumReg" />
+                        <TableColumn editable="false" id="ColValTotal" maxWidth="165.0" minWidth="153.0" prefWidth="165.0" sortable="false" text="Valor Total" fx:id="ColValTotal" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Button fx:id="volver" cancelButton="false" layoutX="12.0" layoutY="413.0" mnemonicParsing="false" onAction="#volverop" prefHeight="54.0" prefWidth="166.0" styleClass="boton_return" text="volver menu &#10;recaudos" textFill="WHITE" />
+        <Button fx:id="volverMenuEnv" cancelButton="false" layoutX="380.0" layoutY="424.0" minHeight="26.0" mnemonicParsing="false" onAction="#volverMenuEnvOP" prefHeight="33.0" prefWidth="166.0" styleClass="boton_return" text="Volver" textFill="WHITE" />
+    </children>
+    <stylesheets>
+        <URL value="@consultaarhrecibdet.css" />
+    </stylesheets>
+</AnchorPane>

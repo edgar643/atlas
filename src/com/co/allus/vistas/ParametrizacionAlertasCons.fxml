@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ParametrizacionAlertasConsController">
+    <children>
+        <Label id="label" alignment="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="29.0" prefWidth="575.0" text="CONSULTA PARAMETRIZACION ALERTAS Y NOTIFICACIONES" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <StackPane fx:id="panel_tabla" layoutX="-2.0" layoutY="55.0" maxWidth="572.0" minHeight="201.0" minWidth="570.0" prefHeight="203.0" prefWidth="572.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" editable="false" focusTraversable="true" maxHeight="304.0" maxWidth="567.0" minHeight="200.0" minWidth="556.0" prefHeight="200.0" prefWidth="567.0" scaleX="1.0" scaleY="1.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="tipotrx" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="true" sortType="ASCENDING" sortable="true" text="Tipo transacción" visible="true" fx:id="tipotrx" />
+                        <TableColumn editable="false" id="monto" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" sortable="true" text="Monto" visible="true" fx:id="monto" />
+                        <TableColumn editable="false" id="nroOp" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" resizable="true" sortable="true" text="No&#10;Operaciones" visible="true" fx:id="nroOp" />
+                        <TableColumn editable="false" id="fechaultparam" maxWidth="153.0" minWidth="153.0" prefWidth="153.0" sortType="ASCENDING" sortable="true" text="Fecha ultima &#10;parametrización" visible="true" fx:id="fechaultparam" />
+                    </columns>
+                    <rotationAxis>
+                        <Point3D x="1.0" />
+                    </rotationAxis>
+                </TableView>
+            </children>
+        </StackPane>
+        <StackPane fx:id="panel_tabla2" layoutX="14.0" layoutY="319.0" minHeight="97.0" prefHeight="148.0" prefWidth="406.0">
+            <children>
+                <TableView fx:id="tabla_datos2" disable="false" editable="false" focusTraversable="true" maxHeight="304.0" maxWidth="567.0" minHeight="97.0" minWidth="206.0" prefHeight="97.0" prefWidth="406.0" scaleX="1.0" scaleY="1.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="tipotrx2" maxWidth="228.0" minWidth="228.0" prefWidth="228.0" resizable="true" sortType="ASCENDING" sortable="true" text="Tipo transacción" visible="true" fx:id="tipotrx2" />
+                        <TableColumn editable="false" id="fechaultParam2" maxWidth="163.0" minWidth="163.0" prefWidth="163.0" sortable="true" text="Fecha ultima parametrización" visible="true" fx:id="fechaultParam2" />
+                    </columns>
+                    <rotationAxis>
+                        <Point3D x="1.0" />
+                    </rotationAxis>
+                    <stylesheets>
+                        <URL value="@prestamos.css" />
+                    </stylesheets>
+                </TableView>
+            </children>
+        </StackPane>
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="457.0" layoutY="380.0" maxHeight="53.0" maxWidth="63.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="53.0" prefWidth="63.0" styleClass="buttontrx">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label layoutX="24.0" layoutY="33.0" prefHeight="19.0" prefWidth="63.0" text="Email :">
+            <font>
+                <Font name="Arial Black" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label font="$x1" layoutX="309.0" layoutY="33.0" prefHeight="19.0" prefWidth="80.0" text="Telefono :" />
+        <Label fx:id="email" layoutX="87.0" layoutY="33.0" prefHeight="19.0" prefWidth="207.0" text="">
+            <font>
+                <Font size="12.0" fx:id="x2" />
+            </font>
+        </Label>
+        <Label fx:id="telefono" font="$x2" layoutX="389.0" layoutY="33.0" prefHeight="19.0" prefWidth="168.0" text="" />
+        <Button fx:id="indmasreg" layoutX="437.0" layoutY="335.0" mnemonicParsing="false" onAction="#MasRegistros" prefHeight="29.0" prefWidth="104.0" text="Mas Registros" textFill="WHITE" />
+    </children>
+    <stylesheets>
+        <URL value="@parametrizacionalertascons.css" />
+    </stylesheets>
+</AnchorPane>

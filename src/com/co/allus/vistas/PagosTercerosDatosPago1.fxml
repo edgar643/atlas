@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../UserComponentsJavaFX/dist/UserComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet pagostercerosdatospago1.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="com.co.allus.controladoresfxml.PagosTercerosDatosPago1Controller">
+    <children>
+        <Label fx:id="titulosPagos" alignment="CENTER" layoutX="0.0" layoutY="18.0" prefHeight="37.0" prefWidth="572.0" text="PAGOS A TERCEROS">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+            <textFill>
+                <Color blue="0.600" green="0.000" red="0.047" fx:id="x1" />
+            </textFill>
+        </Label>
+        <Label fx:id="titulo_nom_conv" alignment="CENTER" layoutX="0.0" layoutY="62.0" minHeight="14.0" prefHeight="26.0" prefWidth="572.0" text="Nombre Convenio" textFill="$x1">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="tipo_Cuenta" layoutX="40.0" layoutY="126.0" onAction="#seleccionTipoCuenta" prefHeight="26.0" prefWidth="200.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Item 1" />
+                    <String fx:value="Item 2" />
+                    <String fx:value="Item 3" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <ComboBox fx:id="nro_cuentas" layoutX="319.0" layoutY="126.0" onAction="#numcuentasevento" prefHeight="26.0" prefWidth="200.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Item 1" />
+                    <String fx:value="Item 2" />
+                    <String fx:value="Item 3" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Label layoutX="40.0" layoutY="99.0" prefWidth="200.0" text="Tipo Cuenta">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x3" />
+            </font>
+        </Label>
+        <Label font="$x3" layoutX="319.0" layoutY="102.0" prefWidth="200.0" text="Cuenta a Debitar" />
+        <VBox fx:id="panel_ref" layoutX="14.0" layoutY="253.0" prefHeight="200.0" prefWidth="544.0" visible="true">
+            <children>
+                <Label minHeight="16.0" prefHeight="18.0" prefWidth="119.0" text="Referencia de Pago:">
+                    <font>
+                        <Font size="13.0" fx:id="x2" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="20.0" />
+                    </VBox.margin>
+                </Label>
+                <Label fx:id="ref_pago1" font="$x2" minHeight="16.0" prefHeight="16.0" prefWidth="399.0" text="Referencia de Pago">
+                    <VBox.margin>
+                        <Insets left="140.0" top="-17.0" fx:id="x5" />
+                    </VBox.margin>
+                </Label>
+                <RestrictiveTextField fx:id="text_refpago1" onKeyPressed="#refpagokeypress" onKeyTyped="#refpagokey" prefHeight="26.0" prefWidth="313.0">
+                    <tooltip>
+                        <Tooltip contentDisplay="CENTER" text="Solicitar al Cliente el número&#10;de referencia de pago de la factura&#10;Importante:  Ingresar unicamente datos numericos." textAlignment="CENTER" />
+                    </tooltip>
+                    <VBox.margin>
+                        <Insets left="20.0" right="200.0" top="5.0" />
+                    </VBox.margin>
+                </RestrictiveTextField>
+                <Label minWidth="20.0" prefHeight="25.999900000002526" prefWidth="25.0" text="" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="30.6666658762339" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../recursos/icono_ayuda.gif" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <stylesheets>
+                        <URL value="@pagostercerosdatospago1.css" />
+                    </stylesheets>
+                    <tooltip>
+                        <Tooltip contentDisplay="CENTER" styleClass="ttip" text="Solicitar al Cliente el número&#10;de referencia de pago de la factura&#10;Importante:  Ingresar únicamente datos numéricos." textAlignment="CENTER" />
+                    </tooltip>
+                    <VBox.margin>
+                        <Insets left="355.0" top="-26.0" fx:id="x4" />
+                    </VBox.margin>
+                </Label>
+                <RestrictiveTextField fx:id="text_refpago2" onKeyPressed="#refpago2keypress" onKeyTyped="#refpago2key" prefHeight="26.0" prefWidth="265.0">
+                    <tooltip>
+                        <Tooltip contentDisplay="CENTER" text="Solicitar al Cliente la segunda  &#10;referencia de pago de la factura." textAlignment="CENTER" />
+                    </tooltip>
+                    <VBox.margin>
+                        <Insets left="20.0" right="200.0" top="40.0" />
+                    </VBox.margin>
+                </RestrictiveTextField>
+                <Label fx:id="tooltip_ref2" minWidth="20.0" prefHeight="25.999900000002526" prefWidth="25.0" text="" textFill="WHITE" VBox.margin="$x4">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="30.6666658762339" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../recursos/icono_ayuda.gif" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <stylesheets>
+                        <URL value="@pagostercerosdatospago1.css" />
+                    </stylesheets>
+                    <tooltip>
+                        <Tooltip contentDisplay="CENTER" styleClass="ttip" text="Solicitar al Cliente la segunda  &#10;referencia de pago de la factura" textAlignment="CENTER" />
+                    </tooltip>
+                </Label>
+                <Label fx:id="labelrefPago2" font="$x2" minHeight="16.0" prefHeight="18.0" prefWidth="119.0" text="Referencia de Pago:">
+                    <VBox.margin>
+                        <Insets left="20.0" top="-50.0" />
+                    </VBox.margin>
+                </Label>
+                <Label fx:id="ref_pago2" font="$x2" minHeight="16.0" prefHeight="18.0" prefWidth="399.0" text="Nombre" VBox.margin="$x5" />
+                <HBox fx:id="pen_progreso" alignment="CENTER" prefHeight="26.0" prefWidth="244.0">
+                    <children>
+                        <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0">
+                            <HBox.margin>
+                                <Insets left="25.0" />
+                            </HBox.margin>
+                        </ProgressBar>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="100.0" right="100.0" top="50.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="37.0" prefWidth="413.0">
+                    <children>
+                        <Button fx:id="continuar_op" disable="true" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="160.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button id="cancelar" fx:id="cancelar_op" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancel_op" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="70.0" fx:id="x7" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+        <HBox fx:id="panel_consulta_conv" layoutX="93.0" layoutY="182.0" prefHeight="37.0" prefWidth="388.0" visible="true">
+            <children>
+                <Button fx:id="continuar_consulta" disable="true" mnemonicParsing="false" onAction="#continuar_consultaconv" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="80.0" fx:id="x6" />
+                    </HBox.margin>
+                </Button>
+                <Button id="continuar_consulta" fx:id="cancelar_consulta" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancel_consultaconv" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE" HBox.margin="$x7" />
+            </children>
+        </HBox>
+        <Separator layoutX="3.0" layoutY="228.0" prefHeight="10.0" prefWidth="569.0" />
+        <HBox id="pen_progreso" alignment="CENTER" layoutX="193.0" layoutY="156.0" prefHeight="26.0" prefWidth="213.0">
+            <children>
+                <ProgressBar fx:id="progreso_conv" prefWidth="200.0" progress="0.0" />
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+        <URL value="@pagostercerosdatospago1.css" />
+    </stylesheets>
+</AnchorPane>

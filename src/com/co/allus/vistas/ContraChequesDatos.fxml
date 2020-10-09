@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ContraChequesDatosController">
+    <children>
+        <Label id="titulo" alignment="CENTER" layoutX="3.0" layoutY="5.0" prefHeight="43.0" prefWidth="572.0" text="CONTRAORDEN DE CHEQUES" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <HBox layoutX="0.0" layoutY="413.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="continuar_op" disable="false" mnemonicParsing="false" onAction="#continuarOP" prefHeight="26.0" prefWidth="95.0" text="Continuar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="160.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelar" mnemonicParsing="false" onAction="#cancelarOP" prefHeight="26.0" prefWidth="95.0" text="Cancelar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="70.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <RestrictiveTextField fx:id="rangoini" layoutX="273.0" layoutY="159.0" maxLength="7" onKeyPressed="#rangoinikeypress" onKeyTyped="#rangoinikeytyped" prefHeight="26.0" prefWidth="200.0" restrict="[1-9][0-9]*+([,\\.][0-9]{0,2})?$" />
+        <RestrictiveTextField fx:id="rangofin" layoutX="274.0" layoutY="211.0" maxLength="7" onKeyPressed="#rangofinkeypress" onKeyTyped="#rangofinkeytyped" prefHeight="26.0" prefWidth="200.0" restrict="[1-9][0-9]*+([,\\.][0-9]{0,2})?$" />
+        <Label layoutX="138.0" layoutY="159.0" prefHeight="26.0" prefWidth="106.0" text="Cheque Inicial">
+            <font>
+                <Font name="System Bold" size="14.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label font="$x1" layoutX="138.0" layoutY="214.0" prefHeight="23.0" prefWidth="106.0" text="Cheque Final" />
+    </children>
+    <stylesheets>
+        <URL value="@contrachequesdatos.css" />
+    </stylesheets>
+</AnchorPane>

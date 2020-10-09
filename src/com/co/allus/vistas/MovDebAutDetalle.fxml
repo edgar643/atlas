@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.MovDebAutDetalleController">
+    <children>
+        <TableView fx:id="tabla_datos2" focusTraversable="false" layoutX="209.0" layoutY="67.0" prefHeight="350.0" prefWidth="352.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn editable="false" id="informacion" maxWidth="820.0" minWidth="820.0" prefWidth="820.0" resizable="false" sortable="false" text="INFORMACIÓN" fx:id="informacion" />
+            </columns>
+        </TableView>
+        <TableView fx:id="tabla_datos" focusTraversable="false" layoutX="0.0" layoutY="67.0" maxWidth="210.0" minWidth="210.0" prefHeight="337.0" prefWidth="210.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn editable="false" id="descripcion" maxWidth="208.0" minWidth="208.0" prefWidth="208.0" resizable="false" sortable="false" text="DESCRIPCIÓN" fx:id="descripcion" />
+            </columns>
+        </TableView>
+        <Button fx:id="VolverOP" layoutX="189.0" layoutY="436.0" mnemonicParsing="false" onAction="#VolverOP" prefHeight="27.0" prefWidth="94.0" styleClass="boton_return" text="Volver" textFill="WHITE" />
+        <Label id="tituloCDTfin" alignment="CENTER" focusTraversable="false" layoutX="1.0" layoutY="11.0" prefHeight="35.0" prefWidth="572.0" text="HISTÓRICO DE DÉBITOS EXITOSOS Y RECHAZADOS">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+            <textFill>
+                <Color blue="0.482" green="0.173" red="0.129" fx:id="x1" />
+            </textFill>
+        </Label>
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="330.0" layoutY="422.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#terminar_trx" prefHeight="53.0" prefWidth="63.0" styleClass="terminar_trx">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <ScrollBar fx:id="scroll" blockIncrement="20.0" layoutX="197.0" layoutY="93.0" max="800.0" orientation="VERTICAL" prefHeight="311.0" unitIncrement="10.0" visibleAmount="20.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="13.0" layoutX="0.0" stroke="BLACK" strokeType="INSIDE" width="210.0" AnchorPane.bottomAnchor="64.0" />
+    </children>
+    <stylesheets>
+        <URL value="@movdebautdetalle.css" />
+    </stylesheets>
+</AnchorPane>

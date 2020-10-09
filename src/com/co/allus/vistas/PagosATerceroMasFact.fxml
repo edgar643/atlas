@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.PagosATerceroMasFactController">
+    <children>
+        <Button fx:id="masRegistros" layoutX="14.0" layoutY="432.0" mnemonicParsing="false" onAction="#masRegistros" prefHeight="26.0" prefWidth="99.0" text="Más Registros" textFill="WHITE">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="pagarOP" disable="false" layoutX="240.0" layoutY="432.0" mnemonicParsing="false" onAction="#pagarOP" prefHeight="26.0" prefWidth="95.0" text="Ir a Pagar" textFill="WHITE">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <StackPane fx:id="panel_tabla" layoutX="3.0" layoutY="105.0" maxHeight="263.0" minHeight="263.0" minWidth="558.0" prefHeight="263.0" prefWidth="558.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" editable="false" focusTraversable="true" maxHeight="263.0" maxWidth="1433.0" minHeight="263.0" minWidth="558.0" prefHeight="263.0" prefWidth="558.0" scaleX="1.0" scaleY="1.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="colnumFact" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" resizable="true" sortType="ASCENDING" sortable="true" text="Numero Factura" visible="true" fx:id="colnumFact" />
+                        <TableColumn editable="false" id="colvalorPagar" maxWidth="142.0" minWidth="142.0" prefWidth="142.0" sortable="false" text="Valor a Pagar" visible="true" fx:id="colvalorPagar" />
+                        <TableColumn editable="false" id="colvalorpagarRestante" maxWidth="142.0" minWidth="142.0" prefWidth="142.0" resizable="true" sortable="false" text="Valor a Pagar&#10;Restante" visible="true" fx:id="colvalorpagarRestante" />
+                        <TableColumn editable="false" id="colfechaVen" maxWidth="135.0" minWidth="135.0" prefWidth="135.0" resizable="true" sortable="false" text="Fecha de Vencimiento" fx:id="colfechaVen" />
+                        <TableColumn editable="false" id="colReferencia1" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" sortType="ASCENDING" sortable="false" text="Referencia 1" visible="true" fx:id="colReferencia1" />
+                        <TableColumn editable="false" id="colReferencia2" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="true" sortable="false" text="Referencia 2" fx:id="colReferencia2" />
+                        <TableColumn editable="false" id="colReferencia3" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="true" sortable="false" text="Referencia 3" fx:id="colReferencia3" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Button fx:id="regresarOp" layoutX="468.0" layoutY="432.0" mnemonicParsing="false" onAction="#regresarOp" prefHeight="26.0" prefWidth="74.0" text="Regresar" textFill="WHITE" />
+        <Label id="label" alignment="CENTER" layoutX="0.0" layoutY="1.0" prefHeight="26.0" prefWidth="575.0" text="PAGOS A TERCEROS - SELECCIÓN FACTURA" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="27.0" prefHeight="26.0" prefWidth="135.0" text="Codigo Convenio :">
+            <font>
+                <Font name="System Bold" size="14.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label fx:id="codConv" font="$x1" layoutX="150.0" layoutY="27.0" prefHeight="26.0" prefWidth="123.0" text="" />
+        <Label font="$x1" layoutX="12.0" layoutY="53.0" prefHeight="26.0" prefWidth="135.0" text="Nombre Convenio :" />
+        <Label fx:id="nomConv" font="$x1" layoutX="149.0" layoutY="53.0" prefHeight="26.0" prefWidth="412.0" text="" />
+        <Label fx:id="lblpagoX" font="$x1" layoutX="229.0" layoutY="80.0" prefHeight="20.0" prefWidth="117.0" text="" />
+    </children>
+    <stylesheets>
+        <URL value="@pagosaterceromasfact.css" />
+    </stylesheets>
+</AnchorPane>

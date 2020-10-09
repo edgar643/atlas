@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.EliminacionCtasAchConfController">
+    <children>
+        <Pane id="pane_modalMov" layoutX="68.0" layoutY="122.0" prefHeight="237.0" prefWidth="439.0" styleClass="pane">
+            <children>
+                <ProgressBar fx:id="progreso" layoutX="120.0" layoutY="143.0" prefWidth="200.0" progress="0.0" visible="true" />
+                <HBox layoutX="-66.0" layoutY="184.0" prefHeight="49.0" prefWidth="572.0">
+                    <children>
+                        <Button fx:id="continuarOP" disable="false" mnemonicParsing="false" onAction="#continuarOP" prefHeight="35.0" prefWidth="95.0" text="Continuar" textFill="WHITE">
+                            <effect>
+                                <Bloom />
+                            </effect>
+                            <HBox.margin>
+                                <Insets left="160.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="cancelarOP" mnemonicParsing="false" onAction="#cancelarOP" prefHeight="35.0" prefWidth="95.0" text="Cancelar" textFill="WHITE">
+                            <effect>
+                                <Bloom />
+                            </effect>
+                            <HBox.margin>
+                                <Insets left="70.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <Label fx:id="lbl" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="27.0" prefHeight="74.0" prefWidth="411.0" text="" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Label id="titulo" alignment="CENTER" layoutX="7.0" layoutY="14.0" prefHeight="43.0" prefWidth="572.0" text="ELIMINACIÓN CUENTAS INSCRITAS OTROS BANCOS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+    </children>
+    <stylesheets>
+        <URL value="@eliminacionctasachconf.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet tokenempresasae.css?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TokenEmpresasAEController">
+    <children>
+        <HBox layoutX="50.0" layoutY="437.0" prefHeight="43.0" prefWidth="475.0">
+            <children>
+                <Button fx:id="regresar_op" mnemonicParsing="false" onAction="#regresar_op" prefHeight="26.0" prefWidth="95.0" text="Regresar" wrapText="false">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="185.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </HBox>
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="65.0" layoutY="408.0" prefHeight="13.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <StackPane fx:id="panel_tabla" layoutX="4.0" layoutY="273.0" prefHeight="83.0" prefWidth="556.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" focusTraversable="false" prefHeight="113.0" prefWidth="559.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="colFecha" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" resizable="false" sortable="false" text="Fecha Envío" fx:id="colFecha" />
+                        <TableColumn editable="false" id="colHora" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" resizable="false" sortable="false" text="Hora Envío" fx:id="colHora" />
+                        <TableColumn editable="false" id="colCosto" maxWidth="91.0" minWidth="91.0" prefWidth="91.0" resizable="false" sortable="false" text="Costo Novedad" fx:id="colCosto" />
+                        <TableColumn editable="false" id="colVigencia" maxWidth="51.0" minWidth="51.0" prefWidth="51.0" resizable="false" sortable="false" text="Vigencia" fx:id="colVigencia" />
+                        <TableColumn editable="false" id="colDestino" maxWidth="166.0" minWidth="166.0" prefWidth="166.0" resizable="false" sortable="false" text="Destino &#10;Envío" fx:id="colDestino" />
+                        <TableColumn editable="false" id="colEstado" maxWidth="67.0" minWidth="67.0" prefWidth="67.0" resizable="false" sortable="false" text="Estado &#10;Envío" fx:id="colEstado" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label alignment="CENTER" layoutX="1.0" layoutY="14.0" prefHeight="27.0" prefWidth="572.0" text="Consulta de Gestión por Emergencia" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Group id="Group" layoutX="275.0" layoutY="135.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="95.0" layoutX="0.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="284.0" />
+                <Button id="buscar_opfecha" fx:id="buscar_op" disable="false" layoutX="49.0" layoutY="77.0" mnemonicParsing="false" onAction="#buscar_op" prefHeight="22.0" prefWidth="83.0" text="Buscar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Button>
+                <DatePicker fx:id="tfFechaIni" layoutX="142.0" layoutY="20.0" prefHeight="24.0" prefWidth="140.0" promptText="Fecha Inicio">
+                    <stylesheets>
+                        <URL value="@DatePicker.css" />
+                    </stylesheets>
+                </DatePicker>
+                <DatePicker fx:id="tfFechaFin" alignment="TOP_LEFT" layoutX="142.0" layoutY="45.0" prefHeight="24.0" prefWidth="140.0" promptText="Fecha Fin">
+                    <stylesheets>
+                        <URL value="@DatePicker.css" />
+                    </stylesheets>
+                </DatePicker>
+                <Label id="lblbuscar" alignment="CENTER" layoutX="12.0" layoutY="0.0" prefHeight="22.0" prefWidth="126.0" styleClass="lblbuscar" text="Búsqueda por Fecha">
+                    <font>
+                        <Font name="System Bold" size="12.0" fx:id="x2" />
+                    </font>
+                </Label>
+                <Button id="limpiar_fecha" fx:id="limpiar_op" disable="false" layoutX="147.0" layoutY="77.0" mnemonicParsing="false" onAction="#limpiar_op" prefHeight="22.0" prefWidth="83.0" text="Limpiar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Button>
+                <Label id="lblbuscar" alignment="CENTER" layoutX="1.0" layoutY="22.0" prefHeight="22.0" prefWidth="141.0" styleClass="lblbuscar" text="Fecha Inicio (AAAA/MM/DD)">
+                    <font>
+                        <Font name="System Bold" size="10.0" fx:id="x1" />
+                    </font>
+                </Label>
+                <Label id="lblbuscar" alignment="CENTER" font="$x1" layoutX="13.0" layoutY="45.0" prefHeight="22.0" prefWidth="126.0" styleClass="lblbuscar" text="Fecha Fin (AAAA/MM/DD)" />
+            </children>
+        </Group>
+        <Label alignment="CENTER" font="$x2" layoutX="61.0" layoutY="70.0" prefHeight="22.0" prefWidth="75.0" text="ID Usuario" />
+        <TextField fx:id="tfID" editable="false" layoutX="136.0" layoutY="69.0" prefHeight="25.0" prefWidth="227.0" />
+        <Label alignment="CENTER" font="$x2" layoutX="5.0" layoutY="100.0" prefHeight="22.0" prefWidth="140.0" text="Nombre de Usuario" />
+        <TextField fx:id="tfNombre" editable="false" layoutX="136.0" layoutY="99.0" prefHeight="25.0" prefWidth="227.0" />
+        <Button fx:id="obtMasReg" layoutX="12.0" layoutY="239.0" mnemonicParsing="false" onAction="#obtMasRegOp" prefWidth="95.0" text="+ Registros" />
+    </children>
+    <stylesheets>
+        <URL value="@tokenempresasae.css" />
+    </stylesheets>
+</AnchorPane>

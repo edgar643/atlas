@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.PuntosColListarMovimientosController">
+    <children>
+        <Label id="tituloCDTfin" alignment="CENTER" focusTraversable="false" layoutX="2.0" layoutY="5.0" minHeight="22.0" prefHeight="27.0" prefWidth="572.0" text="Consulta de Movimientos de Puntos Colombia" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="detalle" layoutX="217.0" layoutY="436.0" mnemonicParsing="false" onAction="#detalleOP" prefHeight="27.0" prefWidth="118.0" text="detalle" textFill="WHITE" />
+        <Button fx:id="indMasReg" layoutX="8.0" layoutY="436.0" mnemonicParsing="false" onAction="#MasRegAction" prefWidth="118.0" text="Mas Registros" />
+        <Button fx:id="regresarOP" layoutX="443.0" layoutY="436.0" mnemonicParsing="false" onAction="#regresarOP" prefWidth="94.0" text="Volver" />
+        <StackPane fx:id="panel_tabla" layoutX="11.0" layoutY="61.0" prefHeight="285.0" prefWidth="558.0">
+            <children>
+                <TableView fx:id="tablaDatos" disable="false" focusTraversable="true" prefHeight="284.0000999999975" prefWidth="556.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="fecha_trx" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" resizable="false" text="Fecha" fx:id="fecha_trx" />
+                        <TableColumn editable="false" id="codigo_trx" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" resizable="false" text="Codigo&#10;Transacción" fx:id="codigo_trx" />
+                        <TableColumn editable="false" id="descripcion_trx" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" resizable="false" text="Descripción" fx:id="descripcion_trx" />
+                        <TableColumn editable="false" id="valor_trx_pesos" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Valor&#10;COP" fx:id="valor_trx_pesos" />
+                        <TableColumn editable="false" id="puntos" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Puntos" fx:id="puntos" />
+                        <TableColumn editable="false" id="extra_puntos" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Extra Puntos" fx:id="extra_puntos" />
+                        <TableColumn editable="false" id="respuesta" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" resizable="false" text="Respuesta" fx:id="respuesta" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+    </children>
+    <stylesheets>
+        <URL value="@puntoscollistarmovimientos.css" />
+    </stylesheets>
+</AnchorPane>

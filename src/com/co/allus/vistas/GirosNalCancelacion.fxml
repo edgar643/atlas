@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.GirosNalCancelacionController">
+    <children>
+        <StackPane fx:id="panel_tabla" layoutX="8.0" layoutY="82.0" minWidth="552.0" prefHeight="286.0" prefWidth="559.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="295.0" maxWidth="775.0" minHeight="274.0" minWidth="556.0" prefHeight="274.0" prefWidth="775.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="seleccion" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" resizable="false" sortable="false" text="Cancelar &#10;Giro" fx:id="seleccion" />
+                        <TableColumn editable="false" id="ColContDiaGiro" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Referencia Giro" fx:id="ColContDiaGiro" />
+                        <TableColumn editable="false" id="ColFechaGiro" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" resizable="false" sortable="false" text="Fecha Venta" fx:id="ColFechaGiro" />
+                        <TableColumn editable="false" id="ColEstadoGiro" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Estado Giro" fx:id="ColEstadoGiro" />
+                        <TableColumn editable="false" id="ColValorGiro" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Valor Giro" fx:id="ColValorGiro" />
+                        <TableColumn editable="false" id="ColDocGirador" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" sortable="false" text="Doc Girador" fx:id="ColDocGirador" />
+                        <TableColumn editable="false" id="ColNomGirador" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" sortable="false" text="Nombre Girador" fx:id="ColNomGirador" />
+                        <TableColumn maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Celular&#10;Girador" fx:id="ColCelGirador" />
+                        <TableColumn editable="false" id="ColDocBenef" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Doc Beneficiario" fx:id="ColDocBenef" />
+                        <TableColumn editable="false" id="colNomBenef" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" sortable="false" text="Nombre Beneficiario" fx:id="colNomBenef" />
+                        <TableColumn editable="false" id="ColCelBenef" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Celular&#10;Beneficiario" fx:id="ColCelBenef" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label alignment="CENTER" layoutX="6.0" layoutY="36.0" prefHeight="32.0" prefWidth="85.0" text="Seleccione &#10;Rango Fechas" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <DatePicker fx:id="fechaini" layoutX="94.0" layoutY="44.0" prefWidth="85.0" promptText="Desde">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <DatePicker fx:id="fechafin" layoutX="225.0" layoutY="44.0" prefWidth="85.0" promptText="Hasta">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <Label id="tituloGirosnal" alignment="CENTER" focusTraversable="false" layoutX="2.0" layoutY="6.0" minHeight="22.0" prefHeight="22.0" prefWidth="572.0" text="CANCELACION GIROS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" font="$x1" layoutX="182.0" layoutY="38.0" prefHeight="32.0" prefWidth="40.0" text="Hasta" textAlignment="CENTER" />
+        <Button fx:id="indMasReg" layoutX="23.0" layoutY="446.0" mnemonicParsing="false" onAction="#MasRegAction" prefHeight="27.0" prefWidth="118.0" text="Mas Registros" />
+        <Button fx:id="volverOP" layoutX="443.0" layoutY="446.0" mnemonicParsing="false" onAction="#volverOP" prefHeight="27.0" prefWidth="118.0" text="Volver" />
+        <Label id="montoMEs" layoutX="162.0" layoutY="82.0" prefHeight="25.0" prefWidth="118.0" text="" />
+        <Label id="montoAnio" layoutX="445.0" layoutY="82.0" prefHeight="25.0" prefWidth="118.0" text="" />
+        <Button fx:id="buscarFechas" layoutX="465.0" layoutY="39.0" mnemonicParsing="false" onAction="#buscarFechas" prefHeight="27.0" prefWidth="85.0" text="Buscar" />
+        <Button fx:id="CancelarOP" layoutX="229.0" layoutY="446.0" mnemonicParsing="false" onAction="#CancelarOP" prefHeight="27.0" prefWidth="118.0" text="Cancelar" />
+        <Label alignment="CENTER" font="$x1" layoutX="313.0" layoutY="38.0" prefHeight="32.0" prefWidth="69.0" text="Referencia" textAlignment="CENTER" />
+        <TextField fx:id="consecutivoRef2" layoutX="384.0" layoutY="44.0" prefWidth="75.0" />
+    </children>
+    <stylesheets>
+        <URL value="@girosnalcancelacion.css" />
+    </stylesheets>
+</AnchorPane>

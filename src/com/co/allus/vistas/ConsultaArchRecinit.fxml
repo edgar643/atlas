@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ConsultaArchRecinitController">
+    <RestrictiveTextField fx:id="codConv" layoutX="68.0" layoutY="203.0" maxLength="15" onKeyPressed="#numConvkeyPress" onKeyTyped="#numConvkeytyped" prefHeight="21.999900000002526" prefWidth="88.0" restrict="[0-9]" />
+    <Label alignment="CENTER" layoutX="346.0" layoutY="178.0" prefWidth="186.0" text="Fecha Recibo" textAlignment="CENTER" />
+    <DatePicker fx:id="fechaini" layoutX="349.0" layoutY="203.0" prefWidth="79.0" promptText="Desde">
+        <stylesheets>
+            <URL value="@DatePicker.css" />
+        </stylesheets>
+    </DatePicker>
+    <DatePicker fx:id="fechafin" layoutX="454.0" layoutY="203.0" prefWidth="79.0" promptText="Hasta">
+        <stylesheets>
+            <URL value="@DatePicker.css" />
+        </stylesheets>
+    </DatePicker>
+    <Button fx:id="buscar" layoutX="228.0" layoutY="306.0" mnemonicParsing="false" onAction="#buscarOP" prefHeight="27.0" prefWidth="118.0" text="Buscar" />
+    <Label alignment="CENTER" layoutX="27.0" layoutY="178.0" prefWidth="186.0" text="Codigo Convenio" textAlignment="CENTER">
+        <font>
+            <Font size="12.0" />
+        </font>
+    </Label>
+    <Label id="tituloCDTfin" alignment="CENTER" focusTraversable="false" layoutX="14.0" layoutY="14.0" minHeight="22.0" prefHeight="22.0" prefWidth="572.0" text="CONSULTA DE ARCHIVOS RECIBIDOS" textFill="#212c7b">
+        <font>
+            <Font name="System Bold" size="17.0" />
+        </font>
+    </Label>
+    <stylesheets>
+        <URL value="@consultaarchrecinit.css" />
+    </stylesheets>
+    <ProgressBar fx:id="progreso" layoutX="189.0" layoutY="288.0" prefWidth="200.0" progress="0.0" visible="true" />
+</AnchorPane>

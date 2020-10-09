@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.MovRecaudosPSEController">
+    <children>
+        <Label id="tituloCDTfin" alignment="CENTER" focusTraversable="false" layoutX="0.0" layoutY="0.0" minHeight="22.0" prefHeight="27.0" prefWidth="572.0" text="Consulta de Movimientos de Pago del Cliente Pagador" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="16.0" layoutY="30.0" prefWidth="199.0" text="Fecha de la Transacción" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label font="$x1" layoutX="262.0" layoutY="30.0" prefWidth="126.0" text="Código del Convenio" />
+        <DatePicker fx:id="fechaini" layoutX="14.0" layoutY="57.0" prefWidth="94.0" promptText="desde">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <Label font="$x1" layoutX="413.0" layoutY="30.0" prefWidth="155.0" text="Nro Cuenta del Cliente" />
+        <DatePicker fx:id="fechafin" layoutX="116.0" layoutY="57.0" prefWidth="94.0" promptText="hasta">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <TextField fx:id="codConvT" layoutX="274.0" layoutY="55.0" onKeyPressed="#codConvkPress" onKeyTyped="#codConvktyped" prefWidth="94.0" />
+        <TextField fx:id="nrocta" layoutX="420.0" layoutY="55.0" onKeyPressed="#nctakPress" onKeyTyped="#nctakTyped" prefWidth="141.0" />
+        <Button fx:id="detalle" layoutX="215.0" layoutY="444.0" mnemonicParsing="false" onAction="#ContinuarOP" prefHeight="27.0" prefWidth="118.0" text="detalle" textFill="WHITE" />
+        <StackPane fx:id="panel_tabla" alignment="CENTER" layoutX="0.0" layoutY="82.0" maxHeight="295.0" maxWidth="572.0" minHeight="274.0" minWidth="556.0" prefHeight="295.0" prefWidth="572.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="295.0" maxWidth="564.0" minHeight="274.0" minWidth="556.0" prefHeight="295.0" prefWidth="564.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" minWidth="75.0" prefWidth="75.0" resizable="false" text="Código del&#10;Convenio" fx:id="codConvenio" />
+                        <TableColumn editable="false" maxWidth="5000.0" minWidth="160.0" prefWidth="160.0" resizable="false" text="Nombre del Convenio" fx:id="nomConv" />
+                        <TableColumn editable="false" minWidth="80.0" prefWidth="80.0" text="Canal del &#10;Pago" fx:id="canal" />
+                        <TableColumn editable="false" id="numero" maxWidth="5000.0" minWidth="125.0" prefWidth="125.0" resizable="false" text="Valor Pagado" fx:id="valor" />
+                        <TableColumn editable="false" maxWidth="5000.0" minWidth="130.0" prefWidth="130.0" resizable="false" text="Fecha y Hora&#10;del Pago" fx:id="fechahora" />
+                        <TableColumn editable="false" id="bloqueo_tarjeta" maxWidth="5000.0" minWidth="178.0" prefWidth="178.0" resizable="false" text="Nro de Cuenta" fx:id="numcta" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </StackPane>
+        <Button fx:id="indMasReg" layoutX="6.0" layoutY="444.0" mnemonicParsing="false" onAction="#MasRegAction" prefWidth="118.0" text="Mas Registros" />
+        <Button fx:id="volverInit" layoutX="422.0" layoutY="444.0" mnemonicParsing="false" onAction="#VolverPseInit" prefWidth="94.0" text="Volver" />
+        <Button fx:id="buscarFechas" layoutY="54.0" minHeight="17.999900000002526" minWidth="15.0" mnemonicParsing="false" onAction="#buscarFechas" prefHeight="24.999900000002526" prefWidth="44.0" styleClass="borrar" text="Button" AnchorPane.rightAnchor="321.0">
+            <graphic>
+                <ImageView id="" fitHeight="18.0" fitWidth="28.0" focusTraversable="true" pickOnBounds="true" preserveRatio="false" styleClass="borrar" x="0.0">
+                    <image>
+                        <Image url="@../recursos/lupa.png" />
+                    </image>
+                    <rotationAxis>
+                        <Point3D z="1.0" />
+                    </rotationAxis>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="limpiar" layoutX="524.0" layoutY="444.0" minHeight="17.999900000002526" minWidth="15.0" mnemonicParsing="false" onAction="#limpiarFiltros" prefHeight="27.0" prefWidth="44.0" styleClass="borrar" text="Button">
+            <graphic>
+                <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="false" styleClass="borrar">
+                    <image>
+                        <Image url="@../recursos/borrar_es.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@movrecaudospse.css" />
+    </stylesheets>
+</AnchorPane>

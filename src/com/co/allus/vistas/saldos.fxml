@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet saldos.css?>
+
+<AnchorPane id="AnchorPane" layoutX="0.0" layoutY="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="435.999755859375" minWidth="572.0" prefHeight="435.999755859375" prefWidth="572.0" scaleX="1.0" scaleY="1.0" scaleZ="1.0" snapToPixel="false" styleClass="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.SaldosController">
+    <children>
+        <TableView fx:id="tabla_saldo1" prefHeight="53.0" prefWidth="567.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn editable="false" id="" minWidth="100.0" prefWidth="90.0" resizable="true" sortable="false" style="" text="Entidad" fx:id="entidad" />
+                <TableColumn editable="false" id="" minWidth="75.0" prefWidth="140.0" resizable="true" sortable="false" text="Tipo de Cuenta" fx:id="tipoCuenta" />
+                <TableColumn editable="false" id="" prefWidth="325.0" resizable="true" sortable="false" text="Numero de Cuenta" fx:id="numeroCuenta" />
+            </columns>
+            <stylesheets>
+                <URL value="@saldos.css" />
+            </stylesheets>
+        </TableView>
+        <TableView fx:id="tabla_saldo2" layoutX="0.0" layoutY="54.0" prefHeight="68.0" prefWidth="567.0" scaleX="1.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn editable="false" prefWidth="150.0" sortable="false" text="Saldo Disponible" fx:id="saldodisp" />
+                <TableColumn editable="false" prefWidth="125.0" sortable="false" text="Saldo en Canje&#10;(No disponible)" fx:id="saldoCanje" />
+                <TableColumn editable="false" prefWidth="170.0" sortable="false" text="Saldo  Total" fx:id="cupoTotal" />
+                <TableColumn editable="false" id="" prefWidth="130.0" sortable="false" style="" text="Dias de SobreGiro" fx:id="diaSobregiro" />
+            </columns>
+            <stylesheets>
+                <URL value="@saldos.css" />
+            </stylesheets>
+        </TableView>
+        <Button fx:id="terminar_aceptar" alignment="CENTER" layoutX="252.0" layoutY="218.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="53.0" prefWidth="63.0">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <TextArea fx:id="textoPopUp" editable="false" focusTraversable="false" layoutX="10.0" layoutY="343.0" prefHeight="79.0" prefWidth="543.9999000000025" visible="true" wrapText="true" />
+        <AnchorPane fx:id="PaneMensajepopup" layoutX="29.0" layoutY="360.0" prefHeight="43.951171875" visible="true">
+            <children>
+                <Label layoutX="0.0" layoutY="0.0" prefHeight="23.961029052734375" prefWidth="86.0" styleClass="poppupSaldo2" text="Recuerda :" underline="true" wrapText="false" />
+                <Label layoutX="79.0" layoutY="4.0" prefWidth="63.0" styleClass="poppupSaldo" text="El Saldo" />
+                <Label layoutX="135.0" layoutY="5.0" prefWidth="157.0" styleClass="poppupSaldobold" text="NO ESTA DISPONIBLE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="286.0" layoutY="4.0" prefWidth="215.9998779296875" styleClass="poppupSaldo" text="hasta que pase el proceso de " />
+                <Label layoutX="0.0" layoutY="24.0" prefWidth="481.0" styleClass="poppupSaldo" text="verificación del cheque , el cual puede ser exitoso o no exitoso." />
+            </children>
+        </AnchorPane>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <rotationAxis>
+        <Point3D z="1.0" />
+    </rotationAxis>
+    <stylesheets>
+        <URL value="@saldos.css" />
+    </stylesheets>
+</AnchorPane>

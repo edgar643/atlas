@@ -1,0 +1,50 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+
+}
+
+
+.tooltip {    
+    -fx-background-color: linear-gradient(#e2ecfe, #99bcfd);
+}
+.page-corner {
+    -fx-background-color: linear-gradient(from 0% 0% to 50% 50%,#3278fa,#99bcfd);
+}
+
+.button
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #212C7B;
+    -fx-border-color: white;
+    /*    -fx-border-insets: 1,1,1,1;  */
+}
+
+.combo-box
+{
+
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-color: white;
+    -fx-border-color: #C0C0C0;
+}
+
+.combo-box .arrow-button.arrow
+{
+    -fx-background-color: white;
+    -fx-cursor: hand;
+    -fx-animated: true;
+
+}
+.combo-box .arrow-button
+{
+    -fx-background-color:#C0C0C0;
+    -fx-cursor: hand;
+    -fx-animated: true;
+
+}
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet prestamospagos.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.PrestamosPagosController">
+    <children>
+        <Label fx:id="lblpagominimo" layoutX="342.0" layoutY="274.0" prefHeight="23.0" prefWidth="180.0" text="">
+            <font>
+                <Font name="System Bold" size="14.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label font="$x1" layoutX="47.0" layoutY="279.0" prefHeight="23.0" prefWidth="91.0" text="Valor a Pagar" />
+        <ComboBox fx:id="tipo_cuenta" layoutX="186.0" layoutY="134.0" onAction="#selTipocta" prefHeight="25.0" prefWidth="144.0" />
+        <ComboBox fx:id="selCuenta" layoutX="186.0" layoutY="176.0" onAction="#selCuenta" prefHeight="25.0" prefWidth="233.0" />
+        <RestrictiveTextField fx:id="tfotrovalor" layoutX="342.0" layoutY="334.0" maxLength="15" onKeyPressed="#otroValPressed" onKeyTyped="#otroValKey" prefWidth="180.0" restrict="[1-9][0-9]*+([,\\.][0-9]{0,2})?$" />
+        <HBox layoutX="3.0" layoutY="410.0" minHeight="23.0" minWidth="86.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="continuarOP" disable="false" mnemonicParsing="false" onAction="#continuarOP" prefHeight="36.0" prefWidth="95.0" text="Continuar" textFill="WHITE">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="100.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelarPago" mnemonicParsing="false" onAction="#cancelPagoActual" prefHeight="36.0" prefWidth="125.0" text="Cancelar éste pago" textFill="WHITE">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="20.0" fx:id="x2" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelarRestantes" mnemonicParsing="false" onAction="#canceltodosPagos" prefHeight="36.0" prefWidth="142.0" text="Cancelar Pagos &#10;Restantes" textFill="WHITE" HBox.margin="$x2">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Button>
+            </children>
+        </HBox>
+        <Label id="" alignment="CENTER" layoutX="-3.0" layoutY="8.0" prefHeight="43.0" prefWidth="572.0" text="PAGOS/PRÉSTAMOS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <VBox layoutX="180.0" layoutY="274.0" prefHeight="105.0" prefWidth="154.0">
+            <children>
+                <RadioButton fx:id="pagoMin" disable="false" font="$x1" mnemonicParsing="false" onAction="#selPagoMin" prefHeight="20.0" selected="false" text="Pago Mínimo" visible="true">
+                    <stylesheets>
+                        <URL value="@pagostdcpropiastrxdatos.css" />
+                    </stylesheets>
+                </RadioButton>
+                <RadioButton fx:id="pagoTotal" disable="false" font="$x1" mnemonicParsing="false" onAction="#selPagoTotal" prefHeight="20.0" text="Pago Total" visible="true">
+                    <VBox.margin>
+                        <Insets top="10.0" fx:id="x3" />
+                    </VBox.margin>
+                </RadioButton>
+                <RadioButton fx:id="otroVal" disable="false" font="$x1" mnemonicParsing="false" onAction="#selOtrovalor" prefHeight="20.0" text="Otro valor" visible="true">
+                    <VBox.margin>
+                        <Insets top="10.0" fx:id="x3" />
+                    </VBox.margin>
+                </RadioButton>
+            </children>
+        </VBox>
+        <Label fx:id="lblpagototal" font="$x1" layoutX="344.0" layoutY="303.0" prefHeight="23.0" prefWidth="180.0" text="" />
+        <Label font="$x1" layoutX="47.0" layoutY="134.0" prefHeight="23.0" prefWidth="112.0" text="Cuenta a debitar" />
+        <Label fx:id="lblpago" alignment="CENTER" contentDisplay="CENTER" font="$x1" layoutX="3.0" layoutY="51.0" prefHeight="43.0" prefWidth="566.0" text="" textAlignment="CENTER" />
+    </children>
+    <stylesheets>
+        <URL value="@prestamospagos.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ConsultaArhEnvController">
+    <children>
+        <Label id="tituloCDTfin" alignment="CENTER" focusTraversable="false" layoutX="4.0" layoutY="0.0" minHeight="22.0" prefHeight="22.0" prefWidth="572.0" text="CONSULTA DE ARCHIVOS ENVIADOS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="232.0" layoutY="32.0" prefWidth="186.0" text="Fecha Envio" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <DatePicker fx:id="fechaini" layoutX="235.0" layoutY="57.0" prefWidth="79.0" promptText="Desde">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <DatePicker fx:id="fechafin" layoutX="340.0" layoutY="57.0" prefWidth="79.0" promptText="Hasta">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <Button fx:id="detalleOP" layoutX="228.0" layoutY="440.0" mnemonicParsing="false" onAction="#detalleOP" prefHeight="27.0" prefWidth="118.0" text="Detalle" textFill="WHITE" />
+        <Button fx:id="indMasReg" layoutX="42.0" layoutY="440.0" mnemonicParsing="false" onAction="#MasRegAction" prefHeight="27.0" prefWidth="118.0" text="Mas Registros" />
+        <Button fx:id="volverOP" layoutX="408.0" layoutY="440.0" mnemonicParsing="false" onAction="#volverOP" prefHeight="27.0" prefWidth="118.0" text="Volver" />
+        <StackPane fx:id="panel_tabla" layoutX="5.0" layoutY="92.0" minWidth="552.0" prefHeight="278.0" prefWidth="559.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="295.0" maxWidth="775.0" minHeight="274.0" minWidth="556.0" prefHeight="274.0" prefWidth="775.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="ColfechaEnv" maxWidth="91.0" minWidth="91.0" prefWidth="91.0" resizable="false" sortable="false" text="Fecha Recibo" fx:id="ColfechaEnv" />
+                        <TableColumn editable="false" id="ColNumReg" maxWidth="95.0" minWidth="95.0" prefWidth="95.0" resizable="false" sortable="false" text="Numero &#10;Registro" fx:id="ColNumReg" />
+                        <TableColumn editable="false" id="ColValTotal" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" sortable="false" text="Valor Total" fx:id="ColValTotal" />
+                        <TableColumn editable="false" id="ColNomArh" maxWidth="215.0" minWidth="215.0" prefWidth="215.0" resizable="false" sortable="false" text="Nombre de Archivo" fx:id="ColNomArh" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Button fx:id="buscar" layoutX="433.0" layoutY="54.0" mnemonicParsing="false" onAction="#buscarOP" prefHeight="27.0" prefWidth="118.0" text="Buscar" />
+        <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="26.0" prefHeight="29.0" prefWidth="134.0" text="Numero Registro" textAlignment="CENTER" />
+        <RestrictiveTextField fx:id="numReg" layoutX="31.0" layoutY="57.0" onKeyPressed="#numRegkPress" onKeyTyped="#numRegktyped" prefHeight="22.0" prefWidth="100.0" restrict="[0-9]" />
+        <ProgressBar fx:id="progreso" layoutX="187.0" layoutY="430.0" prefWidth="200.0" progress="0.0" visible="true" />
+    </children>
+    <stylesheets>
+        <URL value="@consultaarhenv.css" />
+    </stylesheets>
+</AnchorPane>

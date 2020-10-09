@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.SaldoAFCController">
+    <children>
+        <Label id="tituloCDTfin" alignment="CENTER" layoutX="2.0" layoutY="14.0" prefHeight="44.0" prefWidth="572.0" text="SALDO AFC" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="continuarop" disable="false" layoutX="125.0" layoutY="404.0" mnemonicParsing="false" onAction="#continuarop" prefHeight="27.0" prefWidth="116.0" text="Continuar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Label layoutX="73.0" layoutY="200.0" prefHeight="26.0" prefWidth="138.0" text="Numero de Cuenta">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <RestrictiveTextField fx:id="numctaafc" alignment="CENTER" layoutX="218.0" layoutY="200.0" maxLength="11" onKeyPressed="#numctakeypress" onKeyTyped="#numctakeytyped" prefHeight="26.0" prefWidth="220.0" promptText="Ingrese cuenta AFC" restrict="[0-9]" />
+        <Button fx:id="cancelarop" disable="false" layoutX="322.0" layoutY="404.0" mnemonicParsing="false" onAction="#cancelarop" prefHeight="27.0" prefWidth="116.0" text="Cancelar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <HBox fx:id="barraprogreso" alignment="CENTER" layoutX="68.0" layoutY="382.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+        <URL value="@saldoafc.css" />
+    </stylesheets>
+</AnchorPane>

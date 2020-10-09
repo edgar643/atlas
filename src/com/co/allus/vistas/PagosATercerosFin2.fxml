@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.PagosATercerosFin2Controller">
+    <children>
+        <Label id="titulosPagos" alignment="CENTER" layoutX="1.0" layoutY="36.0" prefHeight="49.0" prefWidth="572.0" text="PAGOS A TERCEROS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="1.0" layoutY="115.0" prefHeight="26.0" prefWidth="571.0" text="El pago ha sido realizado de manera exitosa">
+            <font>
+                <Font name="System Bold" size="14.0" fx:id="x1" />
+            </font>
+        </Label>
+        <TableView id="tabla_Datos2" layoutX="3.0" layoutY="233.0" maxHeight="62.0" maxWidth="553.0" minHeight="60.0" minWidth="553.0" prefHeight="60.0" prefWidth="553.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn id="comprobante" maxWidth="115.0" minWidth="115.0" prefWidth="115.0" text="Número de &#10;Comprobante" fx:id="comprobante" />
+                <TableColumn id="num_cuenta" maxWidth="155.0" minWidth="155.0" prefWidth="155.0" text="Número de Cuenta" fx:id="num_cuenta" />
+                <TableColumn editable="false" id="tipo_cuenta" maxWidth="124.0" minWidth="124.0" prefWidth="124.0" sortable="false" text="Tipo de Cuenta" fx:id="tipo_cuenta" />
+                <TableColumn editable="false" id="fecha_pago" maxWidth="154.0" minWidth="154.0" prefWidth="154.0" sortable="false" text="Fecha y Hora del &#10;Pago" fx:id="fecha_pago" />
+            </columns>
+        </TableView>
+        <TableView fx:id="tabla_Datos1" layoutX="127.0" layoutY="155.0" maxHeight="62.0" maxWidth="441.0" minHeight="53.0" minWidth="319.0" prefHeight="53.0" prefWidth="319.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn editable="false" id="convenio_pagado" maxWidth="154.0" minWidth="154.0" prefWidth="154.0" sortable="false" text="Convenio Pagado" fx:id="convenio_pagado" />
+                <TableColumn editable="false" id="valor_pagado" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" sortable="false" text="Valor Pagado" fx:id="valor_pagado" />
+            </columns>
+        </TableView>
+        <TableView id="tabla_Datos3" layoutX="186.0" layoutY="318.0" maxHeight="62.0" maxWidth="441.0" minHeight="53.0" minWidth="201.0" prefHeight="53.0" prefWidth="201.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn editable="false" id="valor_total" maxWidth="195.0" minWidth="195.0" prefWidth="195.0" sortable="false" text="Valor Total Pagado" fx:id="valor_total" />
+            </columns>
+        </TableView>
+        <Button fx:id="volverOP" disable="false" layoutX="142.0" layoutY="402.0" mnemonicParsing="false" onAction="#volverOP" prefHeight="40.0" prefWidth="110.0" text="Volver" textFill="WHITE">
+            <effect>
+                <Bloom />
+            </effect>
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Button>
+        <Label fx:id="lblpago" alignment="CENTER" contentDisplay="CENTER" font="$x1" layoutX="127.0" layoutY="77.0" prefHeight="26.0" prefWidth="319.0" text="" textAlignment="CENTER" />
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="343.0" layoutY="392.0" maxHeight="53.0" maxWidth="63.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#terminar_trx" prefHeight="53.0" prefWidth="63.0" styleClass="terminar_trx">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@pagosatercerosfin2.css" />
+    </stylesheets>
+</AnchorPane>

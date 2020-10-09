@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.MovDebAutIniController">
+    <children>
+        <Label id="tituloCDTfin" alignment="CENTER" focusTraversable="false" layoutX="0.0" layoutY="37.0" prefHeight="49.0" prefWidth="572.0" text="HISTÓRICO DE DÉBITOS EXITOSOS Y RECHAZADOS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="ContinuarOP" layoutX="241.0" layoutY="402.0" mnemonicParsing="false" onAction="#ContinuarOP" prefHeight="26.0" prefWidth="94.0" text="Consultar" textFill="WHITE" />
+        <Label alignment="CENTER" layoutX="59.0" layoutY="180.0" prefWidth="199.0" text="Fecha de la Transacción" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label font="$x1" layoutX="349.0" layoutY="180.0" prefWidth="130.0" text="Código del Convenio" />
+        <ProgressBar fx:id="progreso" layoutX="185.0" layoutY="307.0" prefWidth="200.0" progress="0.0" visible="true" />
+        <DatePicker fx:id="tfini" layoutX="59.0" layoutY="208.0" prefWidth="94.0" promptText="Desde">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <DatePicker fx:id="tffin" layoutX="159.0" layoutY="208.0" prefWidth="94.0" promptText="Hasta">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <RestrictiveTextField fx:id="codConvenio" layoutX="314.0" layoutY="207.0" maxLength="15" prefWidth="182.0" restrict="[a-z0-9A-Z]" />
+    </children>
+    <stylesheets>
+        <URL value="@movdebautini.css" />
+    </stylesheets>
+</AnchorPane>

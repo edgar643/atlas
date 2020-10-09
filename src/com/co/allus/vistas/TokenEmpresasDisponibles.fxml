@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet tokenempresasdisponibles.css?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TokenEmpresasDisponiblesController">
+    <children>
+        <Label fx:id="lbltitulo" alignment="CENTER" layoutX="4.0" layoutY="2.0" prefHeight="43.0" prefWidth="572.0" text="Información Token Disponibles" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="128.0" layoutY="62.0" prefHeight="30.0" prefWidth="111.0" text="NIT">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" font="$x1" layoutX="96.0" layoutY="98.0" prefHeight="30.0" prefWidth="173.0" text="Esquema de Seguridad" />
+        <Label alignment="CENTER" font="$x1" layoutX="123.0" layoutY="135.0" prefHeight="30.0" prefWidth="122.0" text="Búsqueda por Serial" />
+        <TextField fx:id="tfNit" editable="false" layoutX="274.0" layoutY="64.0" prefHeight="26.0" prefWidth="173.0" />
+        <TextField fx:id="tfEsquema_Seguridad" editable="false" layoutX="274.0" layoutY="100.0" prefHeight="26.0" prefWidth="173.0" />
+        <RestrictiveTextField fx:id="tfBusqueda_Serial" editable="false" layoutX="274.0" layoutY="137.0" maxLength="20" onKeyPressed="#serialbuscarkeypress" onKeyTyped="#serialbuscarkeytyped" prefHeight="26.0" prefWidth="173.0" restrict="[0-9]" styleClass="tfBusqueda_Serial" />
+        <HBox layoutX="0.0" layoutY="436.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="regresar_op" mnemonicParsing="false" onAction="#regresar_op" prefHeight="26.0" prefWidth="95.0" text="Regresar">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="70.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="168.0" />
+            </padding>
+        </HBox>
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="68.0" layoutY="409.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <StackPane fx:id="panel_tabla" layoutX="147.0" layoutY="241.0" prefHeight="100.0" prefWidth="281.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" focusTraversable="false" prefHeight="107.0" prefWidth="281.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="colserial" maxWidth="5000.0" minWidth="43.0" prefWidth="140.0" text="Serial" fx:id="colserial" />
+                        <TableColumn editable="false" id="colfecha_exp" maxWidth="5000.0" minWidth="20.0" prefWidth="130.0" resizable="true" text="Fecha de Exp" fx:id="colfecha_exp" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Button fx:id="obtMasReg" layoutX="333.0" layoutY="216.0" mnemonicParsing="false" onAction="#obtMasRegOp" prefWidth="95.0" text="+ Registros" />
+    </children>
+    <stylesheets>
+        <URL value="@tokenempresasdisponibles.css" />
+    </stylesheets>
+</AnchorPane>

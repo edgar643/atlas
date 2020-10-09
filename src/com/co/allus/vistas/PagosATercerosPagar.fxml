@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet prestamos.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.PagosATercerosPagarController">
+    <children>
+        <Label id="lblpagominimo" layoutX="344.0" layoutY="284.0" prefHeight="23.0" prefWidth="180.0" text="">
+            <font>
+                <Font name="System Bold" size="14.0" fx:id="x2" />
+            </font>
+        </Label>
+        <ComboBox fx:id="tipo_cuenta" layoutX="188.0" layoutY="145.0" onAction="#selTipocta" prefHeight="25.0" prefWidth="144.0" />
+        <ComboBox fx:id="selCuenta" layoutX="188.0" layoutY="178.0" onAction="#selCuenta" prefHeight="25.0" prefWidth="233.0" />
+        <RestrictiveTextField fx:id="tfotrovalor" layoutX="301.0" layoutY="316.0" maxLength="15" onKeyPressed="#otroValPressed" onKeyTyped="#otroValKey" prefWidth="180.0" restrict="[1-9][0-9]*+([,\\.][0-9]{0,2})?$" />
+        <HBox layoutX="62.0" layoutY="442.0" minHeight="22.0" minWidth="86.0" prefHeight="25.0" prefWidth="441.0">
+            <children>
+                <Button fx:id="continuarOP" disable="false" mnemonicParsing="false" onAction="#continuarOP" prefHeight="36.0" prefWidth="95.0" text="Continuar" textFill="WHITE">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="20.0" fx:id="x1" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelarPago" mnemonicParsing="false" onAction="#cancelPagoActual" prefHeight="36.0" prefWidth="125.0" text="Cancelar éste pago" textFill="WHITE">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="20.0" fx:id="x1" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelarRestantes" mnemonicParsing="false" onAction="#canceltodosPagos" prefHeight="36.0" prefWidth="142.0" text="Cancelar Pagos &#10;Restantes" textFill="WHITE" HBox.margin="$x1">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Button>
+            </children>
+        </HBox>
+        <Label id="" alignment="CENTER" layoutX="-4.0" layoutY="0.0" prefHeight="34.0" prefWidth="572.0" text="PAGOS A TERCEROS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <VBox layoutX="189.0" layoutY="263.0" minHeight="43.0" prefHeight="53.0" prefWidth="306.0">
+            <children>
+                <RadioButton fx:id="pagoMin" disable="false" font="$x2" mnemonicParsing="false" onAction="#selPagoMin" prefHeight="20.0" selected="false" text="Valor a Pagar" visible="true" />
+                <RadioButton fx:id="pagoTotal" disable="false" font="$x2" mnemonicParsing="false" onAction="#selPagoTotal" prefHeight="20.0" text="Otro Valor" visible="true">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </RadioButton>
+            </children>
+        </VBox>
+        <Label font="$x2" layoutX="64.0" layoutY="146.0" prefHeight="23.0" prefWidth="121.0" text="Cuenta a debitar" />
+        <Label font="$x2" layoutX="73.0" layoutY="261.0" prefHeight="23.0" prefWidth="112.0" text="Datos del Pago" />
+        <TableView fx:id="tabla_datos" disable="false" editable="false" focusTraversable="true" layoutX="4.0" layoutY="67.0" maxHeight="304.0" maxWidth="567.0" minHeight="53.0" minWidth="556.0" prefHeight="53.0" prefWidth="567.0" scaleX="1.0" scaleY="1.0" tableMenuButtonVisible="false" visible="true">
+            <columns>
+                <TableColumn editable="false" id="colNomConv" maxWidth="190.0" minWidth="190.0" prefWidth="190.0" resizable="true" sortType="ASCENDING" sortable="true" text="Nombre Convenio" visible="true" />
+                <TableColumn editable="false" id="colUrb" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" sortable="true" text="Urbanización" visible="true" />
+                <TableColumn editable="false" id="colNit" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" resizable="true" sortable="true" text="NIT o Cédula" visible="true" />
+                <TableColumn editable="false" id="colNumAp" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" sortType="ASCENDING" sortable="true" text="N° Apartamento" visible="true" />
+            </columns>
+            <rotationAxis>
+                <Point3D x="1.0" />
+            </rotationAxis>
+            <stylesheets>
+                <URL value="@prestamos.css" />
+            </stylesheets>
+        </TableView>
+        <Label fx:id="infoPagoX" font="$x2" layoutX="226.0" layoutY="40.0" prefHeight="20.0" prefWidth="112.0" text="" />
+    </children>
+    <stylesheets>
+        <URL value="@pagosatercerospagar.css" />
+    </stylesheets>
+</AnchorPane>

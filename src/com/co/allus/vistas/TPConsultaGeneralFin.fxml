@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TPConsultaGeneralFinController">
+    <children>
+        <StackPane fx:id="panel_tabla" layoutX="0.0" layoutY="102.0" maxHeight="282.0" maxWidth="564.0" minHeight="280.0" minWidth="564.0" prefHeight="280.0" prefWidth="564.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" focusTraversable="true" maxHeight="282.0000999999975" maxWidth="558.0" minHeight="157.0" minWidth="558.0" prefHeight="282.0000999999975" prefWidth="558.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="colDescripcion" maxWidth="280.0" minWidth="280.0" prefWidth="280.0" resizable="false" sortable="false" text="DESCRIPCIÓN" fx:id="colDescripcion" />
+                        <TableColumn editable="false" id="colInformacion" maxWidth="277.0" minWidth="257.0" prefWidth="263.0" resizable="false" sortable="false" text="INFORMACIÓN" fx:id="colInformacion" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label alignment="CENTER" layoutX="3.0" layoutY="36.0" prefHeight="27.0" prefWidth="572.0" text="CONSULTAS GENERALES" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="regresar_op" layoutX="232.0" layoutY="425.0" mnemonicParsing="false" onAction="#regresar_op" prefHeight="26.0" prefWidth="111.0" styleClass="button_azul" text="Regresar" textFill="#dfdfdf">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@tpconsultageneralfin.css" />
+    </stylesheets>
+</AnchorPane>

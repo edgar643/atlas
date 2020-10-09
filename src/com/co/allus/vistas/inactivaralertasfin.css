@@ -1,0 +1,17 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+}
+
+
+.button
+{
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-color: white; 
+    -fx-border-color: white;
+
+}

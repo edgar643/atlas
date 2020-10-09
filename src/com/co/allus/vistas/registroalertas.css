@@ -1,0 +1,38 @@
+/* 
+    Document   : actualizacionDatosSeguridad1
+    Created on : 28-mar-2016, 18:08:54
+    Author     : luis.cuervo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.mainFxmlClass {
+
+}
+
+
+.button
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #212C7B;
+    -fx-border-color: white;
+    /*    -fx-border-insets: 1,1,1,1;  */
+}
+
+.texto-gris
+{
+
+    -fx-text-fill: GRAY;
+    -fx-font-weight: bold;
+
+}
+
+
+.avisos
+{
+    -fx-text-fill: RED !important;
+    -fx-font-weight: bold !important;
+}
+
+

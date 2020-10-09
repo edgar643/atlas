@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="600.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.BolsillosCuentasController">
+    <children>
+        <Label alignment="CENTER" layoutX="-3.0" layoutY="0.0" prefHeight="43.0" prefWidth="572.0" text="CUENTAS DE AHORRO / BOLSILLOS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <StackPane fx:id="panel_tabla" alignment="CENTER" maxHeight="300.0" maxWidth="556.0" minHeight="300.0" minWidth="527.0" prefHeight="300.0" prefWidth="527.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="55.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="295.0" maxWidth="556.0" minHeight="242.0" minWidth="527.0" prefHeight="242.0" prefWidth="527.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn id="tipo_cuenta" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" text="Cuenta con Bolsillos" fx:id="tipo_cuenta" />
+                        <TableColumn id="numero_cuenta" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Cuenta de Ahorros" fx:id="numero_cuenta" />
+                        <TableColumn id="saldo_cuenta" maxWidth="185.0" minWidth="185.0" prefWidth="185.0" text="Disp. Total:" fx:id="saldo_cuenta" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </StackPane>
+        <HBox fx:id="menu_progreso" alignment="CENTER" layoutX="68.0" layoutY="406.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <Separator layoutX="0.0" layoutY="43.0" orientation="HORIZONTAL" prefHeight="10.0" prefWidth="572.0" visible="false" />
+        <Button fx:id="continuar_trx" disable="false" layoutX="112.0" layoutY="440.0" mnemonicParsing="false" onAction="#continuar_op" prefHeight="27.0" prefWidth="108.0" text="Continuar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="cancelar_trx" layoutX="361.0" layoutY="440.0" mnemonicParsing="false" onAction="#cancelar_op" prefHeight="27.0" prefWidth="108.0" text="Cancelar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@bolsilloscuentas.css" />
+    </stylesheets>
+</AnchorPane>

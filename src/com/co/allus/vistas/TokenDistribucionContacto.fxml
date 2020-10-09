@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TokenDistribucionContactoController">
+    <children>
+        <Label alignment="CENTER" layoutX="70.0" layoutY="162.0" prefHeight="22.0" prefWidth="63.0" text="ID Usuario">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <TextField fx:id="tfID" editable="false" layoutX="133.0" layoutY="162.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" layoutX="8.0" layoutY="7.0" prefHeight="37.0" prefWidth="559.0" text="Distribución de Token">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+            <textFill>
+                <Color blue="0.482" green="0.173" red="0.129" fx:id="x2" />
+            </textFill>
+        </Label>
+        <Label alignment="CENTER" font="$x1" layoutX="3.0" layoutY="100.0" prefHeight="26.0" prefWidth="568.0" styleClass="labelazul" text="Detalle Contacto de Entrega" textFill="$x2" />
+        <Label alignment="CENTER" font="$x1" layoutX="20.0" layoutY="190.0" prefHeight="22.0" prefWidth="113.0" text="Nombre de Usuario" />
+        <TextField fx:id="tfNombreU" editable="false" layoutX="133.0" layoutY="189.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="60.0" layoutY="217.0" prefHeight="22.0" prefWidth="74.0" text="Serial Token" />
+        <TextField fx:id="tfSerial" editable="false" layoutX="133.0" layoutY="217.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label id="" alignment="CENTER" font="$x1" layoutX="33.0" layoutY="245.0" prefHeight="22.0" prefWidth="101.0" text="Tipo de Contacto" />
+        <TextField fx:id="tfTipoContacto" editable="false" layoutX="133.0" layoutY="244.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="178.0" layoutY="63.0" prefHeight="22.0" prefWidth="42.0" text="NIT" />
+        <TextField fx:id="tfNit" editable="false" layoutX="217.0" layoutY="63.0" prefHeight="22.000099999997474" prefWidth="141.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="89.0" layoutY="271.0" prefHeight="22.0" prefWidth="44.0" text="Celular" />
+        <TextField fx:id="tfCelular" editable="false" layoutX="133.0" layoutY="271.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="90.0" layoutY="299.0" prefHeight="22.0" prefWidth="44.0" text="Ciudad" />
+        <TextField fx:id="tfCiudad" editable="false" layoutX="133.0" layoutY="298.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="19.0" layoutY="325.0" prefHeight="22.0" prefWidth="114.0" text="Sucursal de Entrega" />
+        <TextField fx:id="tfSucursal" editable="false" layoutX="133.0" layoutY="325.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="2.0" layoutY="353.0" prefHeight="22.0" prefWidth="131.0" text="Nombre del mensajero" />
+        <TextField fx:id="tfNomMensajero" editable="false" layoutX="133.0" layoutY="352.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="353.0" layoutY="162.0" prefHeight="22.0" prefWidth="49.0" text="Nombre" />
+        <TextField fx:id="tfNombre" editable="false" layoutX="404.0" layoutY="160.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="290.0" layoutY="188.0" prefHeight="22.0" prefWidth="113.0" text="Tipo de Documento" />
+        <TextField fx:id="tfTipoDoc" editable="false" layoutX="404.0" layoutY="187.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="336.0" layoutY="215.0" prefHeight="22.0" prefWidth="66.0" text="Documento" />
+        <TextField fx:id="tfDocumento" editable="false" layoutX="404.0" layoutY="215.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="352.0" layoutY="243.0" prefHeight="22.0" prefWidth="50.0" text="Teléfono" />
+        <TextField fx:id="tfTelefono" editable="false" layoutX="404.0" layoutY="242.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="307.0" layoutY="269.0" prefHeight="22.0" prefWidth="96.0" text="Teléfono Alterno" />
+        <TextField fx:id="tfTelefonoAlt" editable="false" layoutX="404.0" layoutY="269.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="286.0" layoutY="297.0" prefHeight="22.0" prefWidth="118.0" text="Dirección de Entrega" />
+        <TextField fx:id="tfDireccionEnt" editable="false" layoutX="404.0" layoutY="296.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="321.0" layoutY="323.0" prefHeight="22.0" prefWidth="82.0" text="Departamento" />
+        <TextField fx:id="tfDepartamento" editable="false" layoutX="404.0" layoutY="323.0" prefHeight="25.0" prefWidth="154.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="291.0" layoutY="350.0" prefHeight="22.0" prefWidth="113.0" text="Dcto. del Mensajero" />
+        <TextField fx:id="tfDocMens" editable="false" layoutX="404.0" layoutY="350.0" prefHeight="25.0" prefWidth="154.0" />
+        <Button id="regresar_op" disable="false" layoutX="240.0" layoutY="426.0" mnemonicParsing="false" onAction="#regresar_op" prefHeight="26.0" prefWidth="95.0" text="Regresar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@tokendistribucioncontacto.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,31 @@
+
+.mainFxmlClass {
+
+}
+
+
+.button
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #212C7B;
+    -fx-border-color: white;
+    /*    -fx-border-insets: 1,1,1,1;  */
+}
+
+.texto-gris
+{
+
+    -fx-text-fill: GRAY;
+    -fx-font-weight: bold;
+
+}
+
+
+.avisos
+{
+    -fx-text-fill: BLACK !important;
+    -fx-font-weight: bold !important;
+    -fx-text-alignment: justify;
+
+}

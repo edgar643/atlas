@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\juan.hernandez.ala\Documents\1 DOCUMENTOS VISOR\Atlas_1.7.5_[7.0]_VISOR\Fuentes\dist\GestiontelPlus.jar</jar>
+  <outfile>C:\Users\juan.hernandez.ala\Documents\1 DOCUMENTOS VISOR\Atlas_1.7.5_[7.0]_VISOR\Fuentes\dist\Atlas.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>high</priority>
+  <downloadUrl>http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>true</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\juan.hernandez.ala\Documents\1 DOCUMENTOS VISOR\Atlas_1.7.5_[7.0]_VISOR\Fuentes\allusico.ico</icon>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.6.0</minVersion>
+    <maxVersion>1.7.80</maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+    <initialHeapSize>128</initialHeapSize>
+    <maxHeapSize>800</maxHeapSize>
+  </jre>
+  <splash>
+    <file>C:\Users\juan.hernandez.ala\Documents\1 DOCUMENTOS VISOR\Atlas_1.7.5_[7.0]_VISOR\Fuentes\ATLAS.bmp</file>
+    <waitForWindow>false</waitForWindow>
+    <timeout>2</timeout>
+    <timeoutErr>true</timeoutErr>
+  </splash>
+  <versionInfo>
+    <fileVersion>1.7.5.0</fileVersion>
+    <txtFileVersion>1.0.0.0</txtFileVersion>
+    <fileDescription>Atlas</fileDescription>
+    <copyright>Konecta Colombia 2020</copyright>
+    <productVersion>1.7.5.0</productVersion>
+    <txtProductVersion>1.0.0.0</txtProductVersion>
+    <productName>Atlas</productName>
+    <companyName>KONECTA</companyName>
+    <internalName>Atlas</internalName>
+    <originalFilename>GestiontelPlus.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>SPANISH_MEXICO</language>
+  </versionInfo>
+  <messages>
+    <startupErr>An error occurred while starting the application.</startupErr>
+    <bundledJreErr>This application was configured to use a bundled Java Runtime Environment but the runtime is missing or corrupted.</bundledJreErr>
+    <jreVersionErr>This application requires a Java Runtime Environment</jreVersionErr>
+    <launcherErr>The registry refers to a nonexistent Java Runtime Environment installation or the runtime is corrupted.</launcherErr>
+    <instanceAlreadyExistsMsg>An application instance is already running.</instanceAlreadyExistsMsg>
+  </messages>
+</launch4jConfig>

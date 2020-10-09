@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" disable="false" focusTraversable="false" maxHeight="630.0" maxWidth="750.0" minHeight="630.0" minWidth="757.0" padding="$x2" prefHeight="630.0" prefWidth="757.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.MarcoPrincipalController">
+    <children>
+        <GridPane fx:id="Panel_datos" alignment="CENTER" focusTraversable="true" gridLinesVisible="false" layoutX="0.0" layoutY="123.0" maxHeight="482.0" maxWidth="750.0" minHeight="482.0" minWidth="750.0" prefHeight="482.0" prefWidth="750.0">
+            <children>
+                <Label fx:id="label_saldos" alignment="CENTER" contentDisplay="TOP" prefHeight="36.0" prefWidth="575.0" text="" textAlignment="CENTER" textFill="#212c7b" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <font>
+                        <Font name="System Bold" size="14.0" fx:id="x1" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets fx:id="x2" />
+                    </GridPane.margin>
+                </Label>
+                <Button fx:id="regresar" minHeight="22.0" mnemonicParsing="false" onAction="#regresar" prefHeight="27.0" prefWidth="188.0" text="INICIO" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <stylesheets>
+                        <URL value="@marcoprincipal.css" />
+                    </stylesheets>
+                    <GridPane.margin>
+                        <Insets top="455.0" />
+                    </GridPane.margin>
+                </Button>
+                <Accordion fx:id="menu" minWidth="188.0" prefHeight="270.0" prefWidth="188.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <expandedPane>
+                        <TitledPane fx:id="menuVisor" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="true" focusTraversable="true" minHeight="23.0" minWidth="184.0" prefHeight="23.0" prefWidth="184.0" styleClass="arbol-style" text="VISOR" textAlignment="LEFT" textFill="WHITE" visible="false">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbolVisor" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                            <font>
+                                <Font name="System Bold" size="13.0" fx:id="x3" />
+                            </font>
+                        </TitledPane>
+                    </expandedPane>
+                    <panes>
+                        <TitledPane id="menu_saldos" fx:id="Menu_saldos" alignment="CENTER" animated="true" collapsible="true" contentDisplay="CENTER" expanded="false" font="$x3" minWidth="184.0" prefHeight="379.0" prefWidth="184.0" styleClass="arbol-style" text="CONSULTA SALDO" textAlignment="LEFT" textFill="WHITE" underline="false">
+                            <content>
+                                <AnchorPane id="Content" fx:id="anchor_saldos" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbol_saldos" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menu_pagos" alignment="CENTER" animated="true" collapsible="true" contentDisplay="CENTER" expanded="false" font="$x3" minWidth="188.0" opacity="1.0" prefHeight="429.0" prefWidth="188.0" styleClass="arbol-style" text="PAGOS" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbol_pagos" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menu_trasnferencias" alignment="CENTER" animated="true" contentDisplay="CENTER" disable="false" expanded="false" focusTraversable="true" font="$x3" styleClass="arbol-style" text="TRANSFERENCIAS" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbol_transferencias" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menu_bloqueos" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="false" font="$x3" minWidth="184.0" prefHeight="345.0" prefWidth="184.0" styleClass="arbol-style" text="CONTRA / BLOQUEOS" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbolbloqueos" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menu_serviciosadicionales" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="false" font="$x3" minWidth="184.0" prefHeight="264.0" prefWidth="184.0" styleClass="arbol-style" text="SERVICIOS ADICIONALES" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbol_servadicionales" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menu_infotdc" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="false" font="$x3" minWidth="184.0" prefHeight="264.0" prefWidth="184.0" styleClass="arbol-style" text="INFORMACIÓN TDC" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbol_infotdc" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menu_consultas" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="false" font="$x3" minWidth="184.0" prefHeight="264.0" prefWidth="184.0" styleClass="arbol-style" text="CONSULTAS/ALERTAS" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbol_consultas" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menu_movimientos" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="false" font="$x3" minWidth="184.0" prefHeight="264.0" prefWidth="184.0" styleClass="arbol-style" text="CONSULTA MOVIMIENTOS" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbol_movimientos" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane id="menu_infoSeguridad" fx:id="menuinfoseguridad" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="false" font="$x3" minWidth="184.0" prefHeight="264.0" prefWidth="184.0" styleClass="arbol-style" text="INFORMACIÓN SEGURIDAD" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbol_infoseguridad" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menurecaudos" alignment="CENTER" animated="true" contentDisplay="LEFT" expanded="false" font="$x3" minWidth="184.0" prefHeight="264.0" prefWidth="184.0" styleClass="arbol-style" text="RECAUDOS" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbol_recaudos" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menuTDCprepago" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="false" focusTraversable="true" font="$x3" minWidth="184.0" prefHeight="264.0" prefWidth="184.0" styleClass="arbol-style" text="TARJETA PREPAGO" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arboltdcPrepago" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menuPuntosCol" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="false" focusTraversable="true" font="$x3" minWidth="184.0" prefHeight="264.0" prefWidth="184.0" styleClass="arbol-style" text="PUNTOS COLOMBIA" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbolPuntosCol" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menuGirosNal" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="false" focusTraversable="true" font="$x3" minWidth="184.0" prefHeight="264.0" prefWidth="184.0" styleClass="arbol-style" text="GIROS NACIONALES" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbolGirosNal" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menuDesbloqueoAlm" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="true" focusTraversable="true" minWidth="184.0" prefHeight="264.0" prefWidth="184.0" styleClass="arbol-style" text="AHORRO A LA MANO" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbolDesbloqueoAlm" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                            <font>
+                                <Font name="System Bold" size="13.0" fx:id="x3" />
+                            </font>
+                        </TitledPane>
+                        <TitledPane fx:id="menuDeclinacionesTdc" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="false" focusTraversable="true" font="$x3" minWidth="184.0" prefHeight="264.0" prefWidth="184.0" styleClass="arbol-style" text="DECLINACIONES TDC" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbolDeclinacionesTdc" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="menuBolsillos" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="false" focusTraversable="true" font="$x3" minHeight="23.0" minWidth="184.0" prefHeight="23.0" prefWidth="184.0" styleClass="arbol-style" text="INFORMACIÓN BOLSILLOS" textAlignment="LEFT" textFill="WHITE" visible="true">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="184.0" snapToPixel="true" visible="true">
+                                    <children>
+                                        <TreeView fx:id="arbolBolsillos" editable="true" focusTraversable="true" maxHeight="346.0" maxWidth="180.0" minHeight="217.0" minWidth="180.0" prefHeight="346.0" prefWidth="180.0" showRoot="false" styleClass="arbol-style" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets fx:id="x2" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <fx:reference source="menuVisor" />
+                        <TitledPane id="" alignment="CENTER" animated="true" contentDisplay="CENTER" expanded="false" font="$x3" minWidth="184.0" prefHeight="264.0" prefWidth="184.0" text="" textAlignment="LEFT" textFill="WHITE" visible="false">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TreeView id="" layoutX="0.0" layoutY="-3.0" prefHeight="314.9999000000025" prefWidth="189.0" styleClass="arbol-bloqueos" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                    </panes>
+                    <stylesheets>
+                        <URL value="@marcoprincipal.css" />
+                    </stylesheets>
+                    <GridPane.margin>
+                        <Insets bottom="24.0" />
+                    </GridPane.margin>
+                </Accordion>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="10.0" prefWidth="188.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="606.0" minWidth="10.0" prefWidth="562.0" />
+            </columnConstraints>
+            <effect>
+                <ColorAdjust />
+            </effect>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <stylesheets>
+                <URL value="@marcoprincipal.css" />
+            </stylesheets>
+        </GridPane>
+        <GridPane fx:id="pane_arriba" alignment="BOTTOM_CENTER" gridLinesVisible="false" layoutX="0.0" layoutY="0.0" maxHeight="119.0" maxWidth="750.0" minHeight="119.0" minWidth="750.0" prefHeight="119.0" prefWidth="750.0">
+            <children>
+                <ImageView fitHeight="101.00001525878906" fitWidth="188.99998474121094" focusTraversable="false" pickOnBounds="true" preserveRatio="false" smooth="true" visible="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <image>
+                        <Image url="@../recursos/logoBancoNew.jpg" />
+                    </image>
+                    <GridPane.margin>
+                        <Insets fx:id="x2" />
+                    </GridPane.margin>
+                </ImageView>
+                <Label fx:id="cliente" alignment="TOP_CENTER" contentDisplay="CENTER" font="$x1" prefHeight="78.0" prefWidth="560.0" text="" textAlignment="CENTER" wrapText="false" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <GridPane.margin>
+                        <Insets top="40.0" />
+                    </GridPane.margin>
+                </Label>
+                <Pane id="panetime" fx:id="time" padding="$x2" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <children>
+                        <Label fx:id="hora" layoutX="0.0" layoutY="12.0" prefHeight="36.0" prefWidth="150.0" text="">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="ip" layoutX="3.0" layoutY="30.0" prefHeight="22.0" prefWidth="140.0" text="">
+                            <font>
+                                <Font name="System Bold" size="11.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <stylesheets>
+                        <URL value="@marcoprincipal.css" />
+                    </stylesheets>
+                    <GridPane.margin>
+                        <Insets bottom="60.0" left="410.0" />
+                    </GridPane.margin>
+                </Pane>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="374.0" minWidth="10.0" prefWidth="190.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="677.0" minWidth="10.0" prefWidth="560.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints fillHeight="true" minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+            </rowConstraints>
+        </GridPane>
+    </children>
+    <stylesheets>
+        <URL value="@marcoprincipal.css" />
+    </stylesheets>
+</AnchorPane>

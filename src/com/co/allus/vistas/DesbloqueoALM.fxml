@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.DesbloqueoALMController">
+    <children>
+        <Label fx:id="lbltitulo" alignment="CENTER" prefHeight="43.0" prefWidth="572.0" text="DESBLOQUEO ALM" textFill="#212c7b" AnchorPane.bottomAnchor="438.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="desbloquear_trx" mnemonicParsing="false" onAction="#desbloquear_op" prefHeight="27.0" prefWidth="113.0" text="Desbloquear" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="304.0" AnchorPane.topAnchor="394.0">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="cancelar_trx" mnemonicParsing="false" onAction="#cancelar_op" prefHeight="27.0" prefWidth="106.0" text="Cancelar" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="313.0" AnchorPane.rightAnchor="156.0" AnchorPane.topAnchor="394.0">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <StackPane fx:id="panel_tabla" focusTraversable="false" prefHeight="191.0" prefWidth="487.0" AnchorPane.bottomAnchor="152.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="115.0">
+            <children>
+                <TableView fx:id="tablaDatosDesbloqueoAlm" focusTraversable="true" prefHeight="242.0" prefWidth="452.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="descripcion" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" text="DESCRIPCIÓN" fx:id="descripcion" />
+                        <TableColumn editable="false" id="informacion" maxWidth="235.0" minWidth="200.0" prefWidth="235.0" text="INFORMACIÓN" fx:id="informacion" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+    </children>
+    <stylesheets>
+        <URL value="@desbloqueoalm.css" />
+    </stylesheets>
+</AnchorPane>

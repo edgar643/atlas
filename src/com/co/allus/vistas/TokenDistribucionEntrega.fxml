@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TokenDistribucionEntregaController">
+    <children>
+        <Label alignment="CENTER" layoutX="96.0" layoutY="124.0" prefHeight="22.0" prefWidth="71.0" text="ID Usuario">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <TextField fx:id="tfID" editable="false" layoutX="171.0" layoutY="124.0" prefHeight="22.0" prefWidth="256.0" />
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="52.0" layoutY="466.0" prefHeight="14.0" prefWidth="475.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <StackPane fx:id="panel_tabla" layoutX="2.0" layoutY="203.0" minHeight="13.0" prefHeight="158.0" prefWidth="559.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" focusTraversable="false" prefHeight="115.0" prefWidth="1145.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="colFecha" maxWidth="116.0" minWidth="116.0" prefWidth="116.0" resizable="false" sortable="false" text="Fecha de Gestión" fx:id="colFecha" />
+                        <TableColumn editable="false" id="colDireccion" maxWidth="188.0" minWidth="188.0" prefWidth="188.0" resizable="false" sortable="false" text="Dirección" fx:id="colDireccion" />
+                        <TableColumn editable="false" id="colCiudad" maxWidth="111.0" minWidth="111.0" prefWidth="111.0" resizable="false" sortable="false" text="Ciudad" fx:id="colCiudad" />
+                        <TableColumn editable="false" id="colEstado" maxWidth="121.0" minWidth="121.0" prefWidth="121.0" resizable="false" sortable="false" text="Estado" fx:id="colEstado" />
+                        <TableColumn editable="false" id="colResultado" maxWidth="139.0" minWidth="139.0" prefWidth="139.0" resizable="false" sortable="false" text="Resultado Gestión" fx:id="colResultado" />
+                        <TableColumn editable="false" id="colObservaciones" maxWidth="232.0" minWidth="232.0" prefWidth="232.0" resizable="false" sortable="false" text="Observaciones" fx:id="colObservaciones" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label alignment="CENTER" layoutX="11.0" layoutY="1.0" prefHeight="37.0" prefWidth="559.0" text="Distribución de Token">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+            <textFill>
+                <Color blue="0.482" green="0.173" red="0.129" fx:id="x2" />
+            </textFill>
+        </Label>
+        <Button fx:id="regresar_op" disable="false" layoutX="240.0" layoutY="430.0" mnemonicParsing="false" onAction="#regresar_op" prefHeight="26.0" prefWidth="95.0" text="Regresar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Label alignment="CENTER" font="$x1" layoutX="4.0" layoutY="88.0" prefHeight="26.0" prefWidth="568.0" styleClass="labelazul" text="Detalle Gestión de Entrega" textFill="$x2" />
+        <Label alignment="CENTER" font="$x1" layoutX="51.0" layoutY="146.0" prefHeight="22.0" prefWidth="113.0" text="Nombre de Usuario" />
+        <TextField fx:id="tfNombre" editable="false" layoutX="171.0" layoutY="147.0" prefHeight="22.0" prefWidth="256.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="88.0" layoutY="169.0" prefHeight="22.0" prefWidth="78.0" text="Serial Token" />
+        <TextField fx:id="tfSerial" editable="false" layoutX="171.0" layoutY="170.0" prefHeight="22.0" prefWidth="256.0" />
+        <Label alignment="CENTER" font="$x1" layoutX="192.0" layoutY="52.0" prefHeight="22.0" prefWidth="42.0" text="NIT" />
+        <TextField fx:id="tfNit" editable="false" layoutX="231.0" layoutY="52.0" prefHeight="22.0" prefWidth="141.0" />
+        <Button fx:id="obtMasReg" layoutX="472.0" layoutY="175.0" mnemonicParsing="false" onAction="#obtMasRegOp" prefWidth="85.0" text="+ Registros" />
+    </children>
+    <stylesheets>
+        <URL value="@tokendistribucionentrega.css" />
+    </stylesheets>
+</AnchorPane>

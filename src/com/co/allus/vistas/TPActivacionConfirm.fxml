@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="215.0" maxWidth="500.0" minHeight="215.0" minWidth="500.0" prefHeight="215.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TPActivacionConfirmController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="215.0" layoutX="59.0" layoutY="0.0" stroke="$x2" strokeType="INSIDE" width="440.0">
+            <fill>
+                <Color blue="0.482" green="0.173" red="0.129" fx:id="x2" />
+            </fill>
+        </Rectangle>
+        <ImageView id="icono" fitHeight="66.0" fitWidth="88.0" layoutX="59.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" smooth="true">
+            <image>
+                <Image url="@../recursos/warning-icon.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="aceptar_op" disable="false" layoutX="166.0" layoutY="170.0" mnemonicParsing="false" onAction="#aceptar_op" prefHeight="26.0" prefWidth="100.0" text="Aceptar" textFill="WHITE" visible="true">
+            <effect>
+                <Bloom threshold="0.9592592592592593" />
+            </effect>
+            <font>
+                <Font name="System Bold" size="13.0" fx:id="x1" />
+            </font>
+            <stylesheets>
+                <URL value="@modalmensajes.css" />
+            </stylesheets>
+        </Button>
+        <Label fx:id="lblmensaje" alignment="BASELINE_CENTER" contentDisplay="LEFT" layoutX="121.0" layoutY="38.0" prefHeight="111.0" prefWidth="347.0" text="asasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" textAlignment="CENTER" textFill="WHITE" textOverrun="ELLIPSIS" underline="false" wrapText="true">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="cancelar_op" disable="false" font="$x1" layoutX="311.0" layoutY="170.0" mnemonicParsing="false" onAction="#cancelar_op" prefHeight="26.0" prefWidth="100.0" text="Cancelar" textFill="WHITE" visible="true">
+            <effect>
+                <Bloom threshold="14.0" />
+            </effect>
+        </Button>
+        <ProgressBar fx:id="progreso" layoutX="195.0" layoutY="153.0" prefWidth="200.0" progress="0.0" visible="true" />
+    </children>
+    <stylesheets>
+        <URL value="@tpactivacionconfirm.css" />
+    </stylesheets>
+</AnchorPane>

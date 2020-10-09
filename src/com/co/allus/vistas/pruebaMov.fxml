@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.vistas.PruebaController">
+    <children>
+        <Accordion layoutX="102.0" layoutY="43.0" prefHeight="343.0" prefWidth="354.0">
+            <expandedPane>
+                <TitledPane fx:id="x2" animated="false" expanded="true" text="tabla x">
+                    <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView layoutX="0.0" layoutY="0.0" prefHeight="170.0" prefWidth="350.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="Column X" />
+                                        <TableColumn prefWidth="75.0" text="Column X" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                    <font>
+                        <Font size="14.0" fx:id="x1" />
+                    </font>
+                </TitledPane>
+            </expandedPane>
+            <panes>
+                <TitledPane animated="false" expanded="false" font="$x1" styleClass="first-titled-pane" text="tabla sizs">
+                    <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView layoutX="0.0" layoutY="0.0" prefHeight="204.0" prefWidth="350.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="Column X" />
+                                        <TableColumn prefWidth="75.0" text="Column X" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" font="$x1" text="tabla 1">
+                    <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView layoutX="0.0" layoutY="0.0" prefHeight="248.0" prefWidth="350.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="Column X" />
+                                        <TableColumn prefWidth="75.0" text="Column X" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <fx:reference source="x2" />
+                <TitledPane animated="false" font="$x1" text="tabla 2">
+                    <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView layoutX="0.0" layoutY="0.0" prefHeight="248.0" prefWidth="350.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="Column X" />
+                                        <TableColumn prefWidth="75.0" text="Column X" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" text="untitled" visible="false">
+                    <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </TitledPane>
+            </panes>
+        </Accordion>
+    </children>
+    <stylesheets>
+        <URL value="@pruebamov.css" />
+    </stylesheets>
+</AnchorPane>

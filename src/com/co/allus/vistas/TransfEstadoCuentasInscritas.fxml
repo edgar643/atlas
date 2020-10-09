@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TransfEstadoCuentasInscritasController">
+    <children>
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="256.0" layoutY="410.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#terminar_trx" prefHeight="53.0" prefWidth="63.0" styleClass="terminar_trx">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <StackPane fx:id="panel_tabla" layoutX="33.0" layoutY="70.0" prefHeight="274.0" prefWidth="507.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" focusTraversable="true" prefHeight="276.0" prefWidth="521.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="colNumCuenta" maxWidth="143.0" minWidth="143.0" prefWidth="143.0" text="Número Cuenta&#10;Beneficiaria" fx:id="colNumCuenta" />
+                        <TableColumn editable="false" id="colTipoCuenta" maxWidth="119.0" minWidth="119.0" prefWidth="119.0" resizable="true" text="Tipo Cuenta" fx:id="colTipoCuenta" />
+                        <TableColumn editable="false" id="colBanco" maxWidth="5000.0" minWidth="10.0" prefWidth="161.0" text="Banco" fx:id="colBanco" />
+                        <TableColumn editable="false" id="colEstado" maxWidth="5000.0" minWidth="10.0" prefWidth="82.0" text="Estado" fx:id="colEstado" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label id="titulo" alignment="CENTER" layoutX="2.0" layoutY="11.0" prefHeight="43.0" prefWidth="572.0" text="ESTADO CUENTAS INSCRITAS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+    </children>
+    <stylesheets>
+        <URL value="@transfestadocuentasinscritas.css" />
+    </stylesheets>
+</AnchorPane>

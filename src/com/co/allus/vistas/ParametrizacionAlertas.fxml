@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ParametrizacionAlertasController">
+  <children>
+    <Label id="label" alignment="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="19.0" prefWidth="575.0" text="PARAMETRIZACION ALERTAS Y NOTIFICACIONES" textFill="#212c7b">
+      <font>
+        <Font name="System Bold" size="14.0" />
+      </font>
+    </Label>
+    <StackPane fx:id="panel_tabla" focusTraversable="true" layoutX="1.0" layoutY="35.0" maxWidth="572.0" minHeight="201.0" minWidth="570.0" prefHeight="213.0" prefWidth="572.0">
+      <children>
+        <TableView fx:id="tabla_datos" disable="false" editable="true" focusTraversable="true" maxHeight="304.0" maxWidth="567.0" minHeight="200.0" minWidth="556.0" prefHeight="200.0" prefWidth="567.0" scaleX="1.0" scaleY="1.0" tableMenuButtonVisible="false" visible="true">
+          <columns>
+            <TableColumn editable="false" id="tipotrx" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" resizable="false" sortType="ASCENDING" sortable="true" text="Tipo transacción" visible="true" fx:id="tipotrx" />
+            <TableColumn editable="true" id="confalerta" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" resizable="false" sortable="false" text="Recibir&#10;Alerta" visible="true" fx:id="confalerta" />
+            <TableColumn editable="true" id="monto" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" resizable="false" sortable="false" text="Monto" visible="true" fx:id="monto" />
+            <TableColumn editable="true" id="nroOp" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" resizable="false" sortable="false" text="No&#10;Operaciones" visible="true" fx:id="nroOp" />
+            <TableColumn editable="false" id="validacion" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" resizable="false" sortType="ASCENDING" sortable="false" text="Correcta" visible="true" fx:id="validacion" />
+          </columns>
+          <rotationAxis>
+            <Point3D x="1.0" />
+          </rotationAxis>
+        </TableView>
+      </children>
+    </StackPane>
+    <StackPane fx:id="panel_tabla2" layoutX="14.0" layoutY="300.0" minHeight="97.0" prefHeight="148.0" prefWidth="406.0">
+      <children>
+        <TableView fx:id="tabla_datos2" disable="false" editable="true" focusTraversable="true" maxHeight="304.0" maxWidth="567.0" minHeight="97.0" minWidth="206.0" prefHeight="148.0" prefWidth="406.0" scaleX="1.0" scaleY="1.0" tableMenuButtonVisible="false" visible="true">
+          <columns>
+            <TableColumn editable="false" id="tipotrx2" maxWidth="228.0" minWidth="228.0" prefWidth="228.0" resizable="true" sortType="ASCENDING" sortable="true" text="Tipo transacción" visible="true" fx:id="tipotrx2" />
+            <TableColumn editable="true" id="confalerta2" maxWidth="163.0" minWidth="163.0" prefWidth="163.0" sortable="true" text="Recibir Alerta" visible="true" fx:id="confalerta2" />
+          </columns>
+          <rotationAxis>
+            <Point3D x="1.0" />
+          </rotationAxis>
+          <stylesheets>
+            <URL value="@prestamos.css" />
+          </stylesheets>
+        </TableView>
+      </children>
+    </StackPane>
+    <Label layoutX="24.0" layoutY="14.0" prefHeight="19.0" prefWidth="63.0" text="Email :">
+      <font>
+        <Font name="Arial Black" size="12.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="309.0" layoutY="14.0" prefHeight="19.0" prefWidth="80.0" text="Telefono :" />
+    <Label fx:id="email" layoutX="87.0" layoutY="14.0" prefHeight="19.0" prefWidth="207.0" text="">
+      <font>
+        <Font size="12.0" fx:id="x2" />
+      </font>
+    </Label>
+    <Label fx:id="telefono" font="$x2" layoutX="389.0" layoutY="14.0" prefHeight="19.0" prefWidth="168.0" text="" />
+    <Button fx:id="indmasreg" layoutX="437.0" layoutY="360.0" mnemonicParsing="false" onAction="#MasRegistros" prefHeight="29.0" prefWidth="104.0" text="Mas Registros" textFill="WHITE" />
+    <Button fx:id="continuarParam" layoutX="24.0" layoutY="451.0" mnemonicParsing="false" onAction="#continuarOp" prefHeight="25.0" prefWidth="104.0" text="Aceptar" textFill="WHITE" />
+    <Button fx:id="terminar_trx" layoutX="165.0" layoutY="451.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="25.0" prefWidth="104.0" text="Cancelar" textFill="WHITE" />
+    <HBox id="menu_progreso" alignment="CENTER" layoutX="280.0" layoutY="450.0" prefHeight="22.0" prefWidth="277.0" spacing="10.0" visible="true">
+      <children>
+        <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@parametrizacionalertas.css" />
+  </stylesheets>
+</AnchorPane>

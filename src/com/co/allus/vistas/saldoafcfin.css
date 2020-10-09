@@ -1,0 +1,88 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+}
+.table-view .column-header, .table-view .filler {
+    -fx-font-size: 14px;
+    -fx-background-color: #212C7B; 
+    -fx-border-color: white;    
+}
+
+.table-view .column-header .label .text
+{
+    -fx-fill:white;
+    -fx-font-size: 14px;  
+    -fx-text-alignment: center;
+}
+
+.table-view:row-selection .table-row-cell:filled:even .table-cell:filled:even
+{
+    -fx-alignment: CENTER;
+    -fx-text-alignment:CENTER; 
+    -fx-font-size: 14px; 
+
+}
+
+.table-view:row-selection .table-row-cell:odd:filled .table-cell:odd:filled
+{
+    -fx-alignment: CENTER;
+    -fx-text-alignment:CENTER; 
+    -fx-font-size: 14px; 
+
+}
+
+.table-view .column-header .label .text
+{
+    -fx-fill:white;   
+}
+
+.table-view .column-header .label
+{
+    -fx-fill:black;
+
+}
+
+.table-view:row-selection
+{
+    -fx-cursor: hand;
+
+}
+
+
+.button
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #212C7B;
+    -fx-border-color: white;
+    -fx-border-insets: 1,1,1,1; 
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}  
+
+.terminar_trx
+{
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-color: white; 
+    -fx-border-color: white;
+
+}
+
+.accordion
+{
+    -fx-background-color: #0C007D;    
+    -fx-border-color: white;
+    -fx-border-insets: 1,1,1,1;  
+}
+
+.column-header-background         { -fx-background-color: white;       }
+.willPayRow                       { -fx-background-color: white;   }
+.wontPayRow                       { -fx-background-color: white;       }
+.willPayCell                      { -fx-background-color: white; }
+.wontPayCell                      { -fx-background-color: white;   }
+.table-row-cell:empty             { -fx-background-color: white;    }
+.table-row-cell:empty .table-cell { -fx-border-width:     0px;         }

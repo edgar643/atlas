@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.PrestamosDetalleController">
+    <children>
+        <Label id="tituloCDTfin" alignment="CENTER" layoutX="3.0" layoutY="6.0" prefHeight="49.0" prefWidth="572.0" text="PAGO/PRÉSTAMOS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tabla_datos" layoutX="16.0" layoutY="71.0" prefHeight="319.0" prefWidth="533.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn editable="false" id="colDescripcion" maxWidth="5000.0" minWidth="10.0" prefWidth="267.0" text="DESCRIPCIÓN" fx:id="colDescripcion" />
+                <TableColumn editable="false" id="colInformacion" maxWidth="5000.0" minWidth="10.0" prefWidth="254.0" text="INFORMACIÓN" fx:id="colInformacion" />
+            </columns>
+        </TableView>
+        <HBox layoutX="14.0" layoutY="425.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="pagarOP" mnemonicParsing="false" onAction="#PagarOP" prefHeight="26.0" prefWidth="95.0" text="Ir a Pagar" textFill="WHITE">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="180.0" right="20.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelarOP" disable="false" mnemonicParsing="false" onAction="#VolverOP" prefHeight="26.0" prefWidth="95.0" text="Volver" textFill="WHITE">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+        <URL value="@prestamosdetalle.css" />
+    </stylesheets>
+</AnchorPane>

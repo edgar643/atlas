@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet transferctaspropias.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TransferCtasPropiasController">
+    <children>
+        <Label id="titulosPagos" alignment="CENTER" layoutX="3.0" layoutY="7.0" prefHeight="59.0" prefWidth="572.0" text="TRANSFERENCIAS BANCOLOMBIA&#10;           A CUENTAS PROPIAS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <HBox layoutX="3.0" layoutY="438.0" prefHeight="37.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="continuar_op" disable="true" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="160.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancel_op" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="70.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <Label layoutX="36.0" layoutY="130.0" prefHeight="23.0" prefWidth="141.0" text="Cuenta  Origen">
+            <font>
+                <Font name="System Bold" size="14.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label font="$x1" layoutX="36.0" layoutY="240.0" prefHeight="23.0" prefWidth="141.0" text="Cuenta Destino" />
+        <Label font="$x1" layoutX="37.0" layoutY="345.0" prefHeight="23.0" prefWidth="141.0" text="Valor a Transferir" />
+        <RestrictiveTextField fx:id="valor_transferir" layoutX="189.0" layoutY="345.0" maxLength="15" onKeyPressed="#valkeypressed" onKeyTyped="#valkeytyped" prefWidth="180.0" restrict="[1-9][0-9]*+([,\\.][0-9]{0,2})?$" />
+        <ComboBox fx:id="tipocta_origen" layoutX="189.0" layoutY="128.0" onAction="#selTipocta_origen" prefHeight="25.0" prefWidth="141.0" />
+        <ComboBox fx:id="cuenta_origen" layoutX="189.0" layoutY="164.0" onAction="#selCuenta_origen" prefHeight="25.0" prefWidth="180.0" />
+        <ComboBox fx:id="tipocta_destino" layoutX="189.0" layoutY="238.0" onAction="#selTipocta_destino" prefHeight="25.0" prefWidth="141.0" />
+        <ComboBox fx:id="cuenta_destino" layoutX="189.0" layoutY="273.0" onAction="#selCuenta_destino" prefHeight="25.0" prefWidth="180.0" />
+    </children>
+    <stylesheets>
+        <URL value="@transferctaspropias.css" />
+    </stylesheets>
+</AnchorPane>

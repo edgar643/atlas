@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TPAutenticacionEmpController">
+    <children>
+        <StackPane fx:id="panel_tabla" layoutX="3.0" layoutY="213.0" prefHeight="127.0" prefWidth="475.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" focusTraversable="false" prefHeight="83.0" prefWidth="476.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="colPregunta" maxWidth="331.0" minWidth="200.0" prefWidth="331.0" resizable="true" sortable="false" text="Pregunta" fx:id="colPregunta" />
+                        <TableColumn editable="false" id="colRespuesta" maxWidth="331.0" minWidth="142.0" prefWidth="142.0" resizable="true" sortable="false" text="Respuesta" fx:id="colRespuesta" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label alignment="CENTER" layoutX="2.0" layoutY="40.0" prefHeight="27.0" prefWidth="572.0" text="AUTENTICACIÓN">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+            <textFill>
+                <Color blue="0.482" green="0.173" red="0.129" fx:id="x1" />
+            </textFill>
+        </Label>
+        <Button fx:id="continuar_op" layoutX="187.0" layoutY="414.0" mnemonicParsing="false" onAction="#continuar_op" prefHeight="26.0" prefWidth="95.0" text="Continuar" wrapText="false">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="cancelar_op" layoutX="309.0" layoutY="414.0" mnemonicParsing="false" onAction="#cancelar_op" prefHeight="26.0" prefWidth="95.0" text="Cancelar" wrapText="false">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <CheckBox fx:id="cbsi1" layoutX="481.0" layoutY="244.0" mnemonicParsing="false" onAction="#cbsi1" text="SI" />
+        <CheckBox fx:id="cbsi2" layoutX="481.0" layoutY="269.0" mnemonicParsing="false" onAction="#cbsi2" text="SI" />
+        <CheckBox fx:id="cbno1" layoutX="524.0" layoutY="244.0" mnemonicParsing="false" onAction="#cbno1" text="NO" />
+        <CheckBox fx:id="cbno2" layoutX="524.0" layoutY="269.0" mnemonicParsing="false" onAction="#cbno2" text="NO" />
+        <Label alignment="CENTER_LEFT" layoutX="478.0" layoutY="211.0" prefHeight="26.0" prefWidth="95.0" text="¿Es correcto?" textFill="$x1">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <CheckBox fx:id="cbsi3" layoutX="481.0" layoutY="294.0" mnemonicParsing="false" onAction="#cbsi3" text="SI" />
+        <CheckBox fx:id="cbno3" layoutX="524.0" layoutY="294.0" mnemonicParsing="false" onAction="#cbno3" text="NO" />
+        <CheckBox fx:id="cbsi4" layoutX="481.0" layoutY="319.0" mnemonicParsing="false" onAction="#cbsi4" text="SI" />
+        <CheckBox fx:id="cbno4" layoutX="524.0" layoutY="319.0" mnemonicParsing="false" onAction="#cbno4" text="NO" />
+    </children>
+    <stylesheets>
+        <URL value="@tpautenticacionemp.css" />
+    </stylesheets>
+</AnchorPane>

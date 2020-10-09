@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.PagosATercerosNoDispoController">
+    <children>
+        <Pane id="pane_modalMov" layoutX="41.0" layoutY="122.0" prefHeight="237.0" prefWidth="489.0" styleClass="pane">
+            <children>
+                <ProgressBar fx:id="progreso" layoutX="145.0" layoutY="143.0" prefWidth="200.0" progress="0.0" visible="true" />
+                <HBox layoutX="0.0" layoutY="184.0" prefHeight="49.0" prefWidth="489.0">
+                    <children>
+                        <Button fx:id="continuarOP" disable="false" mnemonicParsing="false" onAction="#continuarOP" prefHeight="35.0" prefWidth="95.0" text="Continuar" textFill="WHITE" visible="true">
+                            <effect>
+                                <Bloom />
+                            </effect>
+                            <HBox.margin>
+                                <Insets left="120.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="cancelarOP" mnemonicParsing="false" onAction="#cancelarOP" prefHeight="35.0" prefWidth="95.0" text="Cancelar" textFill="WHITE">
+                            <effect>
+                                <Bloom />
+                            </effect>
+                            <HBox.margin>
+                                <Insets left="70.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <Label fx:id="lblconfirmar" alignment="CENTER" contentDisplay="CENTER" layoutX="0.0" layoutY="27.0" prefHeight="92.0" prefWidth="489.0" text="" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" fx:id="x1" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Label id="titulosPagos" alignment="CENTER" layoutX="3.0" layoutY="54.0" prefHeight="59.0" prefWidth="569.0" styleClass="label2" text="PAGOS A TERCEROS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label id="lblpago" alignment="CENTER" contentDisplay="CENTER" font="$x1" layoutX="6.0" layoutY="113.0" prefHeight="43.0" prefWidth="566.0" text="" textAlignment="CENTER" />
+    </children>
+    <stylesheets>
+        <URL value="@pagosatercerosnodispo.css" />
+    </stylesheets>
+</AnchorPane>

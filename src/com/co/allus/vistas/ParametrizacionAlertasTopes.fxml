@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="600.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ParametrizacionAlertasTopesController">
+  <children>
+    <Label alignment="CENTER" layoutX="-3.0" layoutY="-3.0" prefHeight="22.0" prefWidth="572.0" text="PARAMETRIZACION TRANSACCIONES" textFill="#212c7b">
+      <font>
+        <Font name="System Bold" size="14.0" />
+      </font>
+    </Label>
+    <StackPane fx:id="panel_tabla" alignment="CENTER" layoutX="14.0" layoutY="16.0" maxHeight="303.0" maxWidth="556.0" minHeight="220.0" minWidth="527.0" prefHeight="303.0" prefWidth="547.0">
+      <children>
+        <TableView fx:id="tablaDatos" editable="true" maxHeight="303.0" maxWidth="556.0" minHeight="220.0" minWidth="527.0" prefHeight="303.0" prefWidth="527.0" tableMenuButtonVisible="false">
+          <columns>
+            <TableColumn id="tope_operacion" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" sortable="false" text="Operacion" fx:id="tope_operacion" />
+            <TableColumn id="tope_canal" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" sortable="false" text="Canal" fx:id="tope_canal" />
+            <TableColumn id="tope_monto" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" sortable="false" text="Monto" fx:id="tope_monto" />
+            <TableColumn id="tope_numoper" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" sortable="false" text="Número de&#10;Operaciones" fx:id="tope_numoper" />
+            <TableColumn id="tope_montomin" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" sortable="false" text="Monto máximo&#10;permitido Banco" fx:id="tope_montomin" />
+            <TableColumn id="tope_opemin" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" sortable="false" text="Número de&#10;transacciones&#10;máximo Banco" fx:id="tope_opemin" />
+          </columns>
+        </TableView>
+      </children>
+      <padding>
+        <Insets />
+      </padding>
+    </StackPane>
+    <HBox fx:id="menu_progreso" alignment="CENTER" layoutX="68.0" layoutY="428.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true">
+      <children>
+        <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+      </children>
+    </HBox>
+    <Separator layoutX="0.0" layoutY="43.0" orientation="HORIZONTAL" prefHeight="10.0" prefWidth="572.0" visible="false" />
+    <Button fx:id="aceptar_trx" disable="false" layoutX="112.0" layoutY="450.0" mnemonicParsing="false" onAction="#aceptar_op" prefHeight="27.0" prefWidth="108.0" text="Aceptar">
+      <effect>
+        <Bloom />
+      </effect>
+    </Button>
+    <Button fx:id="cancelar_trx" layoutX="361.0" layoutY="450.0" mnemonicParsing="false" onAction="#cancelar_op" prefHeight="27.0" prefWidth="108.0" text="Cancelar">
+      <effect>
+        <Bloom />
+      </effect>
+    </Button>
+    <Label fx:id="label_pac" layoutX="17.0" layoutY="373.0" text="PAC" textFill="BLACK" />
+    <ComboBox fx:id="combo_pac" disable="false" editable="false" focusTraversable="true" layoutX="145.0" layoutY="368.0" maxWidth="70.0" minWidth="70.0" prefHeight="25.0" prefWidth="70.0" visible="true">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label fx:id="label_cajero" layoutX="17.0" layoutY="406.0" text="CAJERO AUTOMATICO" textFill="BLACK" />
+    <ComboBox fx:id="combo_cajero" disable="false" editable="false" focusTraversable="true" layoutX="145.0" layoutY="401.0" maxWidth="70.0" minWidth="70.0" prefHeight="25.0" prefWidth="70.0" visible="true">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label alignment="CENTER" layoutX="225.0" layoutY="373.0" prefHeight="49.0" prefWidth="328.0" text="¿ Desea limitar las transferencias unicamente &#10;a cuentas de terceros previamente inscritas ?" textAlignment="CENTER">
+      <font>
+        <Font name="System Bold" size="12.0" />
+      </font>
+    </Label>
+  </children>
+  <stylesheets>
+    <URL value="@parametrizacionalertastopes.css" />
+  </stylesheets>
+</AnchorPane>

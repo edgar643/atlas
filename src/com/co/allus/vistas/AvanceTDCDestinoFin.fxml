@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-classpath-element D:/Atlas 1DLLO/ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="600.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.AvanceTDCDestinoFinController">
+    <children>
+        <Label alignment="CENTER" layoutX="-3.0" layoutY="0.0" prefHeight="43.0" prefWidth="572.0" text="CONSULTA ORIGEN AVANCE VIRTUAL">
+            <font>
+                <Font name="System Bold" size="20.0" fx:id="x1" />
+            </font>
+            <textFill>
+                <Color blue="0.482" green="0.173" red="0.129" fx:id="x2" />
+            </textFill>
+        </Label>
+        <StackPane fx:id="panel_tabla" alignment="CENTER" maxHeight="295.0" maxWidth="556.0" minHeight="226.0" minWidth="527.0" prefHeight="226.0" prefWidth="527.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="110.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="295.0" maxWidth="556.0" minHeight="226.0" minWidth="527.0" prefHeight="226.0" prefWidth="527.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="fecha_trx" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" resizable="false" text="Fecha Transac" fx:id="fecha_trx" />
+                        <TableColumn editable="false" id="hora_trx" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" resizable="false" text="Hora Transacc" fx:id="hora_trx" />
+                        <TableColumn editable="false" id="numero_tarjeta" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" resizable="false" text="Numero de Tarjeta" fx:id="numero_tarjeta" />
+                        <TableColumn editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" text="Valor Avance" fx:id="valor_avance" />
+                        <TableColumn editable="false" id="cuenta_destino" maxWidth="190.0" minWidth="190.0" prefWidth="190.0" resizable="false" text="Número de Cuenta Destino" fx:id="cuenta_destino" />
+                        <TableColumn editable="false" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" resizable="false" text="Nombre Titular Cuenta Destino" fx:id="titular_destino" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </StackPane>
+        <HBox fx:id="menu_progreso" alignment="CENTER" layoutX="68.0" layoutY="406.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <Separator layoutX="0.0" layoutY="43.0" orientation="HORIZONTAL" prefHeight="10.0" prefWidth="572.0" visible="false" />
+        <Button fx:id="cancelar_trx" layoutX="334.0" layoutY="440.0" mnemonicParsing="false" onAction="#cancelar_op" prefHeight="27.0" prefWidth="108.0" text="Cancelar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Label alignment="CENTER" layoutX="24.0" layoutY="80.0" prefWidth="90.0" text="Fecha inicio" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x3" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" font="$x3" layoutX="229.0" layoutY="80.0" prefWidth="90.0" text="Fecha fin" textAlignment="CENTER" />
+        <DatePicker fx:id="fechaini" layoutX="117.0" layoutY="77.0" prefWidth="102.0" promptText="Desde">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <DatePicker fx:id="fechafin" layoutX="316.0" layoutY="77.0" prefWidth="102.0" promptText="Hasta">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <Button fx:id="buscarFechas" layoutX="431.0" layoutY="74.0" mnemonicParsing="false" onAction="#buscarFechas" prefWidth="90.0" text="Buscar" />
+        <Button fx:id="regresar_trx" layoutX="134.0" layoutY="440.0" mnemonicParsing="false" onAction="#regresar_op" prefHeight="27.0" prefWidth="108.0" text="Regresar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@avancetdcdestinofin.css" />
+    </stylesheets>
+</AnchorPane>

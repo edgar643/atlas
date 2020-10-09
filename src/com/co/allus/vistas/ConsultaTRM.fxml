@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ConsultaTRMController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="68.0" layoutX="145.0" layoutY="128.0" stroke="BLACK" strokeType="INSIDE" width="284.0" />
+        <Label id="lblbuscar" alignment="CENTER" layoutX="157.0" layoutY="117.0" prefHeight="22.0" prefWidth="186.0" styleClass="lbl" text="Seleccionar periodo a consultar" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <StackPane fx:id="panel_tabla" layoutX="312.0" layoutY="247.0" prefHeight="51.0" prefWidth="192.0">
+            <children>
+                <TableView fx:id="tabla_datos" depthTest="INHERIT" disable="false" focusTraversable="false" mouseTransparent="false" pickOnBounds="false" prefHeight="51.0" prefWidth="186.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="valortrm" maxWidth="102.0" minWidth="102.0" prefWidth="102.0" resizable="false" sortable="false" text="Valor TRM" fx:id="valortrm" />
+                        <TableColumn editable="false" id="trm" maxWidth="87.0" minWidth="87.0" prefWidth="87.0" resizable="false" sortable="false" text="" fx:id="trm" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label alignment="CENTER" layoutX="2.0" layoutY="11.0" prefHeight="27.0" prefWidth="572.0" text="Consulta TRM" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="rbhistorico" layoutX="298.0" layoutY="161.0" mnemonicParsing="false" onAction="#continuarOP" text="TRM Histórico" />
+        <RadioButton fx:id="rbhoy" layoutX="177.0" layoutY="161.0" mnemonicParsing="false" selected="true" text="TRM Hoy" />
+        <Label id="lblbuscar" alignment="CENTER" font="$x1" layoutX="60.0" layoutY="247.0" prefHeight="51.0" prefWidth="252.0" styleClass="lblbuscar" text="Tasa representativa del mercado" textFill="WHITE" />
+        <Label id="lblbuscar" alignment="CENTER" layoutX="21.0" layoutY="218.0" prefHeight="22.0" prefWidth="322.0" styleClass="lbl" text="Por favor suministe al cliente la información según solicitud:" textFill="WHITE" underline="true">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="255.0" layoutY="414.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="63.0" styleClass="terminar_trx">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@consultatrm.css" />
+    </stylesheets>
+</AnchorPane>

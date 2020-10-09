@@ -1,0 +1,33 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+}
+.text-field
+{
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: CENTER;
+
+
+}
+
+.button
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #212C7B;
+    -fx-border-color: white;
+    -fx-border-insets: 1,1,1,1;  
+    -fx-text-fill: white;
+}
+
+.labelazul
+{
+    -fx-background-color: #212C7B;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+

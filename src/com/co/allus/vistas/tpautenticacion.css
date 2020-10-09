@@ -1,0 +1,81 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+}
+.check-box
+{
+
+
+    -fx-background-color: white;
+
+}
+
+
+.button
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #212C7B;
+    -fx-border-color: white;
+    -fx-text-fill: white;
+    -fx-border-insets: 1,1,1,1;  
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-font-size: 13px;
+    -fx-background-color: #212C7B; 
+    -fx-border-color: white;    
+}
+
+.table-view .column-header .label .text
+{
+    -fx-fill:white;
+    -fx-font-size: 13px;  
+    -fx-text-alignment: center;
+}
+
+.table-view:row-selection .table-row-cell:filled:even .table-cell:filled:even
+{
+    -fx-alignment: CENTER;
+    -fx-text-alignment:CENTER; 
+    -fx-font-size: 13px; 
+
+}
+
+.table-view:row-selection .table-row-cell:odd:filled .table-cell:odd:filled
+{
+    -fx-alignment: CENTER;
+    -fx-text-alignment:CENTER; 
+    -fx-font-size: 13px; 
+
+}
+
+.table-view .column-header .label .text
+{
+    -fx-fill:white;   
+}
+
+.table-view .column-header .label
+{
+    -fx-fill:black;
+
+}
+
+.table-view:row-selection
+{
+    -fx-cursor: hand;
+
+}
+
+.pagination .pagination-control .left-arrow, .right-arrow{
+    -fx-background-color:white;
+}
+
+.split-pane:horizontal > * > .split-pane-divider {
+    -fx-border-color: transparent -fx-base transparent -fx-base;
+    -fx-background-color: transparent, derive(-fx-base,20%);
+    -fx-background-insets: 0, 0 1 0 1;
+}

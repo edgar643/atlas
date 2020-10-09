@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet tpmovimientosfin.css?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TPMovimientosFinController">
+    <children>
+        <StackPane fx:id="panel_tabla" layoutX="4.0" layoutY="85.0" prefHeight="274.0" prefWidth="558.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" focusTraversable="true" prefHeight="284.0000999999975" prefWidth="556.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="colFechatrx" maxWidth="81.0" minWidth="81.0" prefWidth="81.0" text="Fecha&#10;Transacción" fx:id="colFechatrx" />
+                        <TableColumn editable="false" id="colDesctrx" maxWidth="188.0" minWidth="188.0" prefWidth="188.0" resizable="true" text="Descripción&#10;Transacción" fx:id="colDesctrx" />
+                        <TableColumn editable="false" id="colDescComer" maxWidth="194.0" minWidth="194.0" prefWidth="194.0" text="Descripción&#10;Comercio" fx:id="colDescComer" />
+                        <TableColumn editable="false" id="colValortrx" maxWidth="93.0" minWidth="93.0" prefWidth="93.0" text="Valor&#10;Transacción" fx:id="colValortrx" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Button fx:id="regresar_op" layoutX="289.0" layoutY="441.0" mnemonicParsing="false" onAction="#regresar_op" prefHeight="26.0" prefWidth="111.0" styleClass="button_azul" text="Regresar" textFill="#dfdfdf">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="191.0" layoutY="425.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#terminar_trx" prefHeight="53.0" prefWidth="63.0" styleClass="terminar_trx">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="buscar_op" disable="false" focusTraversable="false" layoutX="333.0" layoutY="24.0" mnemonicParsing="false" onAction="#buscar_op" prefHeight="26.0" prefWidth="100.0" styleClass="button_azul" text="Buscar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <DatePicker fx:id="tfFechaIni" focusTraversable="true" layoutX="177.0" layoutY="16.0" prefHeight="24.0" prefWidth="140.0" promptText="Fecha Inicio">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <DatePicker fx:id="tfFechaFin" alignment="TOP_LEFT" focusTraversable="false" layoutX="177.0" layoutY="41.0" prefHeight="24.0" prefWidth="140.0" promptText="Fecha Fin">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <Button fx:id="limpiar_op" disable="false" focusTraversable="false" layoutX="447.0" layoutY="24.0" mnemonicParsing="false" onAction="#limpiar_op" prefHeight="26.0" prefWidth="100.0" styleClass="button_azul" text="Limpiar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Label id="lblbuscar" alignment="CENTER" layoutX="14.0" layoutY="17.0" prefHeight="22.0" prefWidth="162.0" styleClass="lblbuscar" text="Fecha Inicio (AAAA/MM/DD)">
+            <font>
+                <Font name="System Bold" size="11.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label id="lblbuscar" alignment="CENTER" font="$x1" layoutX="32.0" layoutY="40.0" prefHeight="22.0" prefWidth="140.0" styleClass="lblbuscar" text="Fecha Fin (AAAA/MM/DD)" />
+        <Label fx:id="lblmensaje" alignment="CENTER" layoutX="5.0" layoutY="63.0" prefHeight="22.0" prefWidth="329.0" text="Por favor diligenciar los campos Fecha Inicio y Fecha Fin" textFill="#cc0000">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+    </children>
+    <stylesheets>
+        <URL value="@tpmovimientosfin.css" />
+    </stylesheets>
+</AnchorPane>

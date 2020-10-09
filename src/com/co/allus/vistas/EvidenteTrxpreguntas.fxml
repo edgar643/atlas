@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.EvidenteTrxpreguntasController">
+    <children>
+        <Label fx:id="titulosEvidente" alignment="CENTER" layoutX="3.0" layoutY="0.0" prefHeight="50.0" prefWidth="572.0" text="" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <HBox layoutX="3.0" layoutY="424.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="continuar_op" disable="true" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="160.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancel_op" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="70.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <ComboBox fx:id="combopreg1" layoutX="353.0" layoutY="87.0" onAction="#seleccioncombopreg1" prefHeight="26.0" prefWidth="200.0" promptText="">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Item 1" />
+                    <String fx:value="Item 2" />
+                    <String fx:value="Item 3" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <ComboBox fx:id="combopreg2" layoutX="353.0" layoutY="171.0" onAction="#seleccioncombopreg2" prefHeight="26.0" prefWidth="200.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Item 1" />
+                    <String fx:value="Item 2" />
+                    <String fx:value="Item 3" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <ComboBox fx:id="combopreg3" layoutX="353.0" layoutY="254.0" onAction="#seleccioncombopreg3" prefHeight="26.0" prefWidth="200.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Item 1" />
+                    <String fx:value="Item 2" />
+                    <String fx:value="Item 3" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <ComboBox fx:id="combopreg4" layoutX="353.0" layoutY="330.0" onAction="#seleccioncombopreg4" prefHeight="26.0" prefWidth="200.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Item 1" />
+                    <String fx:value="Item 2" />
+                    <String fx:value="Item 3" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Label fx:id="descpreg1" alignment="CENTER_LEFT" contentDisplay="LEFT" layoutX="14.0" layoutY="60.0" prefHeight="80.0" prefWidth="317.0" text="Descripcion pregunta 1" textAlignment="JUSTIFY" wrapText="true">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label fx:id="descpreg2" font="$x1" layoutX="14.0" layoutY="149.0" prefHeight="70.0" prefWidth="316.9998779296875" text="Descripcion pregunta 2" wrapText="true" />
+        <Label fx:id="descpreg3" font="$x1" layoutX="14.0" layoutY="232.0" prefHeight="70.0" prefWidth="316.0000999999975" text="Descripcion pregunta 3" wrapText="true" />
+        <Label fx:id="descpreg4" font="$x1" layoutX="14.0" layoutY="308.0" prefHeight="71.0" prefWidth="316.0000999999975" text="Descripcion pregunta 4" wrapText="true" />
+    </children>
+    <stylesheets>
+        <URL value="@evidentetrxpreguntas.css" />
+    </stylesheets>
+</AnchorPane>

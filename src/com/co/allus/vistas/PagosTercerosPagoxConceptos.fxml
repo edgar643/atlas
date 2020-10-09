@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../UserComponentsJavaFX/dist/UserComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet pagostercerospagoxconceptos.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="com.co.allus.controladoresfxml.PagosTercerosPagoxCtoController">
+    <children>
+        <Label id="titulosPagos" alignment="CENTER" layoutX="0.0" layoutY="0.0" minHeight="37.0" minWidth="575.0" prefHeight="37.0" prefWidth="575.0" text="PAGOS A TERCEROS">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+            <textFill>
+                <Color blue="0.600" green="0.000" red="0.047" fx:id="x1" />
+            </textFill>
+        </Label>
+        <Label fx:id="titulo_conv" alignment="CENTER" layoutX="0.0" layoutY="41.0" minHeight="14.0" prefHeight="26.0" prefWidth="571.9999000000025" text="Nombre Convenio" textFill="$x1">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tabla_datos" focusTraversable="false" layoutX="20.0" layoutY="75.0" maxHeight="57.0" maxWidth="530.0" minHeight="57.0" minWidth="530.0" prefHeight="57.0" prefWidth="530.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn editable="false" prefWidth="290.0" sortable="false" text="Referencia de Pago:&#10;Numero Identificacion" fx:id="ref_pago" />
+                <TableColumn editable="false" prefWidth="105.0" sortable="false" text="Tipo Cuenta" fx:id="tipo_cuenta" />
+                <TableColumn editable="false" prefWidth="121.0" sortable="false" text="Cuenta a Debitar" fx:id="num_cuenta" />
+            </columns>
+        </TableView>
+        <Button fx:id="continuar_op" focusTraversable="false" layoutX="171.0" layoutY="441.0" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE" />
+        <Button fx:id="cancelar_op" focusTraversable="false" layoutX="320.0" layoutY="441.0" mnemonicParsing="false" onAction="#cancel_op" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE" />
+        <HBox fx:id="menu_progreso" alignment="CENTER" layoutX="171.0" layoutY="415.0" prefHeight="26.0" prefWidth="244.0">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" />
+            </children>
+        </HBox>
+        <Label id="mensaje_valor" fx:id="mensaje" alignment="CENTER" contentDisplay="CENTER" layoutX="0.0" layoutY="136.0" prefHeight="37.0" prefWidth="554.0" text="Valor a pagar : Utilizar punto {.} ó coma { ,} unicamente para separar las cifras decimales" visible="false">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x2" />
+            </font>
+        </Label>
+        <Label layoutX="21.0" layoutY="212.0" prefHeight="22.000099999997474" prefWidth="74.0" text="Concepto 2:" />
+        <RestrictiveTextField fx:id="concepto_3" focusTraversable="true" layoutX="105.0" layoutY="249.0" maxLength="9" onKeyPressed="#concept3keypress" onKeyTyped="#concept3key" prefWidth="188.0" />
+        <Label layoutX="317.0" layoutY="216.0" prefWidth="51.0" text="Valor 2:" />
+        <RestrictiveTextField fx:id="valor_3" focusTraversable="true" isAlphanum="false" layoutX="375.0" layoutY="249.0" maxLength="13" onKeyPressed="#val3keypress" onKeyTyped="#val3key" prefWidth="176.0" restrict="[1-9][0-9]" />
+        <Label layoutX="21.0" layoutY="251.0" prefHeight="22.000099999997474" prefWidth="74.0" text="Concepto 3:" />
+        <RestrictiveTextField fx:id="concepto_4" focusTraversable="true" layoutX="105.0" layoutY="287.0" maxLength="9" onKeyPressed="#concept4keypress" onKeyTyped="#concept4key" prefWidth="188.0" restrict="" />
+        <Label layoutX="317.0" layoutY="255.0" prefWidth="51.0" text="Valor 3:" />
+        <RestrictiveTextField fx:id="valor_4" focusTraversable="true" isAlphanum="false" layoutX="375.0" layoutY="287.0" maxLength="13" onKeyPressed="#val4keypress" onKeyTyped="#val4key" prefWidth="176.0" restrict="[1-9][0-9]" />
+        <Label layoutX="21.0" layoutY="286.0" prefHeight="22.000099999997474" prefWidth="74.0" text="Concepto 4:" />
+        <RestrictiveTextField fx:id="concepto_5" focusTraversable="true" layoutX="105.0" layoutY="325.0" maxLength="9" onKeyPressed="#concept5keypress" onKeyTyped="#concept5key" prefWidth="188.0" restrict="" />
+        <Label layoutX="317.0" layoutY="291.0" prefWidth="51.0" text="Valor 4:" />
+        <RestrictiveTextField fx:id="valor_5" focusTraversable="true" isAlphanum="false" layoutX="375.0" layoutY="325.0" maxLength="13" onKeyPressed="#val5keypress" onKeyTyped="#val5key" prefWidth="176.0" restrict="[1-9][0-9]" />
+        <Label layoutX="21.0" layoutY="324.0" prefHeight="22.000099999997474" prefWidth="74.0" text="Concepto 5:" />
+        <RestrictiveTextField fx:id="concepto_6" focusTraversable="true" layoutX="105.0" layoutY="358.0" maxLength="9" onKeyPressed="#concept6keypress" onKeyTyped="#concept6key" prefWidth="188.0" restrict="" />
+        <Label layoutX="317.0" layoutY="328.0" prefWidth="51.0" text="Valor 5:" />
+        <RestrictiveTextField fx:id="valor_6" focusTraversable="true" isAlphanum="false" layoutX="375.0" layoutY="358.0" maxLength="13" onKeyPressed="#val6keypress" onKeyTyped="#val6key" prefWidth="176.0" restrict="[1-9][0-9]" />
+        <Label layoutX="21.0" layoutY="173.0" prefHeight="22.000099999997474" prefWidth="74.0" text="Concepto 1:" />
+        <RestrictiveTextField fx:id="concepto_1" focusTraversable="true" layoutX="105.0" layoutY="171.0" maxLength="9" onKeyPressed="#concept1keypress" onKeyTyped="#concept1key" prefWidth="188.0" />
+        <Label layoutX="317.0" layoutY="177.0" prefWidth="51.0" text="Valor 1:" />
+        <RestrictiveTextField fx:id="valor_1" focusTraversable="true" isAlphanum="false" layoutX="375.0" layoutY="174.0" maxLength="13" onKeyPressed="#val1keypress" onKeyTyped="#val1key" prefWidth="176.0" restrict="[1-9][0-9]" />
+        <Label layoutX="21.0" layoutY="358.0" prefHeight="22.000099999997474" prefWidth="74.0" text="Concepto 6:" />
+        <RestrictiveTextField fx:id="concepto_2" focusTraversable="true" layoutX="105.0" layoutY="213.0" maxLength="9" onKeyPressed="#concept2keypress" onKeyTyped="#concept2key" prefWidth="188.0" />
+        <Label layoutX="317.0" layoutY="362.0" prefWidth="51.0" text="Valor 6:" />
+        <RestrictiveTextField fx:id="valor_2" focusTraversable="true" isAlphanum="false" layoutX="375.0" layoutY="210.0" maxLength="13" onKeyPressed="#val2keypress" onKeyTyped="#val2key" prefWidth="176.0" restrict="[1-9][0-9]" />
+        <TextField fx:id="suma_valores" alignment="CENTER_LEFT" editable="false" focusTraversable="false" layoutX="193.0" layoutY="393.0" prefWidth="200.0" promptText="" text="" visible="false">
+            <tooltip>
+                <Tooltip text="se debe validar que la suma de los valores&#10;sea igual al valor de la factura." />
+            </tooltip>
+        </TextField>
+        <Label id="mensaje_valor" alignment="CENTER" contentDisplay="CENTER" font="$x2" layoutX="20.0" layoutY="137.0" maxHeight="37.0" maxWidth="560.0" minHeight="26.0" minWidth="530.0" prefHeight="26.0" prefWidth="530.0" text="Valor : No se permite el ingreso de cifras decimales" />
+    </children>
+    <stylesheets>
+        <URL value="@pagostercerospagoxconceptos.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TPRegeneracionController">
+    <children>
+        <StackPane fx:id="panel_tabla" layoutX="3.0" layoutY="71.0" prefHeight="277.0" prefWidth="558.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" focusTraversable="true" prefHeight="83.0" prefWidth="476.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="colNumtarjeta" maxWidth="147.0" minWidth="147.0" prefWidth="147.0" resizable="true" sortable="false" text="Número de Tarjeta" fx:id="colNumtarjeta" />
+                        <TableColumn editable="false" id="colTipoTarjeta" maxWidth="168.0" minWidth="168.0" prefWidth="168.0" resizable="true" sortable="false" text="Tipo de&#10;Tarjeta" fx:id="colTipoTarjeta" />
+                        <TableColumn editable="false" id="colEstadoTarjeta" maxWidth="86.0" minWidth="86.0" prefWidth="86.0" resizable="true" sortable="false" text="Estado de la&#10;Tarjeta" fx:id="colEstadoTarjeta" />
+                        <TableColumn editable="false" id="colNombreEmpresa" maxWidth="153.0" minWidth="153.0" prefWidth="153.0" resizable="true" sortable="false" text="Nombre Empresa" fx:id="colNombreEmpresa" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label alignment="CENTER" layoutX="2.0" layoutY="37.0" prefHeight="27.0" prefWidth="572.0" text="SOLICITUD DE CLAVE" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="continuar_op" layoutX="180.0" layoutY="418.0" mnemonicParsing="false" onAction="#continuar_op" prefHeight="26.0" prefWidth="95.0" text="Continuar" wrapText="false">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="cancelar_op" layoutX="302.0" layoutY="418.0" mnemonicParsing="false" onAction="#cancelar_op" prefHeight="26.0" prefWidth="95.0" text="Cancelar" wrapText="false">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <ProgressBar fx:id="progreso" layoutX="188.0" layoutY="394.0" prefWidth="200.0" progress="0.0" />
+    </children>
+    <stylesheets>
+        <URL value="@tpregeneracion.css" />
+    </stylesheets>
+</AnchorPane>

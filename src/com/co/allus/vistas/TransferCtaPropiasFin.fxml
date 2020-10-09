@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="com.co.allus.controladoresfxml.TransferCtaPropiasFinController">
+    <children>
+        <Label id="titulosPagos" alignment="CENTER" layoutX="3.0" layoutY="7.0" prefHeight="59.0" prefWidth="572.0" text="TRANSFERENCIAS BANCOLOMBIA&#10;           A CUENTAS PROPIAS" textFill="#212C7B">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label id="mensaje" alignment="CENTER" layoutX="3.0" layoutY="83.0" prefHeight="26.0" prefWidth="572.0" text="La transferencia ha sido realizada de manera exitosa">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tabla_datos_fin2" layoutX="89.0" layoutY="241.0" maxHeight="59.0" maxWidth="556.0" minHeight="59.0" minWidth="391.0" prefHeight="59.0" prefWidth="404.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn id="comprobante" maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Número de &#10;Comprobante" fx:id="comprobante" />
+                <TableColumn editable="false" id="valor_transferido" maxWidth="5000.0" minWidth="10.0" prefWidth="154.0" text="Valor&#10;Transferido" fx:id="valor_transferido" />
+                <TableColumn id="hora_trans" maxWidth="5000.0" minWidth="10.0" prefWidth="146.0" text="Fecha y Hora&#10;de la Transferencia" fx:id="hora_trans" />
+            </columns>
+        </TableView>
+        <Button fx:id="terminar_trx" alignment="CENTER" layoutX="256.0" layoutY="361.0" minHeight="53.0" minWidth="63.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="53.0" prefWidth="63.0">
+            <effect>
+                <ColorAdjust brightness="0.09160305343511443" contrast="0.09160305343511443" hue="-0.01526717557251911" />
+            </effect>
+            <graphic>
+                <ImageView fitHeight="44.00000762939453" fitWidth="62.99999237060547" mouseTransparent="true" pickOnBounds="true">
+                    <image>
+                        <Image url="@../recursos/IconoOK.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <TableView fx:id="tabla_datos_fin1" layoutX="5.0" layoutY="127.0" maxHeight="53.0" maxWidth="553.0" minHeight="53.0" minWidth="540.0" prefHeight="53.0" prefWidth="553.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn id="cuenta_origen" maxWidth="152.0" minWidth="67.0" prefWidth="115.0" text="Cuenta Origen" fx:id="cuenta_origen" />
+                <TableColumn editable="false" id="tipo_cta_origen" maxWidth="5000.0" minWidth="10.0" prefWidth="155.0" text="Tipo de Cuenta" fx:id="tipo_cta_origen" />
+                <TableColumn id="cuenta_destino" maxWidth="5000.0" minWidth="10.0" prefWidth="144.0" text="Cuenta Destino" fx:id="cuenta_destino" />
+                <TableColumn id="tipo_cta_destino" maxWidth="5000.0" minWidth="10.0" prefWidth="137.0" text="Tipo de Cuenta" fx:id="tipo_cta_destino" />
+            </columns>
+        </TableView>
+    </children>
+    <stylesheets>
+        <URL value="@transferctapropiasfin.css" />
+    </stylesheets>
+</AnchorPane>

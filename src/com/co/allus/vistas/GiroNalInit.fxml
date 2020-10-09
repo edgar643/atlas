@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.GiroNalInitController">
+    <children>
+        <Label alignment="CENTER" layoutX="3.0" layoutY="21.0" prefHeight="27.0" prefWidth="572.0" text="GIROS NACIONALES" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="giradorRadio" layoutX="213.0" layoutY="175.0" mnemonicParsing="false" onAction="#selgiradorRadio" prefHeight="27.0" prefWidth="120.0" text="Enviados">
+            <font>
+                <Font name="System Bold" size="14.0" fx:id="x1" />
+            </font>
+            <tooltip>
+                <Tooltip autoHide="true" text="Girador-Usuario que envía el Giro" />
+            </tooltip>
+        </RadioButton>
+        <RadioButton fx:id="benefRadio" font="$x1" layoutX="213.0" layoutY="220.0" mnemonicParsing="false" onAction="#selbenefRadio" prefHeight="27.0" prefWidth="120.0" text="Recibidos">
+            <tooltip>
+                <Tooltip autoHide="true" text="Beneficiario-Usuario que recibe el Giro" />
+            </tooltip>
+        </RadioButton>
+        <Label font="$x1" layoutX="213.0" layoutY="125.0" prefHeight="27.0" prefWidth="120.0" text="Consultar Giros :" />
+        <Button fx:id="continuar_op" layoutX="226.0" layoutY="352.0" mnemonicParsing="false" onAction="#continuar_op" prefHeight="27.0" prefWidth="107.0" text="Continuar" textFill="WHITE" wrapText="false">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+    </children>
+    <stylesheets>
+        <URL value="@gironalinit.css" />
+    </stylesheets>
+</AnchorPane>

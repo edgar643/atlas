@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet ActualizacionDatosSeguridad.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.ActualizacionDatosSeguridadController">
+    <children>
+        <AnchorPane id="AnchorPane" layoutX="0.0" layoutY="0.0" prefHeight="419.0" prefWidth="568.0">
+            <children>
+                <Label id="" alignment="CENTER_RIGHT" layoutX="49.0" layoutY="103.0" prefHeight="30.0" prefWidth="115.0" text="Nombre del cliente" textAlignment="RIGHT">
+                    <font>
+                        <Font name="System Bold" size="12.0" fx:id="x1" />
+                    </font>
+                </Label>
+                <Label id="" alignment="CENTER_RIGHT" font="$x1" layoutX="49.0" layoutY="148.0" prefHeight="30.0" prefWidth="115.0" text="Cédula" textAlignment="RIGHT" />
+                <TextField fx:id="nombreCliente" editable="true" layoutX="178.0" layoutY="107.0" prefWidth="200.0" styleClass="texto-gris" text="">
+                    <stylesheets>
+                        <URL value="@ActualizacionDatosSeguridad.css" />
+                    </stylesheets>
+                </TextField>
+                <TextField fx:id="cedulaCliente" editable="true" layoutX="178.0" layoutY="152.0" prefWidth="200.0" styleClass="texto-gris">
+                    <stylesheets>
+                        <URL value="@ActualizacionDatosSeguridad.css" />
+                    </stylesheets>
+                </TextField>
+                <Label alignment="CENTER" layoutX="7.0" layoutY="59.0" prefWidth="572.0" text="Ingresar los datos de seguridad del cliente y confirmarlos">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label id="nombreCliente" alignment="CENTER_RIGHT" font="$x1" layoutX="49.0" layoutY="195.0" prefHeight="30.0" prefWidth="115.0" text="E-mail" textAlignment="RIGHT" />
+                <TextField fx:id="Email" editable="true" layoutX="178.0" layoutY="199.0" onKeyReleased="#keyReleasedEmail" prefWidth="326.0" />
+                <Label alignment="CENTER_RIGHT" font="$x1" layoutX="49.0" layoutY="293.0" prefWidth="115.0" text="Número de Celular" textAlignment="RIGHT" />
+                <RestrictiveTextField fx:id="Celular" layoutX="178.0" layoutY="290.0" maxLength="10" onKeyReleased="#valkeypressed" prefWidth="200.0" restrict="[3][0-9]*?$" />
+                <ComboBox fx:id="tipoEmail" disable="false" editable="false" focusTraversable="true" layoutX="178.0" layoutY="246.0" onAction="#TipoMailOnAction" prefHeight="21.0" prefWidth="145.0" visible="true">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Item 1" />
+                            <String fx:value="Item 2" />
+                            <String fx:value="Item 3" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label alignment="CENTER_RIGHT" font="$x1" layoutX="49.0" layoutY="248.0" prefHeight="18.0" prefWidth="115.0" text="Tipo de E-mail" textAlignment="RIGHT" />
+                <TextField fx:id="avisos" alignment="CENTER" layoutX="139.0" layoutY="356.0" prefHeight="40.0" prefWidth="308.0" styleClass="avisos" text="">
+                    <stylesheets>
+                        <URL value="@ActualizacionDatosSeguridad.css" />
+                    </stylesheets>
+                </TextField>
+            </children>
+        </AnchorPane>
+        <Label fx:id="titulosActDatSeguridad" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="572.0" text="" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="cancelar" layoutX="323.0" layoutY="439.0" mnemonicParsing="false" onAction="#cancel_op" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE" />
+        <Button fx:id="continuar_op" layoutX="157.0" layoutY="439.0" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE" />
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="64.0" layoutY="417.0" prefHeight="22.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+        <URL value="@ActualizacionDatosSeguridad.css" />
+    </stylesheets>
+</AnchorPane>

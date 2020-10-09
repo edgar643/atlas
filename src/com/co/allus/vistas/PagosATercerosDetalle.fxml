@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.PagosATercerosDetalleController">
+    <children>
+        <Label fx:id="titulo" alignment="CENTER" layoutX="-4.0" layoutY="3.0" prefHeight="25.999908447265625" prefWidth="572.0" text="PAGOS A TERCEROS" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="pagarOP" layoutX="182.0" layoutY="449.0" mnemonicParsing="false" onAction="#pagarOP" prefHeight="26.0" prefWidth="95.0" text="Ir a Pagar" textFill="WHITE">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="volverOP" disable="false" layoutX="297.0" layoutY="449.0" mnemonicParsing="false" onAction="#volverOP" prefHeight="26.0" prefWidth="95.0" text="Volver" textFill="WHITE">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <TableView fx:id="tabla_datos2" layoutX="24.0" layoutY="41.0" maxHeight="375.0" minWidth="375.0" prefHeight="51.0" prefWidth="505.0" tableMenuButtonVisible="false">
+            <columns>
+                <TableColumn editable="false" id="colCodConvenio" maxWidth="136.0" minWidth="136.0" prefWidth="136.0" resizable="false" text="Código Convenio" fx:id="colCodConvenio" />
+                <TableColumn editable="false" id="colNombreConvenio" maxWidth="400.0" minWidth="239.0" prefWidth="353.0" resizable="false" text="Nombre Convenio" fx:id="colNombreConvenio" />
+            </columns>
+        </TableView>
+        <StackPane fx:id="panel_tabla" layoutX="20.0" layoutY="101.0" maxWidth="512.0" minWidth="505.0" prefHeight="319.0" prefWidth="512.0">
+            <children>
+                <TableView fx:id="tabla_datos" maxWidth="505.0" minWidth="505.0" prefHeight="505.0" prefWidth="505.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="colDescripcion" maxWidth="245.0" minWidth="245.0" prefWidth="245.0" resizable="false" text="Descripción" fx:id="colDescripcion" />
+                        <TableColumn editable="false" id="colInformacion" maxWidth="246.0" minWidth="246.0" prefWidth="246.0" resizable="false" text="Información" fx:id="colInformacion" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+    </children>
+    <stylesheets>
+        <URL value="@pagosatercerosdetalle.css" />
+    </stylesheets>
+</AnchorPane>

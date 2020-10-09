@@ -1,0 +1,46 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+
+}
+.combo-box
+{
+
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-color: white;
+    -fx-border-color: #C0C0C0;
+}
+
+.combo-box .arrow-button.arrow
+{
+    -fx-background-color: white;
+    -fx-cursor: hand;
+    -fx-animated: true;
+
+}
+.combo-box .arrow-button
+{
+    -fx-background-color:#C0C0C0;
+    -fx-cursor: hand;
+    -fx-animated: true;
+
+}
+
+.button
+{
+    -fx-animated: true;
+    -fx-cursor: hand;
+    -fx-background-color: #212C7B;
+    -fx-border-color: white;
+    -fx-border-insets: 1,1,1,1; 
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-text-alignment: center;
+} 
+
+.radio-button *.radio { 
+    -fx-background-color: -fx-shadow-highlight-color,  #0C55FF, -fx-inner-border, #F7F7F7;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTDCtextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../UserComponentsJavaFX/dist/UserComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet pagostdcnopropias.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="com.co.allus.controladoresfxml.PagosTDCnoPropiasController">
+    <children>
+        <Label id="titulosPagos" alignment="CENTER" layoutX="2.0" layoutY="4.0" prefHeight="49.0" prefWidth="572.0" text="PAGO TDC NO PROPIA&#10;" textFill="#212C7B">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="32.0" layoutY="118.0" prefHeight="23.0" prefWidth="141.0" text="TDC a pagar">
+            <font>
+                <Font name="System Bold" size="14.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label font="$x1" layoutX="32.0" layoutY="230.0" prefHeight="23.0" prefWidth="141.0" text="Cuenta a debitar" />
+        <ComboBox fx:id="tipocta_origen" layoutX="185.0" layoutY="228.0" onAction="#selTipocta_origen" prefHeight="25.0" prefWidth="141.0" />
+        <ComboBox fx:id="cuenta_origen" layoutX="185.0" layoutY="263.0" onAction="#selCuenta_origen" prefHeight="25.0" prefWidth="231.0" />
+        <HBox layoutX="2.0" layoutY="434.0" prefHeight="43.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="continuar_op" disable="true" mnemonicParsing="false" onAction="#continuar_OP" prefHeight="26.0" prefWidth="95.0" text="Continuar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="160.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancel_op" prefHeight="26.0" prefWidth="95.0" text="Cancelar" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets left="70.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <RestrictiveTDCtextField fx:id="num_tarjeta" layoutX="185.0" layoutY="118.0" onKeyPressed="#tarjetaspressed" onKeyTyped="#tarjetaskeyTyped" prefHeight="23.0" prefWidth="231.0">
+            <tooltip>
+                <Tooltip text="Ingrese el número de TDC a pagar" />
+            </tooltip>
+        </RestrictiveTDCtextField>
+    </children>
+    <stylesheets>
+        <URL value="@pagostdcnopropias.css" />
+    </stylesheets>
+</AnchorPane>

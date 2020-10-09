@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.DatePicker?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="600.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.PuntosColAjustePuntosController">
+    <children>
+        <Label alignment="CENTER" layoutX="-2.0" layoutY="0.0" maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="572.0" text="AJUSTE DE PUNTOS / PUNTOS COLOMBIA" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <StackPane fx:id="panel_tabla" alignment="CENTER" layoutX="5.0" layoutY="73.0" maxHeight="317.0" maxWidth="556.0" minHeight="244.0" minWidth="556.0" prefHeight="317.0" prefWidth="556.0">
+            <children>
+                <TableView fx:id="tablaDatos" maxHeight="318.0" maxWidth="564.0" minHeight="274.0" minWidth="556.0" prefHeight="318.0" prefWidth="556.0" tableMenuButtonVisible="false">
+                    <columns>
+                        <TableColumn editable="false" id="fecha" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" resizable="false" sortable="true" text="Fecha" fx:id="fecha" />
+                        <TableColumn editable="false" id="puntos" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Puntos" fx:id="puntos" />
+                        <TableColumn editable="false" id="descripcion" maxWidth="290.0" minWidth="290.0" prefWidth="290.0" resizable="false" text="Descripción" fx:id="descripcion" />
+                        <TableColumn id="concepto" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text="Concepto" fx:id="concepto" />
+                        <TableColumn id="resultado" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" text="Resultado" fx:id="resultado" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </StackPane>
+        <Separator layoutX="0.0" layoutY="48.0" orientation="HORIZONTAL" prefHeight="10.0" prefWidth="572.0" visible="false" />
+        <Button fx:id="cancelar" layoutX="341.0" layoutY="447.0" mnemonicParsing="false" onAction="#CancelarAction" prefHeight="26.0" prefWidth="95.0" text="Cancelar">
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="indMasReg" layoutX="132.0" layoutY="447.0" mnemonicParsing="false" onAction="#MasRegAction" prefWidth="112.0" text="Mas Registros" />
+        <DatePicker fx:id="fechaini" layoutX="14.0" layoutY="43.0" prefWidth="102.0" promptText="Desde">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <DatePicker fx:id="fechafin" layoutX="125.0" layoutY="43.0" prefWidth="102.0" promptText="Hasta">
+            <stylesheets>
+                <URL value="@DatePicker.css" />
+            </stylesheets>
+        </DatePicker>
+        <Label layoutX="52.0" layoutY="20.0" prefHeight="22.0" prefWidth="147.0" text="Fecha de la Transacción">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label font="$x1" layoutX="341.0" layoutY="23.0" prefWidth="126.0" text="Descripcion" />
+        <TextField fx:id="descripcionT" layoutX="341.0" layoutY="43.0" onKeyPressed="#descripcionTkPress" onKeyTyped="#descripcionTktyped" prefWidth="220.0" />
+        <Button fx:id="buscarFechas" layoutX="237.0" layoutY="41.0" mnemonicParsing="false" onAction="#buscarFechas" prefHeight="27.0" prefWidth="95.0" text="Buscar" />
+    </children>
+    <stylesheets>
+        <URL value="@puntoscolajustepuntos.css" />
+    </stylesheets>
+</AnchorPane>

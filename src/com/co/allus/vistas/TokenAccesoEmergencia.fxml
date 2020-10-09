@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.co.allus.userComponent.*?>
+<?import com.co.allus.userComponent.RestrictiveTextField?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../../../../../ComponentsJavaFX/dist/ComponentsJavaFX.jar?>
+<?scenebuilder-stylesheet tokenaccesoemergencia.css?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="481.0" maxWidth="575.0" minHeight="481.0" minWidth="575.0" prefHeight="481.0" prefWidth="575.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.co.allus.controladoresfxml.TokenAccesoEmergenciaController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" layoutX="373.0" layoutY="189.0" stroke="BLACK" strokeType="INSIDE" width="186.0" />
+        <Label id="lblbuscar" alignment="CENTER" layoutX="382.0" layoutY="178.0" prefHeight="22.0" prefWidth="111.0" styleClass="lblbuscar" text="Búsqueda por ID">
+            <font>
+                <Font name="System Bold" size="12.0" fx:id="x1" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" font="$x1" layoutX="27.0" layoutY="78.0" prefHeight="22.0" prefWidth="75.0" text="NIT" />
+        <Label alignment="CENTER" font="$x1" layoutX="6.0" layoutY="139.0" prefHeight="22.0" prefWidth="95.0" text="AE Permitidos" />
+        <TextField fx:id="tfNit" editable="false" layoutX="85.0" layoutY="77.0" prefHeight="22.0" prefWidth="141.0" />
+        <TextField fx:id="tfAEpermitidos" editable="false" focusTraversable="false" layoutX="101.0" layoutY="139.0" prefHeight="22.0" prefWidth="49.0" styleClass="text-fieldAE" />
+        <HBox layoutX="45.0" layoutY="437.0" prefHeight="43.0" prefWidth="475.0">
+            <children>
+                <Button fx:id="continuar_op" mnemonicParsing="false" onAction="#continuarOP" prefHeight="26.0" prefWidth="95.0" text="Continuar" wrapText="false">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="185.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets />
+            </padding>
+        </HBox>
+        <HBox id="menu_progreso" alignment="CENTER" layoutX="64.0" layoutY="409.0" prefHeight="13.0" prefWidth="440.0" spacing="10.0" visible="true">
+            <children>
+                <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" visible="true" />
+            </children>
+        </HBox>
+        <StackPane fx:id="panel_tabla" layoutX="4.0" layoutY="273.0" prefHeight="83.0" prefWidth="556.0">
+            <children>
+                <TableView fx:id="tabla_datos" disable="false" focusTraversable="true" prefHeight="113.0" prefWidth="559.0" tableMenuButtonVisible="false" visible="true">
+                    <columns>
+                        <TableColumn editable="false" id="colID_usuario" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" resizable="false" sortable="false" text="ID Usuario" fx:id="colID_usuario" />
+                        <TableColumn editable="false" id="colNombre_usuario" maxWidth="176.0" minWidth="176.0" prefWidth="176.0" resizable="false" sortable="false" text="Nombre &#10;Usuario" fx:id="colNombre_usuario" />
+                        <TableColumn editable="false" id="colCelular" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" sortable="false" text="Celular Registrado" fx:id="colCelular" />
+                        <TableColumn editable="false" id="colEmail" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Email Registrado" fx:id="colEmail" />
+                        <TableColumn editable="false" id="colAE" maxWidth="67.0" minWidth="67.0" prefWidth="67.0" resizable="false" sortable="false" text="AE &#10;Solicitados" fx:id="colAE" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label alignment="CENTER" layoutX="2.0" layoutY="14.0" prefHeight="27.0" prefWidth="572.0" text="Consulta de Gestión por Emergencia" textFill="#212c7b">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" font="$x1" layoutX="6.0" layoutY="168.0" prefHeight="22.0" prefWidth="95.0" text="AE Solicitados" />
+        <TextField fx:id="tfAEsolicitados" editable="false" focusTraversable="false" layoutX="101.0" layoutY="168.0" prefHeight="22.0" prefWidth="49.0" styleClass="text-fieldAE" />
+        <Label alignment="CENTER" font="$x1" layoutX="155.0" layoutY="138.0" prefHeight="22.0" prefWidth="157.0" text="AE Pendientes por solicitar" />
+        <TextField fx:id="tfAEpendientes" editable="false" focusTraversable="false" layoutX="312.0" layoutY="139.0" prefHeight="22.0" prefWidth="49.0" styleClass="text-fieldAE" />
+        <Label alignment="CENTER" font="$x1" layoutX="236.0" layoutY="168.0" prefHeight="22.0" prefWidth="75.0" text="Período" />
+        <TextField fx:id="tfPeriodo" editable="false" focusTraversable="false" layoutX="312.0" layoutY="168.0" prefHeight="22.0" prefWidth="49.0" styleClass="text-fieldAE" />
+        <Label alignment="CENTER" font="$x1" layoutX="261.0" layoutY="61.0" prefHeight="22.0" prefWidth="170.0" text="Tipo Cuenta Cobro Comisión" />
+        <Label alignment="CENTER" font="$x1" layoutX="269.0" layoutY="85.0" prefHeight="22.0" prefWidth="157.0" text="N° Cuenta Cobro Comisión" />
+        <TextField fx:id="tfTipoCuenta" editable="false" layoutX="429.0" layoutY="63.0" prefHeight="22.0" prefWidth="126.0" styleClass="text-fielddeshabilitado" />
+        <TextField fx:id="tfNumCuenta" editable="false" layoutX="429.0" layoutY="87.0" prefHeight="22.0" prefWidth="126.0" styleClass="text-fielddeshabilitado" />
+        <Label id="" alignment="CENTER" font="$x1" layoutX="370.0" layoutY="109.0" prefHeight="22.0" prefWidth="54.0" text="Costo AE" />
+        <TextField fx:id="tfCosto" editable="false" layoutX="429.0" layoutY="111.0" prefHeight="22.0" prefWidth="126.0" styleClass="text-fielddeshabilitado" />
+        <RestrictiveTextField fx:id="tfBusqueda_ID" editable="true" focusTraversable="false" layoutX="397.0" layoutY="209.0" maxLength="15" onKeyPressed="#idbuscarkeypress" onKeyTyped="#idbuscarkeytyped" prefHeight="27.0" prefWidth="141.0" restrict="^[a-z0-9A-Z]{0,15}$" />
+        <Button fx:id="obtMasReg" layoutX="14.0" layoutY="241.0" mnemonicParsing="false" onAction="#obtMasRegOp" prefWidth="95.0" text="+ Registros" />
+    </children>
+    <stylesheets>
+        <URL value="@tokenaccesoemergencia.css" />
+    </stylesheets>
+</AnchorPane>
